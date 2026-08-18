@@ -572,6 +572,43 @@ td small {
   background: transparent;
 }
 
+.batch-paste {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.batch-paste textarea {
+  flex: 1;
+  min-width: 0;
+  min-height: 68px;
+  resize: vertical;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(12, 17, 24, 0.5);
+  color: var(--text);
+  font: inherit;
+  line-height: 1.45;
+}
+
+.batch-paste textarea:focus {
+  outline: none;
+  border-color: rgba(77, 184, 168, 0.7);
+}
+
+.batch-paste button {
+  align-self: flex-start;
+}
+
+.batch-paste.compact {
+  padding: 8px 10px 0;
+}
+
+.batch-paste.compact textarea {
+  min-height: 52px;
+}
+
 .cargo-table-wrap {
   overflow: auto;
   border: 1px solid var(--line);
@@ -1141,6 +1178,14 @@ td small {
 
   .detail-grid {
     grid-template-columns: 1fr;
+  }
+
+  .batch-paste {
+    flex-direction: column;
+  }
+
+  .batch-paste button {
+    align-self: stretch;
   }
 
   .plan-card {

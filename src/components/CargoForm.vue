@@ -57,6 +57,15 @@
           <button type="button" class="ghost sm" @click="addCargoRow">添加货物</button>
         </div>
       </div>
+      <div class="batch-paste">
+        <textarea
+          v-model="batchText"
+          rows="3"
+          placeholder="粘贴批量添加，每行一种：长*宽*高*件数&#10;120*80*100*2&#10;90*60*50*3"
+        ></textarea>
+        <button type="button" class="ghost sm" @click="onBatchAdd">粘贴添加</button>
+      </div>
+      <p v-if="batchMessage" :class="['msg', batchOk ? 'ok' : 'warn']">{{ batchMessage }}</p>
       <div class="cargo-table-wrap">
         <table class="cargo-table">
           <thead>
@@ -97,7 +106,7 @@
           </tbody>
         </table>
       </div>
-      <p class="hint">可翻转：该型号可任意面朝下。贴边：贴外轮廓；不贴边则长宽各留约 5cm。有斜边的板型会按每层轮廓收放摆放。</p>
+      <p class="hint">新货物默认可翻转。批量格式：长*宽*高*件数，可一次粘贴多行。贴边：贴外轮廓；不贴边则长宽各留约 5cm。</p>
 
       <div class="calc-actions">
         <button type="button" class="primary" @click="onCreate">计算新方案</button>
@@ -113,6 +122,7 @@ import { inject, ref } from "vue";
 import {
   activeResult,
   addCargoRow,
+  addCargosFromPaste,
   calcPallets,
   config,
   enabledPallets,
@@ -129,6 +139,16 @@ import {
 const setTab = inject("setTab", () => {});
 const message = ref("");
 const ok = ref(false);
+const batchText = ref("");
+const batchMessage = ref("");
+const batchOk = ref(false);
+
+function onBatchAdd() {
+  const res = addCargosFromPaste(batchText.value);
+  batchOk.value = res.ok;
+  batchMessage.value = res.message;
+  if (res.ok) batchText.value = "";
+}
 
 function onCreate() {
   const res = runCalculate({ overwrite: false });

@@ -142,6 +142,14 @@
                   <button type="button" class="ghost sm" @click="addRow">添加</button>
                 </div>
               </div>
+              <div class="batch-paste compact">
+                <textarea
+                  v-model="batchText"
+                  rows="2"
+                  placeholder="粘贴批量添加：120*80*100*2"
+                ></textarea>
+                <button type="button" class="ghost sm" @click="onBatchAdd">粘贴添加</button>
+              </div>
               <div class="cargo-table-wrap">
                 <table class="cargo-table">
                   <thead>
@@ -324,6 +332,7 @@ import {
   activeBoard,
   activeResult,
   addResultCargo,
+  addResultCargosFromPaste,
   config,
   deleteResult,
   formatTime,
@@ -343,6 +352,7 @@ import {
 
 const previewOpen = ref(false);
 const editMessage = ref("");
+const batchText = ref("");
 let timer = 0;
 
 const resultPallet = computed(
@@ -460,6 +470,14 @@ function onPalletQty(id, value) {
 
 function addRow() {
   addResultCargo(activeResult.value);
+}
+
+function onBatchAdd() {
+  const res = addResultCargosFromPaste(activeResult.value, batchText.value);
+  editMessage.value = res.ok ? "" : res.message;
+  if (!res.ok) return;
+  batchText.value = "";
+  recalcNow();
 }
 
 function removeRow(id) {

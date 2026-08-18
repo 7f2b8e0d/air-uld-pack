@@ -34,7 +34,7 @@ export function uid(prefix = "id") {
 }
 
 function emptyCargo() {
-  return { id: uid("box"), name: "", l: "", w: "", h: "", qty: "", allowFlip: false };
+  return { id: uid("box"), name: "", l: "", w: "", h: "", qty: "", allowFlip: true };
 }
 
 function normalizeResult(result) {
@@ -359,6 +359,65 @@ export function closePalletPreview() {
 
 export function addCargoRow() {
   config.cargos.push(emptyCargo());
+}
+
+function isBlankCargo(row) {
+  return !String(row?.name || "").trim() && !(Number(row?.l) > 0) && !(Number(row?.w) > 0) && !(Number(row?.h) > 0);
+}
+
+const CARGO_PASTE_RE =
+  /(\d+(?:\.\d+)?)\s*[*\u00d7xX\uff0a]\s*(\d+(?:\.\d+)?)\s*[*\u00d7xX\uff0a]\s*(\d+(?:\.\d+)?)(?:\s*[*\u00d7xX\uff0a]\s*(\d+))?/g;
+
+export function parseCargoPaste(text) {
+  const src = String(text || "").trim();
+  if (!src) {
+    return { ok: false, message: "请粘贴货物尺寸，例如 120*80*100*2", items: [] };
+  }
+  const items = [];
+  const re = new RegExp(CARGO_PASTE_RE.source, "g");
+  let match;
+  while ((match = re.exec(src))) {
+    const l = Number(match[1]);
+    const w = Number(match[2]);
+    const h = Number(match[3]);
+    if (!(l > 0 && w > 0 && h > 0)) continue;
+    const qtyRaw = match[4];
+    const qty = qtyRaw == null || qtyRaw === "" ? "" : Math.max(0, Math.floor(Number(qtyRaw)));
+    items.push({
+      id: uid("box"),
+      name: `${l}×${w}×${h}`,
+      l,
+      w,
+      h,
+      qty: qty === "" || qty <= 0 ? "" : qty,
+      allowFlip: true,
+    });
+  }
+  if (!items.length) {
+    return {
+      ok: false,
+      message: "没有识别到有效尺寸。格式：长*宽*高*件数，例如 120*80*100*2，可一次粘贴多行",
+      items: [],
+    };
+  }
+  return { ok: true, items, message: `已添加 ${items.length} 种货物` };
+}
+
+export function addCargosFromPaste(text) {
+  const parsed = parseCargoPaste(text);
+  if (!parsed.ok) return parsed;
+  const keep = (config.cargos || []).filter((row) => !isBlankCargo(row));
+  config.cargos = [...keep, ...parsed.items];
+  return parsed;
+}
+
+export function addResultCargosFromPaste(result, text) {
+  if (!result) return { ok: false, message: "没有可编辑的方案" };
+  const parsed = parseCargoPaste(text);
+  if (!parsed.ok) return parsed;
+  const current = Array.isArray(result.cargos) ? result.cargos : [];
+  result.cargos = [...current.filter((row) => !isBlankCargo(row)), ...parsed.items];
+  return parsed;
 }
 
 export function setAllCargoFlip(on) {
