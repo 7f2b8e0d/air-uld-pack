@@ -513,6 +513,18 @@ td small {
   border-color: rgba(139, 155, 176, 0.4);
 }
 
+.dim-label.is-tick {
+  padding: 1px 4px;
+  font-size: 11px;
+  color: #d7e4ef;
+  background: rgba(12, 17, 24, 0.78);
+  border-color: rgba(139, 155, 176, 0.28);
+}
+
+.dim-label.is-axis-end {
+  font-weight: 600;
+}
+
 .hint,
 .empty {
   padding: 10px 16px 14px;

@@ -5,6 +5,7 @@ import {
   Float32BufferAttribute,
   Line,
   LineBasicMaterial,
+  LineSegments,
   Mesh,
   MeshPhongMaterial,
   SphereGeometry,
@@ -114,6 +115,92 @@ function tick(from, dir, size = 8) {
   const a = from.clone().add(dir.clone().multiplyScalar(size));
   const b = from.clone().add(dir.clone().multiplyScalar(-size));
   return makeLine(a, b, "#e8d5a3");
+}
+
+function pickAxisStep(size) {
+  const abs = Math.max(Number(size) || 0, 1);
+  if (abs <= 80) return 10;
+  if (abs <= 160) return 20;
+  if (abs <= 400) return 50;
+  return 100;
+}
+
+function axisStops(size, step) {
+  const end = Math.max(Number(size) || 0, 0);
+  const values = [];
+  for (let v = step; v < end - step * 0.15; v += step) values.push(v);
+  return values;
+}
+
+function makeTickSegments(pairs, color = "#d8c48a") {
+  const points = [];
+  for (const [a, b] of pairs) points.push(a, b);
+  const geometry = new BufferGeometry().setFromPoints(points);
+  const material = new LineBasicMaterial({ color, transparent: true, opacity: 0.88 });
+  return new LineSegments(geometry, material);
+}
+
+function addAxisRuler(items, { origin, axis, outward, length, title, labelShift }) {
+  const end = origin.clone().add(axis.clone().multiplyScalar(length));
+  items.push(makeLine(origin, end, "#e8d5a3"));
+  const step = pickAxisStep(length);
+  const minor = step >= 50 ? step / 5 : step / 2;
+  const pairs = [];
+  const out = outward.clone().normalize();
+  for (let v = 0; v <= length + 1e-3; v += minor) {
+    const at = origin.clone().add(axis.clone().multiplyScalar(Math.min(v, length)));
+    const major = Math.abs(v % step) < 1e-3 || Math.abs(v - length) < 1e-3;
+    const size = major ? 8 : 4;
+    pairs.push([at.clone(), at.clone().add(out.clone().multiplyScalar(size))]);
+  }
+  if (pairs.length) items.push(makeTickSegments(pairs));
+  for (const value of axisStops(length, step)) {
+    const label = makeLabel(String(Math.round(value)), "is-tick");
+    label.position.copy(origin).add(axis.clone().multiplyScalar(value)).add(labelShift);
+    items.push(label);
+  }
+  const endLabel = makeLabel(`${title} ${Math.round(length)} cm`, "is-axis-end");
+  endLabel.position.copy(end).add(labelShift.clone().multiplyScalar(1.15));
+  items.push(endLabel);
+}
+
+export function buildAxisRulers(pallet, mesh) {
+  const items = [];
+  const box = mesh?.geometry?.boundingBox;
+  if (!box) return items;
+  const length = Number(pallet.baseOuterLengthCm) || box.max.x - box.min.x;
+  const width = Number(pallet.baseOuterWidthCm) || box.max.z - box.min.z;
+  const height = Number(pallet.heightCm) || box.max.y - box.min.y;
+  const pad = Math.max(6, Math.max(length, width) * 0.012);
+  const x0 = box.min.x;
+  const y0 = box.min.y;
+  const z1 = box.max.z;
+
+  addAxisRuler(items, {
+    origin: new Vector3(x0, y0, z1 + pad),
+    axis: new Vector3(1, 0, 0),
+    outward: new Vector3(0, 0, 1),
+    length,
+    title: "长",
+    labelShift: new Vector3(0, 6, 14),
+  });
+  addAxisRuler(items, {
+    origin: new Vector3(box.max.x + pad, y0, box.min.z),
+    axis: new Vector3(0, 0, 1),
+    outward: new Vector3(1, 0, 0),
+    length: width,
+    title: "宽",
+    labelShift: new Vector3(16, 6, 0),
+  });
+  addAxisRuler(items, {
+    origin: new Vector3(x0 - pad, y0, z1 + pad),
+    axis: new Vector3(0, 1, 0),
+    outward: new Vector3(-1, 0, 0),
+    length: height,
+    title: "高",
+    labelShift: new Vector3(-16, 0, 8),
+  });
+  return items;
 }
 
 export function buildDimensionGuides(pallet, mesh) {

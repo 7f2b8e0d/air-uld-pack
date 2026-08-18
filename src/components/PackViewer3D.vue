@@ -1,7 +1,7 @@
 <template>
   <div class="pack-viewer">
     <div ref="host" class="canvas-host pack-canvas"></div>
-    <p class="hint">拖拽旋转 · 滚轮缩放 · 仅显示勾选分组，每组一种颜色</p>
+    <p class="hint">拖拽旋转 · 滚轮缩放 · 坐标轴刻度为 cm，仅显示勾选分组</p>
   </div>
 </template>
 
@@ -28,7 +28,7 @@ import {
 } from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { CSS2DObject, CSS2DRenderer } from "three/addons/renderers/CSS2DRenderer.js";
-import { buildUldMesh, sceneCenterOf, sceneSizeOf } from "../lib/uldGeometry.js";
+import { buildAxisRulers, buildUldMesh, sceneCenterOf, sceneSizeOf } from "../lib/uldGeometry.js";
 import { expandGroupBoxes } from "../lib/pack.js";
 
 const props = defineProps({
@@ -151,6 +151,9 @@ function rebuildHull() {
   mesh.material.opacity = 0.12;
   mesh.material.depthWrite = false;
   modelGroup.add(mesh);
+  for (const item of buildAxisRulers(props.pallet, mesh)) {
+    modelGroup.add(item);
+  }
   fitCamera();
 }
 
