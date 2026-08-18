@@ -1,0 +1,4477 @@
+{
+  "source": "https://packio.cainiao.com/algo/data-manage",
+  "fetchedAt": "2026-08-18",
+  "total": 67,
+  "palletList": [
+    {
+      "id": 1433,
+      "companyId": "*",
+      "airplaneId": "330",
+      "containerId": "QM-LD",
+      "length": 406,
+      "width": 244,
+      "height": 160,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.1363636363636365",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-50.00000000000001",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.1363636363636365",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "411.3636363636364",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-49.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "357.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[44.0,244.0,0.0],[362.0,244.0,0.0],[362.0,0.0,0.0],[44.0,0.0,0.0],[0.0,244.0,50.0],[406.0,244.0,50.0],[406.0,0.0,50.0],[0.0,0.0,50.0],[0.0,244.0,160.0],[406.0,244.0,160.0],[406.0,0.0,160.0],[0.0,0.0,160.0]]",
+      "hyperplane": "1.1363636363636365x+0y+1z-50.00000000000001&gt;0,-1.1363636363636365x+0y+1z+411.3636363636364&gt;0,1.0x+0y+1z-49.0&gt;0,-1.0x+0y+1z+357.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": true,
+      "palletType": 4,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 50,
+      "topLength": 406,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": 44,
+      "volumeAllowed": "15.85",
+      "gmtCreate": 1743400850000
+    },
+    {
+      "id": 1175,
+      "companyId": "*",
+      "airplaneId": "A330",
+      "containerId": "PMC - K4",
+      "length": 318,
+      "width": 244,
+      "height": 239,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.9767441860465116",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-465.6046511627907",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.9767441860465116",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-155.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,244.0,0.0],[318.0,244.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,244.0,155.0],[318.0,244.0,155.0],[318.0,0.0,155.0],[0.0,0.0,155.0],[86.0,244.0,239.0],[232.0,244.0,239.0],[232.0,0.0,239.0],[86.0,0.0,239.0]]",
+      "hyperplane": "0.9767441860465116x+0y+1z-465.6046511627907&lt;0,-0.9767441860465116x+0y+1z-155.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 155,
+      "topLength": 146,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "16.78",
+      "gmtCreate": 1731995760000
+    },
+    {
+      "id": 1174,
+      "companyId": "*",
+      "airplaneId": "A330",
+      "containerId": "PMC - L2",
+      "length": 244,
+      "width": 318,
+      "height": 244,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.02",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-339.88",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,318.0,0.0],[244.0,318.0,0.0],[244.0,0.0,0.0],[0.0,0.0,0.0],[0.0,318.0,91.0],[244.0,318.0,91.0],[244.0,0.0,91.0],[0.0,0.0,91.0],[0.0,318.0,244.0],[94.0,318.0,244.0],[94.0,0.0,244.0],[0.0,0.0,244.0]]",
+      "hyperplane": "1.02x+0y+1z-339.88&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+239.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+313.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 2,
+      "innerLength": 234,
+      "innerWidth": 308,
+      "reefedHeight": 91,
+      "topLength": 94,
+      "topWidth": 318,
+      "bottomLength": 244,
+      "bottomWidth": 318,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "15.28",
+      "gmtCreate": 1731995552000
+    },
+    {
+      "id": 1148,
+      "companyId": "*",
+      "airplaneId": "B-747F",
+      "containerId": "W2",
+      "length": 460,
+      "width": 244,
+      "height": 160,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.704225352112676",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-50.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-0.704225352112676",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "273.943661971831",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-76.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "384.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[71.0,244.0,0.0],[389.0,244.0,0.0],[389.0,0.0,0.0],[71.0,0.0,0.0],[0.0,244.0,50.0],[460.0,244.0,50.0],[460.0,0.0,50.0],[0.0,0.0,50.0],[0.0,244.0,160.0],[460.0,244.0,160.0],[460.0,0.0,160.0],[0.0,0.0,160.0]]",
+      "hyperplane": "0.704225352112676x+0y+1z-50.0&gt;0,-0.704225352112676x+0y+1z+273.943661971831&gt;0,1.0x+0y+1z-76.0&gt;0,-1.0x+0y+1z+384.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": true,
+      "palletType": 4,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 50,
+      "topLength": 460,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": 71,
+      "volumeAllowed": "17.96",
+      "gmtCreate": 1729509199000
+    },
+    {
+      "id": 1089,
+      "companyId": "*",
+      "airplaneId": "B-747F",
+      "containerId": "BULK",
+      "length": 244,
+      "width": 532,
+      "height": 100,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "527.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,532.0,0.0],[244.0,532.0,0.0],[244.0,0.0,0.0],[0.0,0.0,0.0],[0.0,532.0,100.0],[244.0,532.0,100.0],[244.0,0.0,100.0],[0.0,0.0,100.0],[0.0,532.0,100.0],[244.0,532.0,100.0],[244.0,0.0,100.0],[0.0,0.0,100.0]]",
+      "hyperplane": "1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+239.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+527.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 1,
+      "innerLength": 234,
+      "innerWidth": 522,
+      "reefedHeight": 100,
+      "topLength": 244,
+      "topWidth": 532,
+      "bottomLength": 244,
+      "bottomWidth": 532,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "12.98",
+      "gmtCreate": 1726037389000
+    },
+    {
+      "id": 1063,
+      "companyId": "*",
+      "airplaneId": "B767-300",
+      "containerId": "P8",
+      "length": 244,
+      "width": 153,
+      "height": 163,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "148.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,153.0,0.0],[244.0,153.0,0.0],[244.0,0.0,0.0],[0.0,0.0,0.0],[0.0,153.0,163.0],[244.0,153.0,163.0],[244.0,0.0,163.0],[0.0,0.0,163.0],[0.0,153.0,163.0],[244.0,153.0,163.0],[244.0,0.0,163.0],[0.0,0.0,163.0]]",
+      "hyperplane": "1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+239.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+148.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 1,
+      "innerLength": 234,
+      "innerWidth": 143,
+      "reefedHeight": 163,
+      "topLength": 244,
+      "topWidth": 153,
+      "bottomLength": 244,
+      "bottomWidth": 153,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "6.09",
+      "gmtCreate": 1724312835000
+    },
+    {
+      "id": 1049,
+      "companyId": "*",
+      "airplaneId": "B-777F",
+      "containerId": "H9G",
+      "length": 488,
+      "width": 600,
+      "height": 300,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.8870967741935484",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-622.9032258064516",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.8870967741935484",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-190.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "0.8333333333333334",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-0.8333333333333334",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "401.6666666666667",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-Infinity",
+          "hyperplaneC": "1",
+          "hyperplaneD": "NaN",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-Infinity",
+          "hyperplaneC": "1",
+          "hyperplaneD": "Infinity",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,600.0,0.0],[488.0,600.0,0.0],[488.0,0.0,0.0],[0.0,0.0,0.0],[0.0,600.0,190.0],[488.0,600.0,190.0],[488.0,0.0,190.0],[0.0,0.0,190.0],[124.0,600.0,300.0],[364.0,600.0,300.0],[364.0,0.0,300.0],[124.0,0.0,300.0]]",
+      "hyperplane": "0.8870967741935484x+0y+1z-622.9032258064516&lt;0,-0.8870967741935484x+0y+1z-190.0&lt;0,0.8333333333333334x+0y+1z-5.0&gt;0,-0.8333333333333334x+0y+1z+401.6666666666667&gt;0,0x-Infinityy+1z+NaN&gt;0,0x-Infinityy+1z+Infinity&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 476,
+      "innerWidth": 600,
+      "reefedHeight": 190,
+      "topLength": 240,
+      "topWidth": 600,
+      "bottomLength": 488,
+      "bottomWidth": 600,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "79.66",
+      "gmtCreate": 1723186199000
+    },
+    {
+      "id": 945,
+      "companyId": "*",
+      "airplaneId": "B737-800F",
+      "containerId": "AFT",
+      "length": 292,
+      "width": 605,
+      "height": 119,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.47058823529411764",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-40.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-0.47058823529411764",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "97.41176470588235",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-Infinity",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "Infinity",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-Infinity",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "Infinity",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-Infinity",
+          "hyperplaneC": "1",
+          "hyperplaneD": "NaN",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-Infinity",
+          "hyperplaneC": "1",
+          "hyperplaneD": "Infinity",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[85.0,605.0,0.0],[207.0,605.0,0.0],[207.0,0.0,0.0],[85.0,0.0,0.0],[0.0,605.0,40.0],[292.0,605.0,40.0],[292.0,0.0,40.0],[0.0,0.0,40.0],[0.0,605.0,119.0],[292.0,605.0,119.0],[292.0,0.0,119.0],[0.0,0.0,119.0]]",
+      "hyperplane": "0.47058823529411764x+0y+1z-40.0&gt;0,-0.47058823529411764x+0y+1z+97.41176470588235&gt;0,-Infinityx+0y+1z+Infinity&gt;0,-Infinityx+0y+1z+Infinity&gt;0,0x-Infinityy+1z+NaN&gt;0,0x-Infinityy+1z+Infinity&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": true,
+      "palletType": 4,
+      "innerLength": 122,
+      "innerWidth": 605,
+      "reefedHeight": 40,
+      "topLength": 292,
+      "topWidth": 605,
+      "bottomLength": 122,
+      "bottomWidth": 605,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": 85,
+      "volumeAllowed": "21.02",
+      "gmtCreate": 1719477516000
+    },
+    {
+      "id": 944,
+      "companyId": "*",
+      "airplaneId": "B737-800F",
+      "containerId": "FWD",
+      "length": 305,
+      "width": 308,
+      "height": 112,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.4371584699453552",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-40.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-0.4371584699453552",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "93.33333333333333",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-Infinity",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "Infinity",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-Infinity",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "Infinity",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-Infinity",
+          "hyperplaneC": "1",
+          "hyperplaneD": "NaN",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-Infinity",
+          "hyperplaneC": "1",
+          "hyperplaneD": "Infinity",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[91.5,308.0,0.0],[213.5,308.0,0.0],[213.5,0.0,0.0],[91.5,0.0,0.0],[0.0,308.0,40.0],[305.0,308.0,40.0],[305.0,0.0,40.0],[0.0,0.0,40.0],[0.0,308.0,112.0],[305.0,308.0,112.0],[305.0,0.0,112.0],[0.0,0.0,112.0]]",
+      "hyperplane": "0.4371584699453552x+0y+1z-40.0&gt;0,-0.4371584699453552x+0y+1z+93.33333333333333&gt;0,-Infinityx+0y+1z+Infinity&gt;0,-Infinityx+0y+1z+Infinity&gt;0,0x-Infinityy+1z+NaN&gt;0,0x-Infinityy+1z+Infinity&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": true,
+      "palletType": 4,
+      "innerLength": 122,
+      "innerWidth": 308,
+      "reefedHeight": 40,
+      "topLength": 305,
+      "topWidth": 308,
+      "bottomLength": 122,
+      "bottomWidth": 308,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": 91.5,
+      "volumeAllowed": "10.52",
+      "gmtCreate": 1719477399000
+    },
+    {
+      "id": 814,
+      "companyId": "*",
+      "airplaneId": "B767-300",
+      "containerId": "PMC-探",
+      "length": 400,
+      "width": 244,
+      "height": 200,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.8048780487804879",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-33.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-0.8048780487804879",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "288.95121951219517",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-46.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "354.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[41.0,244.0,0.0],[359.0,244.0,0.0],[359.0,0.0,0.0],[41.0,0.0,0.0],[0.0,244.0,33.0],[400.0,244.0,33.0],[400.0,0.0,33.0],[0.0,0.0,33.0],[0.0,244.0,200.0],[400.0,244.0,200.0],[400.0,0.0,200.0],[0.0,0.0,200.0]]",
+      "hyperplane": "0.8048780487804879x+0y+1z-33.0&gt;0,-0.8048780487804879x+0y+1z+288.95121951219517&gt;0,1.0x+0y+1z-46.0&gt;0,-1.0x+0y+1z+354.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": true,
+      "palletType": 4,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 33,
+      "topLength": 400,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": 41,
+      "volumeAllowed": "19.52",
+      "gmtCreate": 1716450589000
+    },
+    {
+      "id": 679,
+      "companyId": "*",
+      "airplaneId": "B767-300",
+      "containerId": "LD8",
+      "length": 317,
+      "width": 153,
+      "height": 163,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.178082191780822",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-43.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.178082191780822",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "330.45205479452056",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-41.5",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "275.5",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "148.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[36.5,153.0,0.0],[280.5,153.0,0.0],[280.5,0.0,0.0],[36.5,0.0,0.0],[0.0,153.0,43.0],[317.0,153.0,43.0],[317.0,0.0,43.0],[0.0,0.0,43.0],[0.0,153.0,163.0],[317.0,153.0,163.0],[317.0,0.0,163.0],[0.0,0.0,163.0]]",
+      "hyperplane": "1.178082191780822x+0y+1z-43.0&gt;0,-1.178082191780822x+0y+1z+330.45205479452056&gt;0,1.0x+0y+1z-41.5&gt;0,-1.0x+0y+1z+275.5&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+148.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": true,
+      "palletType": 4,
+      "innerLength": 234,
+      "innerWidth": 143,
+      "reefedHeight": 43,
+      "topLength": 317,
+      "topWidth": 153,
+      "bottomLength": 244,
+      "bottomWidth": 153,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": 36.5,
+      "volumeAllowed": "7.91",
+      "gmtCreate": 1715063584000
+    },
+    {
+      "id": 677,
+      "companyId": null,
+      "airplaneId": "B767-300",
+      "containerId": "PMC",
+      "length": 318,
+      "width": 244,
+      "height": 163,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,244.0,0.0],[318.0,244.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,244.0,163.0],[318.0,244.0,163.0],[318.0,0.0,163.0],[0.0,0.0,163.0],[0.0,244.0,163.0],[318.0,244.0,163.0],[318.0,0.0,163.0],[0.0,0.0,163.0]]",
+      "hyperplane": "1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 1,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 163,
+      "topLength": 318,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "12.65",
+      "gmtCreate": 1715063413000
+    },
+    {
+      "id": 676,
+      "companyId": "*",
+      "airplaneId": "B767-300",
+      "containerId": "Q2(A2-A12)",
+      "length": 224,
+      "width": 317,
+      "height": 244,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.2727272727272727",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-389.09090909090907",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "312.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,317.0,0.0],[224.0,317.0,0.0],[224.0,0.0,0.0],[0.0,0.0,0.0],[0.0,317.0,104.0],[224.0,317.0,104.0],[224.0,0.0,104.0],[0.0,0.0,104.0],[0.0,317.0,244.0],[114.0,317.0,244.0],[114.0,0.0,244.0],[0.0,0.0,244.0]]",
+      "hyperplane": "1.2727272727272727x+0y+1z-389.09090909090907&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+219.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+312.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 2,
+      "innerLength": 214,
+      "innerWidth": 307,
+      "reefedHeight": 104,
+      "topLength": 114,
+      "topWidth": 317,
+      "bottomLength": 224,
+      "bottomWidth": 317,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "14.89",
+      "gmtCreate": 1715063287000
+    },
+    {
+      "id": 675,
+      "companyId": "*",
+      "airplaneId": "B767-300",
+      "containerId": "Q1(A1&A13)",
+      "length": 317,
+      "width": 224,
+      "height": 201,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.845360824742268",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-386.97938144329896",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.845360824742268",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-119.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "312.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,224.0,0.0],[317.0,224.0,0.0],[317.0,0.0,0.0],[0.0,0.0,0.0],[0.0,224.0,119.0],[317.0,224.0,119.0],[317.0,0.0,119.0],[0.0,0.0,119.0],[97.0,224.0,201.0],[220.0,224.0,201.0],[220.0,0.0,201.0],[97.0,0.0,201.0]]",
+      "hyperplane": "0.845360824742268x+0y+1z-386.97938144329896&lt;0,-0.845360824742268x+0y+1z-119.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+312.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+219.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 307,
+      "innerWidth": 214,
+      "reefedHeight": 119,
+      "topLength": 123,
+      "topWidth": 224,
+      "bottomLength": 317,
+      "bottomWidth": 224,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "12.49",
+      "gmtCreate": 1715063166000
+    },
+    {
+      "id": 674,
+      "companyId": "*",
+      "airplaneId": "B737-800",
+      "containerId": "PMC",
+      "length": 318,
+      "width": 244,
+      "height": 200,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.851063829787234",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-390.63829787234044",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.851063829787234",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-120.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,244.0,0.0],[318.0,244.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,244.0,120.0],[318.0,244.0,120.0],[318.0,0.0,120.0],[0.0,0.0,120.0],[94.0,244.0,200.0],[224.0,244.0,200.0],[224.0,0.0,200.0],[94.0,0.0,200.0]]",
+      "hyperplane": "0.851063829787234x+0y+1z-390.63829787234044&lt;0,-0.851063829787234x+0y+1z-120.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 120,
+      "topLength": 130,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "13.68",
+      "gmtCreate": 1715061284000
+    },
+    {
+      "id": 669,
+      "companyId": "*",
+      "airplaneId": "B737-800",
+      "containerId": "P11",
+      "length": 318,
+      "width": 224,
+      "height": 198,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-424.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-106.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,224.0,0.0],[318.0,224.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,224.0,106.0],[318.0,224.0,106.0],[318.0,0.0,106.0],[0.0,0.0,106.0],[92.0,224.0,198.0],[226.0,224.0,198.0],[226.0,0.0,198.0],[92.0,0.0,198.0]]",
+      "hyperplane": "1.0x+0y+1z-424.0&lt;0,-1.0x+0y+1z-106.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+219.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 308,
+      "innerWidth": 214,
+      "reefedHeight": 106,
+      "topLength": 134,
+      "topWidth": 224,
+      "bottomLength": 318,
+      "bottomWidth": 224,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "12.21",
+      "gmtCreate": 1715060502000
+    },
+    {
+      "id": 668,
+      "companyId": "*",
+      "airplaneId": "B737-800",
+      "containerId": "P2-P10",
+      "length": 318,
+      "width": 224,
+      "height": 198,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.9456521739130435",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-411.7173913043478",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.9456521739130435",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-111.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,224.0,0.0],[318.0,224.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,224.0,111.0],[318.0,224.0,111.0],[318.0,0.0,111.0],[0.0,0.0,111.0],[92.0,224.0,198.0],[226.0,224.0,198.0],[226.0,0.0,198.0],[92.0,0.0,198.0]]",
+      "hyperplane": "0.9456521739130435x+0y+1z-411.7173913043478&lt;0,-0.9456521739130435x+0y+1z-111.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+219.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 308,
+      "innerWidth": 214,
+      "reefedHeight": 111,
+      "topLength": 134,
+      "topWidth": 224,
+      "bottomLength": 318,
+      "bottomWidth": 224,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "12.31",
+      "gmtCreate": 1715060367000
+    },
+    {
+      "id": 667,
+      "companyId": "*",
+      "airplaneId": "B737-800",
+      "containerId": "P1",
+      "length": 318,
+      "width": 224,
+      "height": 198,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.88",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-378.84",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.88",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-99.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,224.0,0.0],[318.0,224.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,224.0,99.0],[318.0,224.0,99.0],[318.0,0.0,99.0],[0.0,0.0,99.0],[112.5,224.0,198.0],[205.5,224.0,198.0],[205.5,0.0,198.0],[112.5,0.0,198.0]]",
+      "hyperplane": "0.88x+0y+1z-378.84&lt;0,-0.88x+0y+1z-99.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+219.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 308,
+      "innerWidth": 214,
+      "reefedHeight": 99,
+      "topLength": 93,
+      "topWidth": 224,
+      "bottomLength": 318,
+      "bottomWidth": 224,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "11.61",
+      "gmtCreate": 1715060285000
+    },
+    {
+      "id": 608,
+      "companyId": "*",
+      "airplaneId": "B737-800F",
+      "containerId": "C11",
+      "length": 317,
+      "width": 224,
+      "height": 193,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.967032967032967",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-411.54945054945057",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.967032967032967",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-105.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "312.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,224.0,0.0],[317.0,224.0,0.0],[317.0,0.0,0.0],[0.0,0.0,0.0],[0.0,224.0,105.0],[317.0,224.0,105.0],[317.0,0.0,105.0],[0.0,0.0,105.0],[91.0,224.0,193.0],[226.0,224.0,193.0],[226.0,0.0,193.0],[91.0,0.0,193.0]]",
+      "hyperplane": "0.967032967032967x+0y+1z-411.54945054945057&lt;0,-0.967032967032967x+0y+1z-105.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+312.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+219.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 307,
+      "innerWidth": 214,
+      "reefedHeight": 105,
+      "topLength": 135,
+      "topWidth": 224,
+      "bottomLength": 317,
+      "bottomWidth": 224,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "11.91",
+      "gmtCreate": 1712814467000
+    },
+    {
+      "id": 606,
+      "companyId": "*",
+      "airplaneId": "B737-800F",
+      "containerId": "C1",
+      "length": 317,
+      "width": 224,
+      "height": 193,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0769230769230769",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-436.38461538461536",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-1.0769230769230769",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-95.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "312.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,224.0,0.0],[317.0,224.0,0.0],[317.0,0.0,0.0],[0.0,0.0,0.0],[0.0,224.0,95.0],[317.0,224.0,95.0],[317.0,0.0,95.0],[0.0,0.0,95.0],[91.0,224.0,193.0],[226.0,224.0,193.0],[226.0,0.0,193.0],[91.0,0.0,193.0]]",
+      "hyperplane": "1.0769230769230769x+0y+1z-436.38461538461536&lt;0,-1.0769230769230769x+0y+1z-95.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+312.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+219.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 307,
+      "innerWidth": 214,
+      "reefedHeight": 95,
+      "topLength": 135,
+      "topWidth": 224,
+      "bottomLength": 317,
+      "bottomWidth": 224,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "11.71",
+      "gmtCreate": 1712814342000
+    },
+    {
+      "id": 607,
+      "companyId": "*",
+      "airplaneId": "B737-800F",
+      "containerId": "C2-C10",
+      "length": 317,
+      "width": 224,
+      "height": 193,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.7472527472527473",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-361.8791208791209",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.7472527472527473",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-125.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "312.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,224.0,0.0],[317.0,224.0,0.0],[317.0,0.0,0.0],[0.0,0.0,0.0],[0.0,224.0,125.0],[317.0,224.0,125.0],[317.0,0.0,125.0],[0.0,0.0,125.0],[91.0,224.0,193.0],[226.0,224.0,193.0],[226.0,0.0,193.0],[91.0,0.0,193.0]]",
+      "hyperplane": "0.7472527472527473x+0y+1z-361.8791208791209&lt;0,-0.7472527472527473x+0y+1z-125.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+312.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+219.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 307,
+      "innerWidth": 214,
+      "reefedHeight": 125,
+      "topLength": 135,
+      "topWidth": 224,
+      "bottomLength": 317,
+      "bottomWidth": 224,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "12.32",
+      "gmtCreate": 1712814397000
+    },
+    {
+      "id": 605,
+      "companyId": "*",
+      "airplaneId": "B737-400F",
+      "containerId": "C11",
+      "length": 223,
+      "width": 224,
+      "height": 170,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.8823529411764706",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-321.7647058823529",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.8823529411764706",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-125.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "218.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,224.0,0.0],[223.0,224.0,0.0],[223.0,0.0,0.0],[0.0,0.0,0.0],[0.0,224.0,125.0],[223.0,224.0,125.0],[223.0,0.0,125.0],[0.0,0.0,125.0],[51.0,224.0,170.0],[172.0,224.0,170.0],[172.0,0.0,170.0],[51.0,0.0,170.0]]",
+      "hyperplane": "0.8823529411764706x+0y+1z-321.7647058823529&lt;0,-0.8823529411764706x+0y+1z-125.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+218.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+219.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 213,
+      "innerWidth": 214,
+      "reefedHeight": 125,
+      "topLength": 121,
+      "topWidth": 224,
+      "bottomLength": 223,
+      "bottomWidth": 224,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "7.98",
+      "gmtCreate": 1712814234000
+    },
+    {
+      "id": 600,
+      "companyId": "*",
+      "airplaneId": "B737-300F",
+      "containerId": "C1-C8",
+      "length": 318,
+      "width": 224,
+      "height": 193,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.7431693989071039",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-361.327868852459",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.7431693989071039",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-125.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,224.0,0.0],[318.0,224.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,224.0,125.0],[318.0,224.0,125.0],[318.0,0.0,125.0],[0.0,0.0,125.0],[91.5,224.0,193.0],[226.5,224.0,193.0],[226.5,0.0,193.0],[91.5,0.0,193.0]]",
+      "hyperplane": "0.7431693989071039x+0y+1z-361.327868852459&lt;0,-0.7431693989071039x+0y+1z-125.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+219.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 308,
+      "innerWidth": 214,
+      "reefedHeight": 125,
+      "topLength": 135,
+      "topWidth": 224,
+      "bottomLength": 318,
+      "bottomWidth": 224,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "12.35",
+      "gmtCreate": 1712807380000
+    },
+    {
+      "id": 601,
+      "companyId": "*",
+      "airplaneId": "B737-400F",
+      "containerId": "C2-C10",
+      "length": 318,
+      "width": 224,
+      "height": 193,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.7431693989071039",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-361.327868852459",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.7431693989071039",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-125.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "0.9090909090909091",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-0.9090909090909091",
+          "hyperplaneC": "1",
+          "hyperplaneD": "198.63636363636363",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,224.0,0.0],[318.0,224.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,224.0,125.0],[318.0,224.0,125.0],[318.0,0.0,125.0],[0.0,0.0,125.0],[91.5,224.0,193.0],[226.5,224.0,193.0],[226.5,0.0,193.0],[91.5,0.0,193.0]]",
+      "hyperplane": "0.7431693989071039x+0y+1z-361.327868852459&lt;0,-0.7431693989071039x+0y+1z-125.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+0.9090909090909091y+1z-5.0&gt;0,0x-0.9090909090909091y+1z+198.63636363636363&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 308,
+      "innerWidth": 213,
+      "reefedHeight": 125,
+      "topLength": 135,
+      "topWidth": 224,
+      "bottomLength": 318,
+      "bottomWidth": 224,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "12.35",
+      "gmtCreate": 1712807481000
+    },
+    {
+      "id": 599,
+      "companyId": "*",
+      "airplaneId": "B767-300",
+      "containerId": "PAG(A2-A12)",
+      "length": 223,
+      "width": 317,
+      "height": 243,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.238532110091743",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-384.1926605504587",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "218.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "312.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,317.0,0.0],[223.0,317.0,0.0],[223.0,0.0,0.0],[0.0,0.0,0.0],[0.0,317.0,108.0],[223.0,317.0,108.0],[223.0,0.0,108.0],[0.0,0.0,108.0],[0.0,317.0,243.0],[114.0,317.0,243.0],[114.0,0.0,243.0],[0.0,0.0,243.0]]",
+      "hyperplane": "1.238532110091743x+0y+1z-384.1926605504587&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+218.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+312.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 2,
+      "innerLength": 213,
+      "innerWidth": 307,
+      "reefedHeight": 108,
+      "topLength": 114,
+      "topWidth": 317,
+      "bottomLength": 223,
+      "bottomWidth": 317,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "14.85",
+      "gmtCreate": 1712800523000
+    },
+    {
+      "id": 598,
+      "companyId": "*",
+      "airplaneId": "B767-300",
+      "containerId": "PAG(A1/A17)",
+      "length": 317,
+      "width": 224,
+      "height": 200,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.173913043478261",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-491.13043478260875",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-1.173913043478261",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-119.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "312.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,224.0,0.0],[317.0,224.0,0.0],[317.0,0.0,0.0],[0.0,0.0,0.0],[0.0,224.0,119.0],[317.0,224.0,119.0],[317.0,0.0,119.0],[0.0,0.0,119.0],[69.0,224.0,200.0],[248.0,224.0,200.0],[248.0,0.0,200.0],[69.0,0.0,200.0]]",
+      "hyperplane": "1.173913043478261x+0y+1z-491.13043478260875&lt;0,-1.173913043478261x+0y+1z-119.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+312.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+219.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 307,
+      "innerWidth": 214,
+      "reefedHeight": 119,
+      "topLength": 179,
+      "topWidth": 224,
+      "bottomLength": 317,
+      "bottomWidth": 224,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "12.95",
+      "gmtCreate": 1712800397000
+    },
+    {
+      "id": 591,
+      "companyId": "*",
+      "airplaneId": "B757-200F",
+      "containerId": "C1-C14",
+      "length": 317,
+      "width": 224,
+      "height": 200,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.8979591836734694",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-418.6530612244898",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.8979591836734694",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-134.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "312.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,224.0,0.0],[317.0,224.0,0.0],[317.0,0.0,0.0],[0.0,0.0,0.0],[0.0,224.0,134.0],[317.0,224.0,134.0],[317.0,0.0,134.0],[0.0,0.0,134.0],[73.5,224.0,200.0],[243.5,224.0,200.0],[243.5,0.0,200.0],[73.5,0.0,200.0]]",
+      "hyperplane": "0.8979591836734694x+0y+1z-418.6530612244898&lt;0,-0.8979591836734694x+0y+1z-134.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+312.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+219.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 307,
+      "innerWidth": 214,
+      "reefedHeight": 134,
+      "topLength": 170,
+      "topWidth": 224,
+      "bottomLength": 317,
+      "bottomWidth": 224,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "13.11",
+      "gmtCreate": 1712489034000
+    },
+    {
+      "id": 592,
+      "companyId": "*",
+      "airplaneId": "B757-200F",
+      "containerId": "C15",
+      "length": 317,
+      "width": 224,
+      "height": 195,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.1229946524064172",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-445.98930481283423",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-1.1229946524064172",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-90.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "312.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,224.0,0.0],[317.0,224.0,0.0],[317.0,0.0,0.0],[0.0,0.0,0.0],[0.0,224.0,90.0],[317.0,224.0,90.0],[317.0,0.0,90.0],[0.0,0.0,90.0],[93.5,224.0,195.0],[223.5,224.0,195.0],[223.5,0.0,195.0],[93.5,0.0,195.0]]",
+      "hyperplane": "1.1229946524064172x+0y+1z-445.98930481283423&lt;0,-1.1229946524064172x+0y+1z-90.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+312.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+219.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 307,
+      "innerWidth": 214,
+      "reefedHeight": 90,
+      "topLength": 130,
+      "topWidth": 224,
+      "bottomLength": 317,
+      "bottomWidth": 224,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "11.65",
+      "gmtCreate": 1712489160000
+    },
+    {
+      "id": 586,
+      "companyId": "*",
+      "airplaneId": "B-777F",
+      "containerId": "J4",
+      "length": 244,
+      "width": 318,
+      "height": 300,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.8110236220472441",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-394.8897637795276",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "0.5",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-0.5",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "117.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "0.9090909090909091",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-0.9090909090909091",
+          "hyperplaneC": "1",
+          "hyperplaneD": "284.09090909090907",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,318.0,0.0],[244.0,318.0,0.0],[244.0,0.0,0.0],[0.0,0.0,0.0],[0.0,318.0,197.0],[244.0,318.0,197.0],[244.0,0.0,197.0],[0.0,0.0,197.0],[0.0,318.0,300.0],[117.0,318.0,300.0],[117.0,0.0,300.0],[0.0,0.0,300.0]]",
+      "hyperplane": "0.8110236220472441x+0y+1z-394.8897637795276&lt;0,0.5x+0y+1z-5.0&gt;0,-0.5x+0y+1z+117.0&gt;0,0x+0.9090909090909091y+1z-5.0&gt;0,0x-0.9090909090909091y+1z+284.09090909090907&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 2,
+      "innerLength": 224,
+      "innerWidth": 307,
+      "reefedHeight": 197,
+      "topLength": 117,
+      "topWidth": 318,
+      "bottomLength": 244,
+      "bottomWidth": 318,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "21.20",
+      "gmtCreate": 1712046876000
+    },
+    {
+      "id": 216,
+      "companyId": "*",
+      "airplaneId": "B-777F",
+      "containerId": "Q5",
+      "length": 244,
+      "width": 318,
+      "height": 290,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.8064516129032258",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-386.7741935483871",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,318.0,0.0],[244.0,318.0,0.0],[244.0,0.0,0.0],[0.0,0.0,0.0],[0.0,318.0,190.0],[244.0,318.0,190.0],[244.0,0.0,190.0],[0.0,0.0,190.0],[0.0,318.0,290.0],[120.0,318.0,290.0],[120.0,0.0,290.0],[0.0,0.0,290.0]]",
+      "hyperplane": "0.8064516129032258x+0y+1z-386.7741935483871&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+239.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+313.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 2,
+      "innerLength": 234,
+      "innerWidth": 308,
+      "reefedHeight": 190,
+      "topLength": 120,
+      "topWidth": 318,
+      "bottomLength": 244,
+      "bottomWidth": 318,
+      "privateOwner": 0,
+      "num": 764,
+      "maxDetectDistance": null,
+      "volumeAllowed": "20.53",
+      "gmtCreate": 1711607830000
+    },
+    {
+      "id": 446,
+      "companyId": "*",
+      "airplaneId": "B-777F",
+      "containerId": "LD",
+      "length": 380,
+      "width": 244,
+      "height": 160,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.6129032258064515",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-50.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.6129032258064515",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "562.9032258064516",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-36.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "344.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[31.0,244.0,0.0],[349.0,244.0,0.0],[349.0,0.0,0.0],[31.0,0.0,0.0],[0.0,244.0,50.0],[380.0,244.0,50.0],[380.0,0.0,50.0],[0.0,0.0,50.0],[0.0,244.0,160.0],[380.0,244.0,160.0],[380.0,0.0,160.0],[0.0,0.0,160.0]]",
+      "hyperplane": "1.6129032258064515x+0y+1z-50.0&gt;0,-1.6129032258064515x+0y+1z+562.9032258064516&gt;0,1.0x+0y+1z-36.0&gt;0,-1.0x+0y+1z+344.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": true,
+      "palletType": 4,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 50,
+      "topLength": 380,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 137,
+      "maxDetectDistance": 31,
+      "volumeAllowed": "14.84",
+      "gmtCreate": 1703224295000
+    },
+    {
+      "id": 340,
+      "companyId": "*",
+      "airplaneId": "B-777F",
+      "containerId": "PAG(318*224)",
+      "length": 224,
+      "width": 318,
+      "height": 242,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.8083333333333333",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-326.06666666666666",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,318.0,0.0],[224.0,318.0,0.0],[224.0,0.0,0.0],[0.0,0.0,0.0],[0.0,318.0,145.0],[224.0,318.0,145.0],[224.0,0.0,145.0],[0.0,0.0,145.0],[0.0,318.0,242.0],[104.0,318.0,242.0],[104.0,0.0,242.0],[0.0,0.0,242.0]]",
+      "hyperplane": "0.8083333333333333x+0y+1z-326.06666666666666&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+219.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+313.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 2,
+      "innerLength": 214,
+      "innerWidth": 308,
+      "reefedHeight": 145,
+      "topLength": 104,
+      "topWidth": 318,
+      "bottomLength": 224,
+      "bottomWidth": 318,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "15.39",
+      "gmtCreate": 1695350609000
+    },
+    {
+      "id": 277,
+      "companyId": "*",
+      "airplaneId": "B-747F",
+      "containerId": "QW(PAG)",
+      "length": 460,
+      "width": 224,
+      "height": 160,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.267605633802817",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-90.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.267605633802817",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "493.0985915492958",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-76.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "384.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[71.0,224.0,0.0],[389.0,224.0,0.0],[389.0,0.0,0.0],[71.0,0.0,0.0],[0.0,224.0,90.0],[460.0,224.0,90.0],[460.0,0.0,90.0],[0.0,0.0,90.0],[0.0,224.0,160.0],[460.0,224.0,160.0],[460.0,0.0,160.0],[0.0,0.0,160.0]]",
+      "hyperplane": "1.267605633802817x+0y+1z-90.0&gt;0,-1.267605633802817x+0y+1z+493.0985915492958&gt;0,1.0x+0y+1z-76.0&gt;0,-1.0x+0y+1z+384.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+219.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": true,
+      "palletType": 4,
+      "innerLength": 308,
+      "innerWidth": 214,
+      "reefedHeight": 90,
+      "topLength": 460,
+      "topWidth": 224,
+      "bottomLength": 318,
+      "bottomWidth": 224,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": 71,
+      "volumeAllowed": "16.49",
+      "gmtCreate": 1682581431000
+    },
+    {
+      "id": 341,
+      "companyId": "*",
+      "airplaneId": "A330",
+      "containerId": "PAG(318*224)",
+      "length": 224,
+      "width": 318,
+      "height": 242,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.8083333333333333",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-326.06666666666666",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,318.0,0.0],[224.0,318.0,0.0],[224.0,0.0,0.0],[0.0,0.0,0.0],[0.0,318.0,145.0],[224.0,318.0,145.0],[224.0,0.0,145.0],[0.0,0.0,145.0],[0.0,318.0,242.0],[104.0,318.0,242.0],[104.0,0.0,242.0],[0.0,0.0,242.0]]",
+      "hyperplane": "0.8083333333333333x+0y+1z-326.06666666666666&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+219.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+313.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 2,
+      "innerLength": 214,
+      "innerWidth": 308,
+      "reefedHeight": 145,
+      "topLength": 104,
+      "topWidth": 318,
+      "bottomLength": 224,
+      "bottomWidth": 318,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "15.39",
+      "gmtCreate": 1695350934000
+    },
+    {
+      "id": 338,
+      "companyId": "*",
+      "airplaneId": "B-777F",
+      "containerId": "ZR(PAG)",
+      "length": 224,
+      "width": 318,
+      "height": 292,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.8130081300813008",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-374.1138211382114",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,318.0,0.0],[224.0,318.0,0.0],[224.0,0.0,0.0],[0.0,0.0,0.0],[0.0,318.0,192.0],[224.0,318.0,192.0],[224.0,0.0,192.0],[0.0,0.0,192.0],[0.0,318.0,292.0],[101.0,318.0,292.0],[101.0,0.0,292.0],[0.0,0.0,292.0]]",
+      "hyperplane": "0.8130081300813008x+0y+1z-374.1138211382114&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+219.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+313.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 2,
+      "innerLength": 214,
+      "innerWidth": 308,
+      "reefedHeight": 192,
+      "topLength": 101,
+      "topWidth": 318,
+      "bottomLength": 224,
+      "bottomWidth": 318,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "18.84",
+      "gmtCreate": 1694679508000
+    },
+    {
+      "id": 242,
+      "companyId": "*",
+      "airplaneId": "B-747F",
+      "containerId": "Q7",
+      "length": 244,
+      "width": 318,
+      "height": 298,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.6923076923076923",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-412.9230769230769",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,318.0,0.0],[244.0,318.0,0.0],[244.0,0.0,0.0],[0.0,0.0,0.0],[0.0,318.0,244.0],[244.0,318.0,244.0],[244.0,0.0,244.0],[0.0,0.0,244.0],[0.0,318.0,298.0],[166.0,318.0,298.0],[166.0,0.0,298.0],[0.0,0.0,298.0]]",
+      "hyperplane": "0.6923076923076923x+0y+1z-412.9230769230769&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+239.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+313.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 2,
+      "innerLength": 234,
+      "innerWidth": 308,
+      "reefedHeight": 244,
+      "topLength": 166,
+      "topWidth": 318,
+      "bottomLength": 244,
+      "bottomWidth": 318,
+      "privateOwner": 0,
+      "num": 237,
+      "maxDetectDistance": null,
+      "volumeAllowed": "22.45",
+      "gmtCreate": 1681124590000
+    },
+    {
+      "id": 337,
+      "companyId": "*",
+      "airplaneId": "B-747F",
+      "containerId": "Q6(PYB)",
+      "length": 244,
+      "width": 140,
+      "height": 244,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "135.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,140.0,0.0],[244.0,140.0,0.0],[244.0,0.0,0.0],[0.0,0.0,0.0],[0.0,140.0,244.0],[244.0,140.0,244.0],[244.0,0.0,244.0],[0.0,0.0,244.0],[0.0,140.0,244.0],[244.0,140.0,244.0],[244.0,0.0,244.0],[0.0,0.0,244.0]]",
+      "hyperplane": "1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+239.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+135.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 1,
+      "innerLength": 234,
+      "innerWidth": 130,
+      "reefedHeight": 244,
+      "topLength": 244,
+      "topWidth": 140,
+      "bottomLength": 244,
+      "bottomWidth": 140,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "8.34",
+      "gmtCreate": 1691978321000
+    },
+    {
+      "id": 336,
+      "companyId": "*",
+      "airplaneId": "B-747F",
+      "containerId": "QL(QR)",
+      "length": 234,
+      "width": 130,
+      "height": 300,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0980392156862746",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-500.94117647058823",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-Infinity",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "NaN",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-Infinity",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "Infinity",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-Infinity",
+          "hyperplaneC": "1",
+          "hyperplaneD": "NaN",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-Infinity",
+          "hyperplaneC": "1",
+          "hyperplaneD": "Infinity",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,130.0,0.0],[234.0,130.0,0.0],[234.0,0.0,0.0],[0.0,0.0,0.0],[0.0,130.0,244.0],[234.0,130.0,244.0],[234.0,0.0,244.0],[0.0,0.0,244.0],[0.0,130.0,300.0],[183.0,130.0,300.0],[183.0,0.0,300.0],[0.0,0.0,300.0]]",
+      "hyperplane": "1.0980392156862746x+0y+1z-500.94117647058823&lt;0,-Infinityx+0y+1z+NaN&gt;0,-Infinityx+0y+1z+Infinity&gt;0,0x-Infinityy+1z+NaN&gt;0,0x-Infinityy+1z+Infinity&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 2,
+      "innerLength": 234,
+      "innerWidth": 130,
+      "reefedHeight": 244,
+      "topLength": 183,
+      "topWidth": 130,
+      "bottomLength": 234,
+      "bottomWidth": 130,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "8.94",
+      "gmtCreate": 1691730846000
+    },
+    {
+      "id": 335,
+      "companyId": "*",
+      "airplaneId": "B-747F",
+      "containerId": "AKE",
+      "length": 156,
+      "width": 153,
+      "height": 160,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "-0.6818181818181818",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "76.36363636363636",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "107.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "148.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,153.0,0.0],[112.0,153.0,0.0],[112.0,0.0,0.0],[0.0,0.0,0.0],[0.0,153.0,30.0],[156.0,153.0,30.0],[156.0,0.0,30.0],[0.0,0.0,30.0],[0.0,153.0,160.0],[156.0,153.0,160.0],[156.0,0.0,160.0],[0.0,0.0,160.0]]",
+      "hyperplane": "-0.6818181818181818x+0y+1z+76.36363636363636&gt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+107.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+148.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": true,
+      "palletType": 5,
+      "innerLength": 102,
+      "innerWidth": 143,
+      "reefedHeight": 30,
+      "topLength": 156,
+      "topWidth": 153,
+      "bottomLength": 112,
+      "bottomWidth": 153,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": 44,
+      "volumeAllowed": "3.82",
+      "gmtCreate": 1691648441000
+    },
+    {
+      "id": 282,
+      "companyId": "*",
+      "airplaneId": "B-777F",
+      "containerId": "AR(CA)",
+      "length": 244,
+      "width": 308,
+      "height": 293,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.2255639097744362",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-429.0375939849624",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "303.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,308.0,0.0],[244.0,308.0,0.0],[244.0,0.0,0.0],[0.0,0.0,0.0],[0.0,308.0,130.0],[244.0,308.0,130.0],[244.0,0.0,130.0],[0.0,0.0,130.0],[0.0,308.0,293.0],[111.0,308.0,293.0],[111.0,0.0,293.0],[0.0,0.0,293.0]]",
+      "hyperplane": "1.2255639097744362x+0y+1z-429.0375939849624&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+239.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+303.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 2,
+      "innerLength": 234,
+      "innerWidth": 298,
+      "reefedHeight": 130,
+      "topLength": 111,
+      "topWidth": 308,
+      "bottomLength": 244,
+      "bottomWidth": 308,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "18.68",
+      "gmtCreate": 1686537578000
+    },
+    {
+      "id": 283,
+      "companyId": "*",
+      "airplaneId": "B-777F",
+      "containerId": "AL(CA)",
+      "length": 224,
+      "width": 308,
+      "height": 293,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.314516129032258",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-424.4516129032258",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "303.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,308.0,0.0],[224.0,308.0,0.0],[224.0,0.0,0.0],[0.0,0.0,0.0],[0.0,308.0,130.0],[224.0,308.0,130.0],[224.0,0.0,130.0],[0.0,0.0,130.0],[0.0,308.0,293.0],[100.0,308.0,293.0],[100.0,0.0,293.0],[0.0,0.0,293.0]]",
+      "hyperplane": "1.314516129032258x+0y+1z-424.4516129032258&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+219.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+303.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 2,
+      "innerLength": 214,
+      "innerWidth": 298,
+      "reefedHeight": 130,
+      "topLength": 100,
+      "topWidth": 308,
+      "bottomLength": 224,
+      "bottomWidth": 308,
+      "privateOwner": 0,
+      "num": 9,
+      "maxDetectDistance": null,
+      "volumeAllowed": "17.10",
+      "gmtCreate": 1686539079000
+    },
+    {
+      "id": 281,
+      "companyId": "*",
+      "airplaneId": "B-777F",
+      "containerId": "AKE",
+      "length": 200,
+      "width": 153,
+      "height": 162,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "-0.6818181818181818",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "106.36363636363636",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "151.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "148.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,153.0,0.0],[156.0,153.0,0.0],[156.0,0.0,0.0],[0.0,0.0,0.0],[0.0,153.0,30.0],[200.0,153.0,30.0],[200.0,0.0,30.0],[0.0,0.0,30.0],[0.0,153.0,162.0],[200.0,153.0,162.0],[200.0,0.0,162.0],[0.0,0.0,162.0]]",
+      "hyperplane": "-0.6818181818181818x+0y+1z+106.36363636363636&gt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+151.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+148.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": true,
+      "palletType": 5,
+      "innerLength": 146,
+      "innerWidth": 143,
+      "reefedHeight": 30,
+      "topLength": 200,
+      "topWidth": 153,
+      "bottomLength": 156,
+      "bottomWidth": 153,
+      "privateOwner": 0,
+      "num": 8,
+      "maxDetectDistance": 44,
+      "volumeAllowed": "4.96",
+      "gmtCreate": 1685695263000
+    },
+    {
+      "id": 280,
+      "companyId": "*",
+      "airplaneId": "B-777F",
+      "containerId": "PRA",
+      "length": 244,
+      "width": 498,
+      "height": 300,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.9016393442622951",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-410.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "493.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,498.0,0.0],[244.0,498.0,0.0],[244.0,0.0,0.0],[0.0,0.0,0.0],[0.0,498.0,190.0],[244.0,498.0,190.0],[244.0,0.0,190.0],[0.0,0.0,190.0],[0.0,498.0,300.0],[122.0,498.0,300.0],[122.0,0.0,300.0],[0.0,0.0,300.0]]",
+      "hyperplane": "0.9016393442622951x+0y+1z-410.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+239.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+493.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 2,
+      "innerLength": 234,
+      "innerWidth": 488,
+      "reefedHeight": 190,
+      "topLength": 122,
+      "topWidth": 498,
+      "bottomLength": 244,
+      "bottomWidth": 498,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "33.11",
+      "gmtCreate": 1685670812000
+    },
+    {
+      "id": 279,
+      "companyId": "*",
+      "airplaneId": "B-777F",
+      "containerId": "PGA",
+      "length": 244,
+      "width": 618,
+      "height": 300,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.9016393442622951",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-410.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "613.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,618.0,0.0],[244.0,618.0,0.0],[244.0,0.0,0.0],[0.0,0.0,0.0],[0.0,618.0,190.0],[244.0,618.0,190.0],[244.0,0.0,190.0],[0.0,0.0,190.0],[0.0,618.0,300.0],[122.0,618.0,300.0],[122.0,0.0,300.0],[0.0,0.0,300.0]]",
+      "hyperplane": "0.9016393442622951x+0y+1z-410.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+239.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+613.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 2,
+      "innerLength": 234,
+      "innerWidth": 608,
+      "reefedHeight": 190,
+      "topLength": 122,
+      "topWidth": 618,
+      "bottomLength": 244,
+      "bottomWidth": 618,
+      "privateOwner": 0,
+      "num": 6,
+      "maxDetectDistance": null,
+      "volumeAllowed": "41.09",
+      "gmtCreate": 1685669690000
+    },
+    {
+      "id": 249,
+      "companyId": "*",
+      "airplaneId": "A300-600",
+      "containerId": "A-H",
+      "length": 244,
+      "width": 318,
+      "height": 228,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.8166666666666667",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-329.26666666666665",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,318.0,0.0],[244.0,318.0,0.0],[244.0,0.0,0.0],[0.0,0.0,0.0],[0.0,318.0,130.0],[244.0,318.0,130.0],[244.0,0.0,130.0],[0.0,0.0,130.0],[0.0,318.0,228.0],[124.0,318.0,228.0],[124.0,0.0,228.0],[0.0,0.0,228.0]]",
+      "hyperplane": "0.8166666666666667x+0y+1z-329.26666666666665&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+239.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+313.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 2,
+      "innerLength": 234,
+      "innerWidth": 308,
+      "reefedHeight": 130,
+      "topLength": 124,
+      "topWidth": 318,
+      "bottomLength": 244,
+      "bottomWidth": 318,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "15.82",
+      "gmtCreate": 1681454373000
+    },
+    {
+      "id": 254,
+      "companyId": "*",
+      "airplaneId": "A330",
+      "containerId": "H3",
+      "length": 406,
+      "width": 244,
+      "height": 160,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.1590909090909092",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-51.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.1590909090909092",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "419.5909090909091",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-49.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "357.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[44.0,244.0,0.0],[362.0,244.0,0.0],[362.0,0.0,0.0],[44.0,0.0,0.0],[0.0,244.0,51.0],[406.0,244.0,51.0],[406.0,0.0,51.0],[0.0,0.0,51.0],[0.0,244.0,160.0],[406.0,244.0,160.0],[406.0,0.0,160.0],[0.0,0.0,160.0]]",
+      "hyperplane": "1.1590909090909092x+0y+1z-51.0&gt;0,-1.1590909090909092x+0y+1z+419.5909090909091&gt;0,1.0x+0y+1z-49.0&gt;0,-1.0x+0y+1z+357.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": true,
+      "palletType": 4,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 51,
+      "topLength": 406,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": 44,
+      "volumeAllowed": "15.85",
+      "gmtCreate": 1681457816000
+    },
+    {
+      "id": 276,
+      "companyId": "*",
+      "airplaneId": "B-777F",
+      "containerId": "W3(PAG)",
+      "length": 396,
+      "width": 224,
+      "height": 160,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.2820512820512822",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-50.00000000000001",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.2820512820512822",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "457.69230769230774",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-44.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "352.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[39.0,224.0,0.0],[357.0,224.0,0.0],[357.0,0.0,0.0],[39.0,0.0,0.0],[0.0,224.0,50.0],[396.0,224.0,50.0],[396.0,0.0,50.0],[0.0,0.0,50.0],[0.0,224.0,160.0],[396.0,224.0,160.0],[396.0,0.0,160.0],[0.0,0.0,160.0]]",
+      "hyperplane": "1.2820512820512822x+0y+1z-50.00000000000001&gt;0,-1.2820512820512822x+0y+1z+457.69230769230774&gt;0,1.0x+0y+1z-44.0&gt;0,-1.0x+0y+1z+352.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+219.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": true,
+      "palletType": 4,
+      "innerLength": 308,
+      "innerWidth": 214,
+      "reefedHeight": 50,
+      "topLength": 396,
+      "topWidth": 224,
+      "bottomLength": 318,
+      "bottomWidth": 224,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": 39,
+      "volumeAllowed": "14.19",
+      "gmtCreate": 1682580554000
+    },
+    {
+      "id": 244,
+      "companyId": "*",
+      "airplaneId": "B-747F",
+      "containerId": "QW",
+      "length": 460,
+      "width": 244,
+      "height": 160,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.267605633802817",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-90.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.267605633802817",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "493.0985915492958",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-76.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "384.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[71.0,244.0,0.0],[389.0,244.0,0.0],[389.0,0.0,0.0],[71.0,0.0,0.0],[0.0,244.0,90.0],[460.0,244.0,90.0],[460.0,0.0,90.0],[0.0,0.0,90.0],[0.0,244.0,160.0],[460.0,244.0,160.0],[460.0,0.0,160.0],[0.0,0.0,160.0]]",
+      "hyperplane": "1.267605633802817x+0y+1z-90.0&gt;0,-1.267605633802817x+0y+1z+493.0985915492958&gt;0,1.0x+0y+1z-76.0&gt;0,-1.0x+0y+1z+384.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": true,
+      "palletType": 4,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 90,
+      "topLength": 460,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": 71,
+      "volumeAllowed": "17.96",
+      "gmtCreate": 1681125743000
+    },
+    {
+      "id": 225,
+      "companyId": "*",
+      "airplaneId": "B-777F",
+      "containerId": "W3",
+      "length": 396,
+      "width": 244,
+      "height": 160,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.2820512820512822",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-50.00000000000001",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.2820512820512822",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "457.69230769230774",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-44.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "352.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[39.0,244.0,0.0],[357.0,244.0,0.0],[357.0,0.0,0.0],[39.0,0.0,0.0],[0.0,244.0,50.0],[396.0,244.0,50.0],[396.0,0.0,50.0],[0.0,0.0,50.0],[0.0,244.0,160.0],[396.0,244.0,160.0],[396.0,0.0,160.0],[0.0,0.0,160.0]]",
+      "hyperplane": "1.2820512820512822x+0y+1z-50.00000000000001&gt;0,-1.2820512820512822x+0y+1z+457.69230769230774&gt;0,1.0x+0y+1z-44.0&gt;0,-1.0x+0y+1z+352.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": true,
+      "palletType": 4,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 50,
+      "topLength": 396,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 85,
+      "maxDetectDistance": 39,
+      "volumeAllowed": "15.46",
+      "gmtCreate": 1680170320000
+    },
+    {
+      "id": 239,
+      "companyId": "*",
+      "airplaneId": "B-747F",
+      "containerId": "Q6",
+      "length": 318,
+      "width": 244,
+      "height": 242,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,244.0,0.0],[318.0,244.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,244.0,242.0],[318.0,244.0,242.0],[318.0,0.0,242.0],[0.0,0.0,242.0],[0.0,244.0,242.0],[318.0,244.0,242.0],[318.0,0.0,242.0],[0.0,0.0,242.0]]",
+      "hyperplane": "1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 1,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 242,
+      "topLength": 318,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 50,
+      "maxDetectDistance": null,
+      "volumeAllowed": "18.78",
+      "gmtCreate": 1681115607000
+    },
+    {
+      "id": 240,
+      "companyId": "*",
+      "airplaneId": "B-747F",
+      "containerId": "S1",
+      "length": 318,
+      "width": 244,
+      "height": 242,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.7295081967213115",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-384.9836065573771",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.7295081967213115",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-153.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,244.0,0.0],[318.0,244.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,244.0,153.0],[318.0,244.0,153.0],[318.0,0.0,153.0],[0.0,0.0,153.0],[122.0,244.0,242.0],[196.0,244.0,242.0],[196.0,0.0,242.0],[122.0,0.0,242.0]]",
+      "hyperplane": "0.7295081967213115x+0y+1z-384.9836065573771&lt;0,-0.7295081967213115x+0y+1z-153.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 153,
+      "topLength": 74,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "16.13",
+      "gmtCreate": 1681120418000
+    },
+    {
+      "id": 241,
+      "companyId": "*",
+      "airplaneId": "B-747F",
+      "containerId": "S2",
+      "length": 318,
+      "width": 244,
+      "height": 242,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.85",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-756.3000000000001",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-1.85",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-168.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,244.0,0.0],[318.0,244.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,244.0,168.0],[318.0,244.0,168.0],[318.0,0.0,168.0],[0.0,0.0,168.0],[40.0,244.0,242.0],[278.0,244.0,242.0],[278.0,0.0,242.0],[40.0,0.0,242.0]]",
+      "hyperplane": "1.85x+0y+1z-756.3000000000001&lt;0,-1.85x+0y+1z-168.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 168,
+      "topLength": 238,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "18.06",
+      "gmtCreate": 1681124009000
+    },
+    {
+      "id": 243,
+      "companyId": "*",
+      "airplaneId": "B-747F",
+      "containerId": "QM",
+      "length": 318,
+      "width": 244,
+      "height": 160,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,244.0,0.0],[318.0,244.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,244.0,160.0],[318.0,244.0,160.0],[318.0,0.0,160.0],[0.0,0.0,160.0],[0.0,244.0,160.0],[318.0,244.0,160.0],[318.0,0.0,160.0],[0.0,0.0,160.0]]",
+      "hyperplane": "1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 1,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 160,
+      "topLength": 318,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 9,
+      "maxDetectDistance": null,
+      "volumeAllowed": "12.41",
+      "gmtCreate": 1681124922000
+    },
+    {
+      "id": 250,
+      "companyId": "*",
+      "airplaneId": "A300-600",
+      "containerId": "J-R",
+      "length": 318,
+      "width": 244,
+      "height": 198,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.9333333333333333",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-466.8",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.9333333333333333",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-170.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,244.0,0.0],[318.0,244.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,244.0,170.0],[318.0,244.0,170.0],[318.0,0.0,170.0],[0.0,0.0,170.0],[30.0,244.0,198.0],[288.0,244.0,198.0],[288.0,0.0,198.0],[30.0,0.0,198.0]]",
+      "hyperplane": "0.9333333333333333x+0y+1z-466.8&lt;0,-0.9333333333333333x+0y+1z-170.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 170,
+      "topLength": 258,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "15.16",
+      "gmtCreate": 1681455032000
+    },
+    {
+      "id": 251,
+      "companyId": "*",
+      "airplaneId": "A300-600",
+      "containerId": "PLA",
+      "length": 318,
+      "width": 153,
+      "height": 160,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "148.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,153.0,0.0],[318.0,153.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,153.0,160.0],[318.0,153.0,160.0],[318.0,0.0,160.0],[0.0,0.0,160.0],[0.0,153.0,160.0],[318.0,153.0,160.0],[318.0,0.0,160.0],[0.0,0.0,160.0]]",
+      "hyperplane": "1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+148.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 1,
+      "innerLength": 308,
+      "innerWidth": 143,
+      "reefedHeight": 160,
+      "topLength": 318,
+      "topWidth": 153,
+      "bottomLength": 318,
+      "bottomWidth": 153,
+      "privateOwner": 0,
+      "num": 30,
+      "maxDetectDistance": null,
+      "volumeAllowed": "7.78",
+      "gmtCreate": 1681455811000
+    },
+    {
+      "id": 252,
+      "companyId": "*",
+      "airplaneId": "A300-600",
+      "containerId": "PAG",
+      "length": 318,
+      "width": 224,
+      "height": 160,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,224.0,0.0],[318.0,224.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,224.0,160.0],[318.0,224.0,160.0],[318.0,0.0,160.0],[0.0,0.0,160.0],[0.0,224.0,160.0],[318.0,224.0,160.0],[318.0,0.0,160.0],[0.0,0.0,160.0]]",
+      "hyperplane": "1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+219.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 1,
+      "innerLength": 308,
+      "innerWidth": 214,
+      "reefedHeight": 160,
+      "topLength": 318,
+      "topWidth": 224,
+      "bottomLength": 318,
+      "bottomWidth": 224,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "11.40",
+      "gmtCreate": 1681455973000
+    },
+    {
+      "id": 253,
+      "companyId": "*",
+      "airplaneId": "A330",
+      "containerId": "A2",
+      "length": 318,
+      "width": 244,
+      "height": 160,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,244.0,0.0],[318.0,244.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,244.0,160.0],[318.0,244.0,160.0],[318.0,0.0,160.0],[0.0,0.0,160.0],[0.0,244.0,160.0],[318.0,244.0,160.0],[318.0,0.0,160.0],[0.0,0.0,160.0]]",
+      "hyperplane": "1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 1,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 160,
+      "topLength": 318,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 1,
+      "maxDetectDistance": null,
+      "volumeAllowed": "12.41",
+      "gmtCreate": 1681456118000
+    },
+    {
+      "id": 255,
+      "companyId": "*",
+      "airplaneId": "A330",
+      "containerId": "XJ",
+      "length": 318,
+      "width": 244,
+      "height": 242,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.5686274509803921",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-393.8235294117647",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.5686274509803921",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-213.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,244.0,0.0],[318.0,244.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,244.0,213.0],[318.0,244.0,213.0],[318.0,0.0,213.0],[0.0,0.0,213.0],[51.0,244.0,242.0],[267.0,244.0,242.0],[267.0,0.0,242.0],[51.0,0.0,242.0]]",
+      "hyperplane": "0.5686274509803921x+0y+1z-393.8235294117647&lt;0,-0.5686274509803921x+0y+1z-213.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 213,
+      "topLength": 216,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "18.42",
+      "gmtCreate": 1681458155000
+    },
+    {
+      "id": 257,
+      "companyId": "*",
+      "airplaneId": "A330",
+      "containerId": "ZY(RR)",
+      "length": 318,
+      "width": 244,
+      "height": 234,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.5057471264367817",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-350.82758620689657",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.5057471264367817",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-190.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,244.0,0.0],[318.0,244.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,244.0,190.0],[318.0,244.0,190.0],[318.0,0.0,190.0],[0.0,0.0,190.0],[87.0,244.0,234.0],[231.0,244.0,234.0],[231.0,0.0,234.0],[87.0,0.0,234.0]]",
+      "hyperplane": "0.5057471264367817x+0y+1z-350.82758620689657&lt;0,-0.5057471264367817x+0y+1z-190.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 190,
+      "topLength": 144,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "17.22",
+      "gmtCreate": 1681459041000
+    },
+    {
+      "id": 258,
+      "companyId": "*",
+      "airplaneId": "A330",
+      "containerId": "ZY(PP)",
+      "length": 318,
+      "width": 244,
+      "height": 239,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.41379310344827586",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-334.58620689655174",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.41379310344827586",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-203.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,244.0,0.0],[318.0,244.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,244.0,203.0],[318.0,244.0,203.0],[318.0,0.0,203.0],[0.0,0.0,203.0],[87.0,244.0,239.0],[231.0,244.0,239.0],[231.0,0.0,239.0],[87.0,0.0,239.0]]",
+      "hyperplane": "0.41379310344827586x+0y+1z-334.58620689655174&lt;0,-0.41379310344827586x+0y+1z-203.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 203,
+      "topLength": 144,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "17.78",
+      "gmtCreate": 1681459193000
+    },
+    {
+      "id": 259,
+      "companyId": "*",
+      "airplaneId": "A330",
+      "containerId": "ZR(SS)",
+      "length": 318,
+      "width": 244,
+      "height": 229,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.5977011494252874",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-367.0689655172414",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.5977011494252874",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-177.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,244.0,0.0],[318.0,244.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,244.0,177.0],[318.0,244.0,177.0],[318.0,0.0,177.0],[0.0,0.0,177.0],[87.0,244.0,229.0],[231.0,244.0,229.0],[231.0,0.0,229.0],[87.0,0.0,229.0]]",
+      "hyperplane": "0.5977011494252874x+0y+1z-367.0689655172414&lt;0,-0.5977011494252874x+0y+1z-177.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 177,
+      "topLength": 144,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "16.66",
+      "gmtCreate": 1681459471000
+    },
+    {
+      "id": 261,
+      "companyId": "*",
+      "airplaneId": "A330",
+      "containerId": "ZL(MD)",
+      "length": 244,
+      "width": 318,
+      "height": 244,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.094890510948905",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-361.15328467153284",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,318.0,0.0],[244.0,318.0,0.0],[244.0,0.0,0.0],[0.0,0.0,0.0],[0.0,318.0,94.0],[244.0,318.0,94.0],[244.0,0.0,94.0],[0.0,0.0,94.0],[0.0,318.0,244.0],[107.0,318.0,244.0],[107.0,0.0,244.0],[0.0,0.0,244.0]]",
+      "hyperplane": "1.094890510948905x+0y+1z-361.15328467153284&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+239.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+313.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 2,
+      "innerLength": 234,
+      "innerWidth": 308,
+      "reefedHeight": 94,
+      "topLength": 107,
+      "topWidth": 318,
+      "bottomLength": 244,
+      "bottomWidth": 318,
+      "privateOwner": 0,
+      "num": 1,
+      "maxDetectDistance": null,
+      "volumeAllowed": "15.66",
+      "gmtCreate": 1681720395000
+    },
+    {
+      "id": 260,
+      "companyId": "*",
+      "airplaneId": "A330",
+      "containerId": "ZR(TT)",
+      "length": 318,
+      "width": 244,
+      "height": 226,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.8505747126436781",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-422.48275862068965",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.8505747126436781",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-152.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,244.0,0.0],[318.0,244.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,244.0,152.0],[318.0,244.0,152.0],[318.0,0.0,152.0],[0.0,0.0,152.0],[87.0,244.0,226.0],[231.0,244.0,226.0],[231.0,0.0,226.0],[87.0,0.0,226.0]]",
+      "hyperplane": "0.8505747126436781x+0y+1z-422.48275862068965&lt;0,-0.8505747126436781x+0y+1z-152.0&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 3,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 152,
+      "topLength": 144,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": null,
+      "volumeAllowed": "15.96",
+      "gmtCreate": 1681459854000
+    },
+    {
+      "id": 224,
+      "companyId": "*",
+      "airplaneId": "B-777F",
+      "containerId": "Q2",
+      "length": 318,
+      "width": 244,
+      "height": 160,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,244.0,0.0],[318.0,244.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,244.0,160.0],[318.0,244.0,160.0],[318.0,0.0,160.0],[0.0,0.0,160.0],[0.0,244.0,160.0],[318.0,244.0,160.0],[318.0,0.0,160.0],[0.0,0.0,160.0]]",
+      "hyperplane": "1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 1,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 160,
+      "topLength": 318,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 210,
+      "maxDetectDistance": null,
+      "volumeAllowed": "12.41",
+      "gmtCreate": 1680169902000
+    },
+    {
+      "id": 217,
+      "companyId": "*",
+      "airplaneId": "B-777F",
+      "containerId": "Q4",
+      "length": 244,
+      "width": 318,
+      "height": 290,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.1510791366906474",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-410.86330935251794",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,318.0,0.0],[244.0,318.0,0.0],[244.0,0.0,0.0],[0.0,0.0,0.0],[0.0,318.0,130.0],[244.0,318.0,130.0],[244.0,0.0,130.0],[0.0,0.0,130.0],[0.0,318.0,290.0],[105.0,318.0,290.0],[105.0,0.0,290.0],[0.0,0.0,290.0]]",
+      "hyperplane": "1.1510791366906474x+0y+1z-410.86330935251794&lt;0,1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+239.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+313.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 2,
+      "innerLength": 234,
+      "innerWidth": 308,
+      "reefedHeight": 130,
+      "topLength": 105,
+      "topWidth": 318,
+      "bottomLength": 244,
+      "bottomWidth": 318,
+      "privateOwner": 0,
+      "num": 133,
+      "maxDetectDistance": null,
+      "volumeAllowed": "18.97",
+      "gmtCreate": 1680169201000
+    },
+    {
+      "id": 278,
+      "companyId": "*",
+      "airplaneId": "A330",
+      "containerId": "H3(PAG)",
+      "length": 406,
+      "width": 224,
+      "height": 160,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.1590909090909092",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-51.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.1590909090909092",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "419.5909090909091",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-49.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "357.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[44.0,224.0,0.0],[362.0,224.0,0.0],[362.0,0.0,0.0],[44.0,0.0,0.0],[0.0,224.0,51.0],[406.0,224.0,51.0],[406.0,0.0,51.0],[0.0,0.0,51.0],[0.0,224.0,160.0],[406.0,224.0,160.0],[406.0,0.0,160.0],[0.0,0.0,160.0]]",
+      "hyperplane": "1.1590909090909092x+0y+1z-51.0&gt;0,-1.1590909090909092x+0y+1z+419.5909090909091&gt;0,1.0x+0y+1z-49.0&gt;0,-1.0x+0y+1z+357.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+219.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": true,
+      "palletType": 4,
+      "innerLength": 308,
+      "innerWidth": 214,
+      "reefedHeight": 51,
+      "topLength": 406,
+      "topWidth": 224,
+      "bottomLength": 318,
+      "bottomWidth": 224,
+      "privateOwner": 0,
+      "num": 0,
+      "maxDetectDistance": 44,
+      "volumeAllowed": "14.55",
+      "gmtCreate": 1682583492000
+    },
+    {
+      "id": 223,
+      "companyId": "*",
+      "airplaneId": "B-777F",
+      "containerId": "Q6(R)",
+      "length": 318,
+      "width": 244,
+      "height": 240,
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "pointCoordinate": "[[0.0,244.0,0.0],[318.0,244.0,0.0],[318.0,0.0,0.0],[0.0,0.0,0.0],[0.0,244.0,240.0],[318.0,244.0,240.0],[318.0,0.0,240.0],[0.0,0.0,240.0],[0.0,244.0,240.0],[318.0,244.0,240.0],[318.0,0.0,240.0],[0.0,0.0,240.0]]",
+      "hyperplane": "1.0x+0y+1z-5.0&gt;0,-1.0x+0y+1z+313.0&gt;0,0x+1.0y+1z-5.0&gt;0,0x-1.0y+1z+239.0&gt;0",
+      "palletRelease": 1,
+      "containerType": null,
+      "lowPallet": false,
+      "palletType": 1,
+      "innerLength": 308,
+      "innerWidth": 234,
+      "reefedHeight": 240,
+      "topLength": 318,
+      "topWidth": 244,
+      "bottomLength": 318,
+      "bottomWidth": 244,
+      "privateOwner": 0,
+      "num": 51,
+      "maxDetectDistance": null,
+      "volumeAllowed": "18.62",
+      "gmtCreate": 1680169856000
+    }
+  ]
+}

@@ -1,0 +1,8497 @@
+{
+  "source": "https://packio.cainiao.com/algo/data-manage",
+  "fetchedAt": "2026-08-18",
+  "total": 67,
+  "items": [
+    {
+      "index": 1,
+      "id": 1433,
+      "airlines": "*",
+      "airplane": "330",
+      "pallet": "QM-LD",
+      "publicBoard": true,
+      "baseOuterLengthCm": 406,
+      "baseOuterWidthCm": 244,
+      "heightCm": 160,
+      "transitionHeightCm": 50,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 406,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 15.85,
+      "lowPallet": true,
+      "palletType": 4,
+      "palletTypeName": "low-pallet-flare",
+      "maxDetectDistanceCm": 44,
+      "pointCoordinate": [
+        [
+          44,
+          244,
+          0
+        ],
+        [
+          362,
+          244,
+          0
+        ],
+        [
+          362,
+          0,
+          0
+        ],
+        [
+          44,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          50
+        ],
+        [
+          406,
+          244,
+          50
+        ],
+        [
+          406,
+          0,
+          50
+        ],
+        [
+          0,
+          0,
+          50
+        ],
+        [
+          0,
+          244,
+          160
+        ],
+        [
+          406,
+          244,
+          160
+        ],
+        [
+          406,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          160
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.1363636363636365",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-50.00000000000001",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.1363636363636365",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "411.3636363636364",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-49.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "357.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1743400850000
+    },
+    {
+      "index": 2,
+      "id": 1175,
+      "airlines": "*",
+      "airplane": "A330",
+      "pallet": "PMC - K4",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 244,
+      "heightCm": 239,
+      "transitionHeightCm": 155,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 146,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 16.78,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          244,
+          0
+        ],
+        [
+          318,
+          244,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          155
+        ],
+        [
+          318,
+          244,
+          155
+        ],
+        [
+          318,
+          0,
+          155
+        ],
+        [
+          0,
+          0,
+          155
+        ],
+        [
+          86,
+          244,
+          239
+        ],
+        [
+          232,
+          244,
+          239
+        ],
+        [
+          232,
+          0,
+          239
+        ],
+        [
+          86,
+          0,
+          239
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.9767441860465116",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-465.6046511627907",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.9767441860465116",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-155.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1731995760000
+    },
+    {
+      "index": 3,
+      "id": 1174,
+      "airlines": "*",
+      "airplane": "A330",
+      "pallet": "PMC - L2",
+      "publicBoard": true,
+      "baseOuterLengthCm": 244,
+      "baseOuterWidthCm": 318,
+      "heightCm": 244,
+      "transitionHeightCm": 91,
+      "status": "Active",
+      "innerLengthCm": 234,
+      "innerWidthCm": 308,
+      "topLengthCm": 94,
+      "topWidthCm": 318,
+      "bottomLengthCm": 244,
+      "bottomWidthCm": 318,
+      "volumeAllowedM3": 15.28,
+      "lowPallet": false,
+      "palletType": 2,
+      "palletTypeName": "slope-one-side",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          318,
+          0
+        ],
+        [
+          244,
+          318,
+          0
+        ],
+        [
+          244,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          318,
+          91
+        ],
+        [
+          244,
+          318,
+          91
+        ],
+        [
+          244,
+          0,
+          91
+        ],
+        [
+          0,
+          0,
+          91
+        ],
+        [
+          0,
+          318,
+          244
+        ],
+        [
+          94,
+          318,
+          244
+        ],
+        [
+          94,
+          0,
+          244
+        ],
+        [
+          0,
+          0,
+          244
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.02",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-339.88",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1731995552000
+    },
+    {
+      "index": 4,
+      "id": 1148,
+      "airlines": "*",
+      "airplane": "B-747F",
+      "pallet": "W2",
+      "publicBoard": true,
+      "baseOuterLengthCm": 460,
+      "baseOuterWidthCm": 244,
+      "heightCm": 160,
+      "transitionHeightCm": 50,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 460,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 17.96,
+      "lowPallet": true,
+      "palletType": 4,
+      "palletTypeName": "low-pallet-flare",
+      "maxDetectDistanceCm": 71,
+      "pointCoordinate": [
+        [
+          71,
+          244,
+          0
+        ],
+        [
+          389,
+          244,
+          0
+        ],
+        [
+          389,
+          0,
+          0
+        ],
+        [
+          71,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          50
+        ],
+        [
+          460,
+          244,
+          50
+        ],
+        [
+          460,
+          0,
+          50
+        ],
+        [
+          0,
+          0,
+          50
+        ],
+        [
+          0,
+          244,
+          160
+        ],
+        [
+          460,
+          244,
+          160
+        ],
+        [
+          460,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          160
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.704225352112676",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-50.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-0.704225352112676",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "273.943661971831",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-76.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "384.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1729509199000
+    },
+    {
+      "index": 5,
+      "id": 1089,
+      "airlines": "*",
+      "airplane": "B-747F",
+      "pallet": "BULK",
+      "publicBoard": true,
+      "baseOuterLengthCm": 244,
+      "baseOuterWidthCm": 532,
+      "heightCm": 100,
+      "transitionHeightCm": 100,
+      "status": "Active",
+      "innerLengthCm": 234,
+      "innerWidthCm": 522,
+      "topLengthCm": 244,
+      "topWidthCm": 532,
+      "bottomLengthCm": 244,
+      "bottomWidthCm": 532,
+      "volumeAllowedM3": 12.98,
+      "lowPallet": false,
+      "palletType": 1,
+      "palletTypeName": "box",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          532,
+          0
+        ],
+        [
+          244,
+          532,
+          0
+        ],
+        [
+          244,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          532,
+          100
+        ],
+        [
+          244,
+          532,
+          100
+        ],
+        [
+          244,
+          0,
+          100
+        ],
+        [
+          0,
+          0,
+          100
+        ],
+        [
+          0,
+          532,
+          100
+        ],
+        [
+          244,
+          532,
+          100
+        ],
+        [
+          244,
+          0,
+          100
+        ],
+        [
+          0,
+          0,
+          100
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "527.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1726037389000
+    },
+    {
+      "index": 6,
+      "id": 1063,
+      "airlines": "*",
+      "airplane": "B767-300",
+      "pallet": "P8",
+      "publicBoard": true,
+      "baseOuterLengthCm": 244,
+      "baseOuterWidthCm": 153,
+      "heightCm": 163,
+      "transitionHeightCm": 163,
+      "status": "Active",
+      "innerLengthCm": 234,
+      "innerWidthCm": 143,
+      "topLengthCm": 244,
+      "topWidthCm": 153,
+      "bottomLengthCm": 244,
+      "bottomWidthCm": 153,
+      "volumeAllowedM3": 6.09,
+      "lowPallet": false,
+      "palletType": 1,
+      "palletTypeName": "box",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          153,
+          0
+        ],
+        [
+          244,
+          153,
+          0
+        ],
+        [
+          244,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          153,
+          163
+        ],
+        [
+          244,
+          153,
+          163
+        ],
+        [
+          244,
+          0,
+          163
+        ],
+        [
+          0,
+          0,
+          163
+        ],
+        [
+          0,
+          153,
+          163
+        ],
+        [
+          244,
+          153,
+          163
+        ],
+        [
+          244,
+          0,
+          163
+        ],
+        [
+          0,
+          0,
+          163
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "148.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1724312835000
+    },
+    {
+      "index": 7,
+      "id": 1049,
+      "airlines": "*",
+      "airplane": "B-777F",
+      "pallet": "H9G",
+      "publicBoard": true,
+      "baseOuterLengthCm": 488,
+      "baseOuterWidthCm": 600,
+      "heightCm": 300,
+      "transitionHeightCm": 190,
+      "status": "Active",
+      "innerLengthCm": 476,
+      "innerWidthCm": 600,
+      "topLengthCm": 240,
+      "topWidthCm": 600,
+      "bottomLengthCm": 488,
+      "bottomWidthCm": 600,
+      "volumeAllowedM3": 79.66,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          600,
+          0
+        ],
+        [
+          488,
+          600,
+          0
+        ],
+        [
+          488,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          600,
+          190
+        ],
+        [
+          488,
+          600,
+          190
+        ],
+        [
+          488,
+          0,
+          190
+        ],
+        [
+          0,
+          0,
+          190
+        ],
+        [
+          124,
+          600,
+          300
+        ],
+        [
+          364,
+          600,
+          300
+        ],
+        [
+          364,
+          0,
+          300
+        ],
+        [
+          124,
+          0,
+          300
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.8870967741935484",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-622.9032258064516",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.8870967741935484",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-190.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "0.8333333333333334",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-0.8333333333333334",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "401.6666666666667",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-Infinity",
+          "hyperplaneC": "1",
+          "hyperplaneD": "NaN",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-Infinity",
+          "hyperplaneC": "1",
+          "hyperplaneD": "Infinity",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1723186199000
+    },
+    {
+      "index": 8,
+      "id": 945,
+      "airlines": "*",
+      "airplane": "B737-800F",
+      "pallet": "AFT",
+      "publicBoard": true,
+      "baseOuterLengthCm": 292,
+      "baseOuterWidthCm": 605,
+      "heightCm": 119,
+      "transitionHeightCm": 40,
+      "status": "Active",
+      "innerLengthCm": 122,
+      "innerWidthCm": 605,
+      "topLengthCm": 292,
+      "topWidthCm": 605,
+      "bottomLengthCm": 122,
+      "bottomWidthCm": 605,
+      "volumeAllowedM3": 21.02,
+      "lowPallet": true,
+      "palletType": 4,
+      "palletTypeName": "low-pallet-flare",
+      "maxDetectDistanceCm": 85,
+      "pointCoordinate": [
+        [
+          85,
+          605,
+          0
+        ],
+        [
+          207,
+          605,
+          0
+        ],
+        [
+          207,
+          0,
+          0
+        ],
+        [
+          85,
+          0,
+          0
+        ],
+        [
+          0,
+          605,
+          40
+        ],
+        [
+          292,
+          605,
+          40
+        ],
+        [
+          292,
+          0,
+          40
+        ],
+        [
+          0,
+          0,
+          40
+        ],
+        [
+          0,
+          605,
+          119
+        ],
+        [
+          292,
+          605,
+          119
+        ],
+        [
+          292,
+          0,
+          119
+        ],
+        [
+          0,
+          0,
+          119
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.47058823529411764",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-40.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-0.47058823529411764",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "97.41176470588235",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-Infinity",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "Infinity",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-Infinity",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "Infinity",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-Infinity",
+          "hyperplaneC": "1",
+          "hyperplaneD": "NaN",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-Infinity",
+          "hyperplaneC": "1",
+          "hyperplaneD": "Infinity",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1719477516000
+    },
+    {
+      "index": 9,
+      "id": 944,
+      "airlines": "*",
+      "airplane": "B737-800F",
+      "pallet": "FWD",
+      "publicBoard": true,
+      "baseOuterLengthCm": 305,
+      "baseOuterWidthCm": 308,
+      "heightCm": 112,
+      "transitionHeightCm": 40,
+      "status": "Active",
+      "innerLengthCm": 122,
+      "innerWidthCm": 308,
+      "topLengthCm": 305,
+      "topWidthCm": 308,
+      "bottomLengthCm": 122,
+      "bottomWidthCm": 308,
+      "volumeAllowedM3": 10.52,
+      "lowPallet": true,
+      "palletType": 4,
+      "palletTypeName": "low-pallet-flare",
+      "maxDetectDistanceCm": 91.5,
+      "pointCoordinate": [
+        [
+          91.5,
+          308,
+          0
+        ],
+        [
+          213.5,
+          308,
+          0
+        ],
+        [
+          213.5,
+          0,
+          0
+        ],
+        [
+          91.5,
+          0,
+          0
+        ],
+        [
+          0,
+          308,
+          40
+        ],
+        [
+          305,
+          308,
+          40
+        ],
+        [
+          305,
+          0,
+          40
+        ],
+        [
+          0,
+          0,
+          40
+        ],
+        [
+          0,
+          308,
+          112
+        ],
+        [
+          305,
+          308,
+          112
+        ],
+        [
+          305,
+          0,
+          112
+        ],
+        [
+          0,
+          0,
+          112
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.4371584699453552",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-40.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-0.4371584699453552",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "93.33333333333333",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-Infinity",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "Infinity",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-Infinity",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "Infinity",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-Infinity",
+          "hyperplaneC": "1",
+          "hyperplaneD": "NaN",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-Infinity",
+          "hyperplaneC": "1",
+          "hyperplaneD": "Infinity",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1719477399000
+    },
+    {
+      "index": 10,
+      "id": 814,
+      "airlines": "*",
+      "airplane": "B767-300",
+      "pallet": "PMC-探",
+      "publicBoard": true,
+      "baseOuterLengthCm": 400,
+      "baseOuterWidthCm": 244,
+      "heightCm": 200,
+      "transitionHeightCm": 33,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 400,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 19.52,
+      "lowPallet": true,
+      "palletType": 4,
+      "palletTypeName": "low-pallet-flare",
+      "maxDetectDistanceCm": 41,
+      "pointCoordinate": [
+        [
+          41,
+          244,
+          0
+        ],
+        [
+          359,
+          244,
+          0
+        ],
+        [
+          359,
+          0,
+          0
+        ],
+        [
+          41,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          33
+        ],
+        [
+          400,
+          244,
+          33
+        ],
+        [
+          400,
+          0,
+          33
+        ],
+        [
+          0,
+          0,
+          33
+        ],
+        [
+          0,
+          244,
+          200
+        ],
+        [
+          400,
+          244,
+          200
+        ],
+        [
+          400,
+          0,
+          200
+        ],
+        [
+          0,
+          0,
+          200
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.8048780487804879",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-33.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-0.8048780487804879",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "288.95121951219517",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-46.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "354.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1716450589000
+    },
+    {
+      "index": 11,
+      "id": 679,
+      "airlines": "*",
+      "airplane": "B767-300",
+      "pallet": "LD8",
+      "publicBoard": true,
+      "baseOuterLengthCm": 317,
+      "baseOuterWidthCm": 153,
+      "heightCm": 163,
+      "transitionHeightCm": 43,
+      "status": "Active",
+      "innerLengthCm": 234,
+      "innerWidthCm": 143,
+      "topLengthCm": 317,
+      "topWidthCm": 153,
+      "bottomLengthCm": 244,
+      "bottomWidthCm": 153,
+      "volumeAllowedM3": 7.91,
+      "lowPallet": true,
+      "palletType": 4,
+      "palletTypeName": "low-pallet-flare",
+      "maxDetectDistanceCm": 36.5,
+      "pointCoordinate": [
+        [
+          36.5,
+          153,
+          0
+        ],
+        [
+          280.5,
+          153,
+          0
+        ],
+        [
+          280.5,
+          0,
+          0
+        ],
+        [
+          36.5,
+          0,
+          0
+        ],
+        [
+          0,
+          153,
+          43
+        ],
+        [
+          317,
+          153,
+          43
+        ],
+        [
+          317,
+          0,
+          43
+        ],
+        [
+          0,
+          0,
+          43
+        ],
+        [
+          0,
+          153,
+          163
+        ],
+        [
+          317,
+          153,
+          163
+        ],
+        [
+          317,
+          0,
+          163
+        ],
+        [
+          0,
+          0,
+          163
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.178082191780822",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-43.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.178082191780822",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "330.45205479452056",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-41.5",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "275.5",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "148.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1715063584000
+    },
+    {
+      "index": 12,
+      "id": 677,
+      "airlines": null,
+      "airplane": "B767-300",
+      "pallet": "PMC",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 244,
+      "heightCm": 163,
+      "transitionHeightCm": 163,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 318,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 12.65,
+      "lowPallet": false,
+      "palletType": 1,
+      "palletTypeName": "box",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          244,
+          0
+        ],
+        [
+          318,
+          244,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          163
+        ],
+        [
+          318,
+          244,
+          163
+        ],
+        [
+          318,
+          0,
+          163
+        ],
+        [
+          0,
+          0,
+          163
+        ],
+        [
+          0,
+          244,
+          163
+        ],
+        [
+          318,
+          244,
+          163
+        ],
+        [
+          318,
+          0,
+          163
+        ],
+        [
+          0,
+          0,
+          163
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1715063413000
+    },
+    {
+      "index": 13,
+      "id": 676,
+      "airlines": "*",
+      "airplane": "B767-300",
+      "pallet": "Q2(A2-A12)",
+      "publicBoard": true,
+      "baseOuterLengthCm": 224,
+      "baseOuterWidthCm": 317,
+      "heightCm": 244,
+      "transitionHeightCm": 104,
+      "status": "Active",
+      "innerLengthCm": 214,
+      "innerWidthCm": 307,
+      "topLengthCm": 114,
+      "topWidthCm": 317,
+      "bottomLengthCm": 224,
+      "bottomWidthCm": 317,
+      "volumeAllowedM3": 14.89,
+      "lowPallet": false,
+      "palletType": 2,
+      "palletTypeName": "slope-one-side",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          317,
+          0
+        ],
+        [
+          224,
+          317,
+          0
+        ],
+        [
+          224,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          317,
+          104
+        ],
+        [
+          224,
+          317,
+          104
+        ],
+        [
+          224,
+          0,
+          104
+        ],
+        [
+          0,
+          0,
+          104
+        ],
+        [
+          0,
+          317,
+          244
+        ],
+        [
+          114,
+          317,
+          244
+        ],
+        [
+          114,
+          0,
+          244
+        ],
+        [
+          0,
+          0,
+          244
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.2727272727272727",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-389.09090909090907",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "312.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1715063287000
+    },
+    {
+      "index": 14,
+      "id": 675,
+      "airlines": "*",
+      "airplane": "B767-300",
+      "pallet": "Q1(A1&A13)",
+      "publicBoard": true,
+      "baseOuterLengthCm": 317,
+      "baseOuterWidthCm": 224,
+      "heightCm": 201,
+      "transitionHeightCm": 119,
+      "status": "Active",
+      "innerLengthCm": 307,
+      "innerWidthCm": 214,
+      "topLengthCm": 123,
+      "topWidthCm": 224,
+      "bottomLengthCm": 317,
+      "bottomWidthCm": 224,
+      "volumeAllowedM3": 12.49,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          224,
+          0
+        ],
+        [
+          317,
+          224,
+          0
+        ],
+        [
+          317,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          224,
+          119
+        ],
+        [
+          317,
+          224,
+          119
+        ],
+        [
+          317,
+          0,
+          119
+        ],
+        [
+          0,
+          0,
+          119
+        ],
+        [
+          97,
+          224,
+          201
+        ],
+        [
+          220,
+          224,
+          201
+        ],
+        [
+          220,
+          0,
+          201
+        ],
+        [
+          97,
+          0,
+          201
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.845360824742268",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-386.97938144329896",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.845360824742268",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-119.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "312.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1715063166000
+    },
+    {
+      "index": 15,
+      "id": 674,
+      "airlines": "*",
+      "airplane": "B737-800",
+      "pallet": "PMC",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 244,
+      "heightCm": 200,
+      "transitionHeightCm": 120,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 130,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 13.68,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          244,
+          0
+        ],
+        [
+          318,
+          244,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          120
+        ],
+        [
+          318,
+          244,
+          120
+        ],
+        [
+          318,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          120
+        ],
+        [
+          94,
+          244,
+          200
+        ],
+        [
+          224,
+          244,
+          200
+        ],
+        [
+          224,
+          0,
+          200
+        ],
+        [
+          94,
+          0,
+          200
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.851063829787234",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-390.63829787234044",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.851063829787234",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-120.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1715061284000
+    },
+    {
+      "index": 16,
+      "id": 669,
+      "airlines": "*",
+      "airplane": "B737-800",
+      "pallet": "P11",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 224,
+      "heightCm": 198,
+      "transitionHeightCm": 106,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 214,
+      "topLengthCm": 134,
+      "topWidthCm": 224,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 224,
+      "volumeAllowedM3": 12.21,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          224,
+          0
+        ],
+        [
+          318,
+          224,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          224,
+          106
+        ],
+        [
+          318,
+          224,
+          106
+        ],
+        [
+          318,
+          0,
+          106
+        ],
+        [
+          0,
+          0,
+          106
+        ],
+        [
+          92,
+          224,
+          198
+        ],
+        [
+          226,
+          224,
+          198
+        ],
+        [
+          226,
+          0,
+          198
+        ],
+        [
+          92,
+          0,
+          198
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-424.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-106.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1715060502000
+    },
+    {
+      "index": 17,
+      "id": 668,
+      "airlines": "*",
+      "airplane": "B737-800",
+      "pallet": "P2-P10",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 224,
+      "heightCm": 198,
+      "transitionHeightCm": 111,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 214,
+      "topLengthCm": 134,
+      "topWidthCm": 224,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 224,
+      "volumeAllowedM3": 12.31,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          224,
+          0
+        ],
+        [
+          318,
+          224,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          224,
+          111
+        ],
+        [
+          318,
+          224,
+          111
+        ],
+        [
+          318,
+          0,
+          111
+        ],
+        [
+          0,
+          0,
+          111
+        ],
+        [
+          92,
+          224,
+          198
+        ],
+        [
+          226,
+          224,
+          198
+        ],
+        [
+          226,
+          0,
+          198
+        ],
+        [
+          92,
+          0,
+          198
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.9456521739130435",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-411.7173913043478",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.9456521739130435",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-111.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1715060367000
+    },
+    {
+      "index": 18,
+      "id": 667,
+      "airlines": "*",
+      "airplane": "B737-800",
+      "pallet": "P1",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 224,
+      "heightCm": 198,
+      "transitionHeightCm": 99,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 214,
+      "topLengthCm": 93,
+      "topWidthCm": 224,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 224,
+      "volumeAllowedM3": 11.61,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          224,
+          0
+        ],
+        [
+          318,
+          224,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          224,
+          99
+        ],
+        [
+          318,
+          224,
+          99
+        ],
+        [
+          318,
+          0,
+          99
+        ],
+        [
+          0,
+          0,
+          99
+        ],
+        [
+          112.5,
+          224,
+          198
+        ],
+        [
+          205.5,
+          224,
+          198
+        ],
+        [
+          205.5,
+          0,
+          198
+        ],
+        [
+          112.5,
+          0,
+          198
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.88",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-378.84",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.88",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-99.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1715060285000
+    },
+    {
+      "index": 19,
+      "id": 608,
+      "airlines": "*",
+      "airplane": "B737-800F",
+      "pallet": "C11",
+      "publicBoard": true,
+      "baseOuterLengthCm": 317,
+      "baseOuterWidthCm": 224,
+      "heightCm": 193,
+      "transitionHeightCm": 105,
+      "status": "Active",
+      "innerLengthCm": 307,
+      "innerWidthCm": 214,
+      "topLengthCm": 135,
+      "topWidthCm": 224,
+      "bottomLengthCm": 317,
+      "bottomWidthCm": 224,
+      "volumeAllowedM3": 11.91,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          224,
+          0
+        ],
+        [
+          317,
+          224,
+          0
+        ],
+        [
+          317,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          224,
+          105
+        ],
+        [
+          317,
+          224,
+          105
+        ],
+        [
+          317,
+          0,
+          105
+        ],
+        [
+          0,
+          0,
+          105
+        ],
+        [
+          91,
+          224,
+          193
+        ],
+        [
+          226,
+          224,
+          193
+        ],
+        [
+          226,
+          0,
+          193
+        ],
+        [
+          91,
+          0,
+          193
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.967032967032967",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-411.54945054945057",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.967032967032967",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-105.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "312.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1712814467000
+    },
+    {
+      "index": 20,
+      "id": 606,
+      "airlines": "*",
+      "airplane": "B737-800F",
+      "pallet": "C1",
+      "publicBoard": true,
+      "baseOuterLengthCm": 317,
+      "baseOuterWidthCm": 224,
+      "heightCm": 193,
+      "transitionHeightCm": 95,
+      "status": "Active",
+      "innerLengthCm": 307,
+      "innerWidthCm": 214,
+      "topLengthCm": 135,
+      "topWidthCm": 224,
+      "bottomLengthCm": 317,
+      "bottomWidthCm": 224,
+      "volumeAllowedM3": 11.71,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          224,
+          0
+        ],
+        [
+          317,
+          224,
+          0
+        ],
+        [
+          317,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          224,
+          95
+        ],
+        [
+          317,
+          224,
+          95
+        ],
+        [
+          317,
+          0,
+          95
+        ],
+        [
+          0,
+          0,
+          95
+        ],
+        [
+          91,
+          224,
+          193
+        ],
+        [
+          226,
+          224,
+          193
+        ],
+        [
+          226,
+          0,
+          193
+        ],
+        [
+          91,
+          0,
+          193
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0769230769230769",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-436.38461538461536",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-1.0769230769230769",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-95.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "312.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1712814342000
+    },
+    {
+      "index": 21,
+      "id": 607,
+      "airlines": "*",
+      "airplane": "B737-800F",
+      "pallet": "C2-C10",
+      "publicBoard": true,
+      "baseOuterLengthCm": 317,
+      "baseOuterWidthCm": 224,
+      "heightCm": 193,
+      "transitionHeightCm": 125,
+      "status": "Active",
+      "innerLengthCm": 307,
+      "innerWidthCm": 214,
+      "topLengthCm": 135,
+      "topWidthCm": 224,
+      "bottomLengthCm": 317,
+      "bottomWidthCm": 224,
+      "volumeAllowedM3": 12.32,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          224,
+          0
+        ],
+        [
+          317,
+          224,
+          0
+        ],
+        [
+          317,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          224,
+          125
+        ],
+        [
+          317,
+          224,
+          125
+        ],
+        [
+          317,
+          0,
+          125
+        ],
+        [
+          0,
+          0,
+          125
+        ],
+        [
+          91,
+          224,
+          193
+        ],
+        [
+          226,
+          224,
+          193
+        ],
+        [
+          226,
+          0,
+          193
+        ],
+        [
+          91,
+          0,
+          193
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.7472527472527473",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-361.8791208791209",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.7472527472527473",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-125.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "312.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1712814397000
+    },
+    {
+      "index": 22,
+      "id": 605,
+      "airlines": "*",
+      "airplane": "B737-400F",
+      "pallet": "C11",
+      "publicBoard": true,
+      "baseOuterLengthCm": 223,
+      "baseOuterWidthCm": 224,
+      "heightCm": 170,
+      "transitionHeightCm": 125,
+      "status": "Active",
+      "innerLengthCm": 213,
+      "innerWidthCm": 214,
+      "topLengthCm": 121,
+      "topWidthCm": 224,
+      "bottomLengthCm": 223,
+      "bottomWidthCm": 224,
+      "volumeAllowedM3": 7.98,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          224,
+          0
+        ],
+        [
+          223,
+          224,
+          0
+        ],
+        [
+          223,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          224,
+          125
+        ],
+        [
+          223,
+          224,
+          125
+        ],
+        [
+          223,
+          0,
+          125
+        ],
+        [
+          0,
+          0,
+          125
+        ],
+        [
+          51,
+          224,
+          170
+        ],
+        [
+          172,
+          224,
+          170
+        ],
+        [
+          172,
+          0,
+          170
+        ],
+        [
+          51,
+          0,
+          170
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.8823529411764706",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-321.7647058823529",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.8823529411764706",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-125.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "218.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1712814234000
+    },
+    {
+      "index": 23,
+      "id": 600,
+      "airlines": "*",
+      "airplane": "B737-300F",
+      "pallet": "C1-C8",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 224,
+      "heightCm": 193,
+      "transitionHeightCm": 125,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 214,
+      "topLengthCm": 135,
+      "topWidthCm": 224,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 224,
+      "volumeAllowedM3": 12.35,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          224,
+          0
+        ],
+        [
+          318,
+          224,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          224,
+          125
+        ],
+        [
+          318,
+          224,
+          125
+        ],
+        [
+          318,
+          0,
+          125
+        ],
+        [
+          0,
+          0,
+          125
+        ],
+        [
+          91.5,
+          224,
+          193
+        ],
+        [
+          226.5,
+          224,
+          193
+        ],
+        [
+          226.5,
+          0,
+          193
+        ],
+        [
+          91.5,
+          0,
+          193
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.7431693989071039",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-361.327868852459",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.7431693989071039",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-125.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1712807380000
+    },
+    {
+      "index": 24,
+      "id": 601,
+      "airlines": "*",
+      "airplane": "B737-400F",
+      "pallet": "C2-C10",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 224,
+      "heightCm": 193,
+      "transitionHeightCm": 125,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 213,
+      "topLengthCm": 135,
+      "topWidthCm": 224,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 224,
+      "volumeAllowedM3": 12.35,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          224,
+          0
+        ],
+        [
+          318,
+          224,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          224,
+          125
+        ],
+        [
+          318,
+          224,
+          125
+        ],
+        [
+          318,
+          0,
+          125
+        ],
+        [
+          0,
+          0,
+          125
+        ],
+        [
+          91.5,
+          224,
+          193
+        ],
+        [
+          226.5,
+          224,
+          193
+        ],
+        [
+          226.5,
+          0,
+          193
+        ],
+        [
+          91.5,
+          0,
+          193
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.7431693989071039",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-361.327868852459",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.7431693989071039",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-125.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "0.9090909090909091",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-0.9090909090909091",
+          "hyperplaneC": "1",
+          "hyperplaneD": "198.63636363636363",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1712807481000
+    },
+    {
+      "index": 25,
+      "id": 599,
+      "airlines": "*",
+      "airplane": "B767-300",
+      "pallet": "PAG(A2-A12)",
+      "publicBoard": true,
+      "baseOuterLengthCm": 223,
+      "baseOuterWidthCm": 317,
+      "heightCm": 243,
+      "transitionHeightCm": 108,
+      "status": "Active",
+      "innerLengthCm": 213,
+      "innerWidthCm": 307,
+      "topLengthCm": 114,
+      "topWidthCm": 317,
+      "bottomLengthCm": 223,
+      "bottomWidthCm": 317,
+      "volumeAllowedM3": 14.85,
+      "lowPallet": false,
+      "palletType": 2,
+      "palletTypeName": "slope-one-side",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          317,
+          0
+        ],
+        [
+          223,
+          317,
+          0
+        ],
+        [
+          223,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          317,
+          108
+        ],
+        [
+          223,
+          317,
+          108
+        ],
+        [
+          223,
+          0,
+          108
+        ],
+        [
+          0,
+          0,
+          108
+        ],
+        [
+          0,
+          317,
+          243
+        ],
+        [
+          114,
+          317,
+          243
+        ],
+        [
+          114,
+          0,
+          243
+        ],
+        [
+          0,
+          0,
+          243
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.238532110091743",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-384.1926605504587",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "218.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "312.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1712800523000
+    },
+    {
+      "index": 26,
+      "id": 598,
+      "airlines": "*",
+      "airplane": "B767-300",
+      "pallet": "PAG(A1/A17)",
+      "publicBoard": true,
+      "baseOuterLengthCm": 317,
+      "baseOuterWidthCm": 224,
+      "heightCm": 200,
+      "transitionHeightCm": 119,
+      "status": "Active",
+      "innerLengthCm": 307,
+      "innerWidthCm": 214,
+      "topLengthCm": 179,
+      "topWidthCm": 224,
+      "bottomLengthCm": 317,
+      "bottomWidthCm": 224,
+      "volumeAllowedM3": 12.95,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          224,
+          0
+        ],
+        [
+          317,
+          224,
+          0
+        ],
+        [
+          317,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          224,
+          119
+        ],
+        [
+          317,
+          224,
+          119
+        ],
+        [
+          317,
+          0,
+          119
+        ],
+        [
+          0,
+          0,
+          119
+        ],
+        [
+          69,
+          224,
+          200
+        ],
+        [
+          248,
+          224,
+          200
+        ],
+        [
+          248,
+          0,
+          200
+        ],
+        [
+          69,
+          0,
+          200
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.173913043478261",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-491.13043478260875",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-1.173913043478261",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-119.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "312.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1712800397000
+    },
+    {
+      "index": 27,
+      "id": 591,
+      "airlines": "*",
+      "airplane": "B757-200F",
+      "pallet": "C1-C14",
+      "publicBoard": true,
+      "baseOuterLengthCm": 317,
+      "baseOuterWidthCm": 224,
+      "heightCm": 200,
+      "transitionHeightCm": 134,
+      "status": "Active",
+      "innerLengthCm": 307,
+      "innerWidthCm": 214,
+      "topLengthCm": 170,
+      "topWidthCm": 224,
+      "bottomLengthCm": 317,
+      "bottomWidthCm": 224,
+      "volumeAllowedM3": 13.11,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          224,
+          0
+        ],
+        [
+          317,
+          224,
+          0
+        ],
+        [
+          317,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          224,
+          134
+        ],
+        [
+          317,
+          224,
+          134
+        ],
+        [
+          317,
+          0,
+          134
+        ],
+        [
+          0,
+          0,
+          134
+        ],
+        [
+          73.5,
+          224,
+          200
+        ],
+        [
+          243.5,
+          224,
+          200
+        ],
+        [
+          243.5,
+          0,
+          200
+        ],
+        [
+          73.5,
+          0,
+          200
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.8979591836734694",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-418.6530612244898",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.8979591836734694",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-134.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "312.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1712489034000
+    },
+    {
+      "index": 28,
+      "id": 592,
+      "airlines": "*",
+      "airplane": "B757-200F",
+      "pallet": "C15",
+      "publicBoard": true,
+      "baseOuterLengthCm": 317,
+      "baseOuterWidthCm": 224,
+      "heightCm": 195,
+      "transitionHeightCm": 90,
+      "status": "Active",
+      "innerLengthCm": 307,
+      "innerWidthCm": 214,
+      "topLengthCm": 130,
+      "topWidthCm": 224,
+      "bottomLengthCm": 317,
+      "bottomWidthCm": 224,
+      "volumeAllowedM3": 11.65,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          224,
+          0
+        ],
+        [
+          317,
+          224,
+          0
+        ],
+        [
+          317,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          224,
+          90
+        ],
+        [
+          317,
+          224,
+          90
+        ],
+        [
+          317,
+          0,
+          90
+        ],
+        [
+          0,
+          0,
+          90
+        ],
+        [
+          93.5,
+          224,
+          195
+        ],
+        [
+          223.5,
+          224,
+          195
+        ],
+        [
+          223.5,
+          0,
+          195
+        ],
+        [
+          93.5,
+          0,
+          195
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.1229946524064172",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-445.98930481283423",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-1.1229946524064172",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-90.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "312.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1712489160000
+    },
+    {
+      "index": 29,
+      "id": 586,
+      "airlines": "*",
+      "airplane": "B-777F",
+      "pallet": "J4",
+      "publicBoard": true,
+      "baseOuterLengthCm": 244,
+      "baseOuterWidthCm": 318,
+      "heightCm": 300,
+      "transitionHeightCm": 197,
+      "status": "Active",
+      "innerLengthCm": 224,
+      "innerWidthCm": 307,
+      "topLengthCm": 117,
+      "topWidthCm": 318,
+      "bottomLengthCm": 244,
+      "bottomWidthCm": 318,
+      "volumeAllowedM3": 21.2,
+      "lowPallet": false,
+      "palletType": 2,
+      "palletTypeName": "slope-one-side",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          318,
+          0
+        ],
+        [
+          244,
+          318,
+          0
+        ],
+        [
+          244,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          318,
+          197
+        ],
+        [
+          244,
+          318,
+          197
+        ],
+        [
+          244,
+          0,
+          197
+        ],
+        [
+          0,
+          0,
+          197
+        ],
+        [
+          0,
+          318,
+          300
+        ],
+        [
+          117,
+          318,
+          300
+        ],
+        [
+          117,
+          0,
+          300
+        ],
+        [
+          0,
+          0,
+          300
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.8110236220472441",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-394.8897637795276",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "0.5",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-0.5",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "117.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "0.9090909090909091",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-0.9090909090909091",
+          "hyperplaneC": "1",
+          "hyperplaneD": "284.09090909090907",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1712046876000
+    },
+    {
+      "index": 30,
+      "id": 216,
+      "airlines": "*",
+      "airplane": "B-777F",
+      "pallet": "Q5",
+      "publicBoard": true,
+      "baseOuterLengthCm": 244,
+      "baseOuterWidthCm": 318,
+      "heightCm": 290,
+      "transitionHeightCm": 190,
+      "status": "Active",
+      "innerLengthCm": 234,
+      "innerWidthCm": 308,
+      "topLengthCm": 120,
+      "topWidthCm": 318,
+      "bottomLengthCm": 244,
+      "bottomWidthCm": 318,
+      "volumeAllowedM3": 20.53,
+      "lowPallet": false,
+      "palletType": 2,
+      "palletTypeName": "slope-one-side",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          318,
+          0
+        ],
+        [
+          244,
+          318,
+          0
+        ],
+        [
+          244,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          318,
+          190
+        ],
+        [
+          244,
+          318,
+          190
+        ],
+        [
+          244,
+          0,
+          190
+        ],
+        [
+          0,
+          0,
+          190
+        ],
+        [
+          0,
+          318,
+          290
+        ],
+        [
+          120,
+          318,
+          290
+        ],
+        [
+          120,
+          0,
+          290
+        ],
+        [
+          0,
+          0,
+          290
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.8064516129032258",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-386.7741935483871",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1711607830000
+    },
+    {
+      "index": 31,
+      "id": 446,
+      "airlines": "*",
+      "airplane": "B-777F",
+      "pallet": "LD",
+      "publicBoard": true,
+      "baseOuterLengthCm": 380,
+      "baseOuterWidthCm": 244,
+      "heightCm": 160,
+      "transitionHeightCm": 50,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 380,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 14.84,
+      "lowPallet": true,
+      "palletType": 4,
+      "palletTypeName": "low-pallet-flare",
+      "maxDetectDistanceCm": 31,
+      "pointCoordinate": [
+        [
+          31,
+          244,
+          0
+        ],
+        [
+          349,
+          244,
+          0
+        ],
+        [
+          349,
+          0,
+          0
+        ],
+        [
+          31,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          50
+        ],
+        [
+          380,
+          244,
+          50
+        ],
+        [
+          380,
+          0,
+          50
+        ],
+        [
+          0,
+          0,
+          50
+        ],
+        [
+          0,
+          244,
+          160
+        ],
+        [
+          380,
+          244,
+          160
+        ],
+        [
+          380,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          160
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.6129032258064515",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-50.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.6129032258064515",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "562.9032258064516",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-36.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "344.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1703224295000
+    },
+    {
+      "index": 32,
+      "id": 340,
+      "airlines": "*",
+      "airplane": "B-777F",
+      "pallet": "PAG(318*224)",
+      "publicBoard": true,
+      "baseOuterLengthCm": 224,
+      "baseOuterWidthCm": 318,
+      "heightCm": 242,
+      "transitionHeightCm": 145,
+      "status": "Active",
+      "innerLengthCm": 214,
+      "innerWidthCm": 308,
+      "topLengthCm": 104,
+      "topWidthCm": 318,
+      "bottomLengthCm": 224,
+      "bottomWidthCm": 318,
+      "volumeAllowedM3": 15.39,
+      "lowPallet": false,
+      "palletType": 2,
+      "palletTypeName": "slope-one-side",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          318,
+          0
+        ],
+        [
+          224,
+          318,
+          0
+        ],
+        [
+          224,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          318,
+          145
+        ],
+        [
+          224,
+          318,
+          145
+        ],
+        [
+          224,
+          0,
+          145
+        ],
+        [
+          0,
+          0,
+          145
+        ],
+        [
+          0,
+          318,
+          242
+        ],
+        [
+          104,
+          318,
+          242
+        ],
+        [
+          104,
+          0,
+          242
+        ],
+        [
+          0,
+          0,
+          242
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.8083333333333333",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-326.06666666666666",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1695350609000
+    },
+    {
+      "index": 33,
+      "id": 277,
+      "airlines": "*",
+      "airplane": "B-747F",
+      "pallet": "QW(PAG)",
+      "publicBoard": true,
+      "baseOuterLengthCm": 460,
+      "baseOuterWidthCm": 224,
+      "heightCm": 160,
+      "transitionHeightCm": 90,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 214,
+      "topLengthCm": 460,
+      "topWidthCm": 224,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 224,
+      "volumeAllowedM3": 16.49,
+      "lowPallet": true,
+      "palletType": 4,
+      "palletTypeName": "low-pallet-flare",
+      "maxDetectDistanceCm": 71,
+      "pointCoordinate": [
+        [
+          71,
+          224,
+          0
+        ],
+        [
+          389,
+          224,
+          0
+        ],
+        [
+          389,
+          0,
+          0
+        ],
+        [
+          71,
+          0,
+          0
+        ],
+        [
+          0,
+          224,
+          90
+        ],
+        [
+          460,
+          224,
+          90
+        ],
+        [
+          460,
+          0,
+          90
+        ],
+        [
+          0,
+          0,
+          90
+        ],
+        [
+          0,
+          224,
+          160
+        ],
+        [
+          460,
+          224,
+          160
+        ],
+        [
+          460,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          160
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.267605633802817",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-90.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.267605633802817",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "493.0985915492958",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-76.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "384.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1682581431000
+    },
+    {
+      "index": 34,
+      "id": 341,
+      "airlines": "*",
+      "airplane": "A330",
+      "pallet": "PAG(318*224)",
+      "publicBoard": true,
+      "baseOuterLengthCm": 224,
+      "baseOuterWidthCm": 318,
+      "heightCm": 242,
+      "transitionHeightCm": 145,
+      "status": "Active",
+      "innerLengthCm": 214,
+      "innerWidthCm": 308,
+      "topLengthCm": 104,
+      "topWidthCm": 318,
+      "bottomLengthCm": 224,
+      "bottomWidthCm": 318,
+      "volumeAllowedM3": 15.39,
+      "lowPallet": false,
+      "palletType": 2,
+      "palletTypeName": "slope-one-side",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          318,
+          0
+        ],
+        [
+          224,
+          318,
+          0
+        ],
+        [
+          224,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          318,
+          145
+        ],
+        [
+          224,
+          318,
+          145
+        ],
+        [
+          224,
+          0,
+          145
+        ],
+        [
+          0,
+          0,
+          145
+        ],
+        [
+          0,
+          318,
+          242
+        ],
+        [
+          104,
+          318,
+          242
+        ],
+        [
+          104,
+          0,
+          242
+        ],
+        [
+          0,
+          0,
+          242
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.8083333333333333",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-326.06666666666666",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1695350934000
+    },
+    {
+      "index": 35,
+      "id": 338,
+      "airlines": "*",
+      "airplane": "B-777F",
+      "pallet": "ZR(PAG)",
+      "publicBoard": true,
+      "baseOuterLengthCm": 224,
+      "baseOuterWidthCm": 318,
+      "heightCm": 292,
+      "transitionHeightCm": 192,
+      "status": "Active",
+      "innerLengthCm": 214,
+      "innerWidthCm": 308,
+      "topLengthCm": 101,
+      "topWidthCm": 318,
+      "bottomLengthCm": 224,
+      "bottomWidthCm": 318,
+      "volumeAllowedM3": 18.84,
+      "lowPallet": false,
+      "palletType": 2,
+      "palletTypeName": "slope-one-side",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          318,
+          0
+        ],
+        [
+          224,
+          318,
+          0
+        ],
+        [
+          224,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          318,
+          192
+        ],
+        [
+          224,
+          318,
+          192
+        ],
+        [
+          224,
+          0,
+          192
+        ],
+        [
+          0,
+          0,
+          192
+        ],
+        [
+          0,
+          318,
+          292
+        ],
+        [
+          101,
+          318,
+          292
+        ],
+        [
+          101,
+          0,
+          292
+        ],
+        [
+          0,
+          0,
+          292
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.8130081300813008",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-374.1138211382114",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1694679508000
+    },
+    {
+      "index": 36,
+      "id": 242,
+      "airlines": "*",
+      "airplane": "B-747F",
+      "pallet": "Q7",
+      "publicBoard": true,
+      "baseOuterLengthCm": 244,
+      "baseOuterWidthCm": 318,
+      "heightCm": 298,
+      "transitionHeightCm": 244,
+      "status": "Active",
+      "innerLengthCm": 234,
+      "innerWidthCm": 308,
+      "topLengthCm": 166,
+      "topWidthCm": 318,
+      "bottomLengthCm": 244,
+      "bottomWidthCm": 318,
+      "volumeAllowedM3": 22.45,
+      "lowPallet": false,
+      "palletType": 2,
+      "palletTypeName": "slope-one-side",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          318,
+          0
+        ],
+        [
+          244,
+          318,
+          0
+        ],
+        [
+          244,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          318,
+          244
+        ],
+        [
+          244,
+          318,
+          244
+        ],
+        [
+          244,
+          0,
+          244
+        ],
+        [
+          0,
+          0,
+          244
+        ],
+        [
+          0,
+          318,
+          298
+        ],
+        [
+          166,
+          318,
+          298
+        ],
+        [
+          166,
+          0,
+          298
+        ],
+        [
+          0,
+          0,
+          298
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.6923076923076923",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-412.9230769230769",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1681124590000
+    },
+    {
+      "index": 37,
+      "id": 337,
+      "airlines": "*",
+      "airplane": "B-747F",
+      "pallet": "Q6(PYB)",
+      "publicBoard": true,
+      "baseOuterLengthCm": 244,
+      "baseOuterWidthCm": 140,
+      "heightCm": 244,
+      "transitionHeightCm": 244,
+      "status": "Active",
+      "innerLengthCm": 234,
+      "innerWidthCm": 130,
+      "topLengthCm": 244,
+      "topWidthCm": 140,
+      "bottomLengthCm": 244,
+      "bottomWidthCm": 140,
+      "volumeAllowedM3": 8.34,
+      "lowPallet": false,
+      "palletType": 1,
+      "palletTypeName": "box",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          140,
+          0
+        ],
+        [
+          244,
+          140,
+          0
+        ],
+        [
+          244,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          140,
+          244
+        ],
+        [
+          244,
+          140,
+          244
+        ],
+        [
+          244,
+          0,
+          244
+        ],
+        [
+          0,
+          0,
+          244
+        ],
+        [
+          0,
+          140,
+          244
+        ],
+        [
+          244,
+          140,
+          244
+        ],
+        [
+          244,
+          0,
+          244
+        ],
+        [
+          0,
+          0,
+          244
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "135.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1691978321000
+    },
+    {
+      "index": 38,
+      "id": 336,
+      "airlines": "*",
+      "airplane": "B-747F",
+      "pallet": "QL(QR)",
+      "publicBoard": true,
+      "baseOuterLengthCm": 234,
+      "baseOuterWidthCm": 130,
+      "heightCm": 300,
+      "transitionHeightCm": 244,
+      "status": "Active",
+      "innerLengthCm": 234,
+      "innerWidthCm": 130,
+      "topLengthCm": 183,
+      "topWidthCm": 130,
+      "bottomLengthCm": 234,
+      "bottomWidthCm": 130,
+      "volumeAllowedM3": 8.94,
+      "lowPallet": false,
+      "palletType": 2,
+      "palletTypeName": "slope-one-side",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          130,
+          0
+        ],
+        [
+          234,
+          130,
+          0
+        ],
+        [
+          234,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          130,
+          244
+        ],
+        [
+          234,
+          130,
+          244
+        ],
+        [
+          234,
+          0,
+          244
+        ],
+        [
+          0,
+          0,
+          244
+        ],
+        [
+          0,
+          130,
+          300
+        ],
+        [
+          183,
+          130,
+          300
+        ],
+        [
+          183,
+          0,
+          300
+        ],
+        [
+          0,
+          0,
+          300
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0980392156862746",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-500.94117647058823",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-Infinity",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "NaN",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-Infinity",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "Infinity",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-Infinity",
+          "hyperplaneC": "1",
+          "hyperplaneD": "NaN",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-Infinity",
+          "hyperplaneC": "1",
+          "hyperplaneD": "Infinity",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1691730846000
+    },
+    {
+      "index": 39,
+      "id": 335,
+      "airlines": "*",
+      "airplane": "B-747F",
+      "pallet": "AKE",
+      "publicBoard": true,
+      "baseOuterLengthCm": 156,
+      "baseOuterWidthCm": 153,
+      "heightCm": 160,
+      "transitionHeightCm": 30,
+      "status": "Active",
+      "innerLengthCm": 102,
+      "innerWidthCm": 143,
+      "topLengthCm": 156,
+      "topWidthCm": 153,
+      "bottomLengthCm": 112,
+      "bottomWidthCm": 153,
+      "volumeAllowedM3": 3.82,
+      "lowPallet": true,
+      "palletType": 5,
+      "palletTypeName": "ake-container",
+      "maxDetectDistanceCm": 44,
+      "pointCoordinate": [
+        [
+          0,
+          153,
+          0
+        ],
+        [
+          112,
+          153,
+          0
+        ],
+        [
+          112,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          153,
+          30
+        ],
+        [
+          156,
+          153,
+          30
+        ],
+        [
+          156,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          30
+        ],
+        [
+          0,
+          153,
+          160
+        ],
+        [
+          156,
+          153,
+          160
+        ],
+        [
+          156,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          160
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "-0.6818181818181818",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "76.36363636363636",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "107.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "148.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1691648441000
+    },
+    {
+      "index": 40,
+      "id": 282,
+      "airlines": "*",
+      "airplane": "B-777F",
+      "pallet": "AR(CA)",
+      "publicBoard": true,
+      "baseOuterLengthCm": 244,
+      "baseOuterWidthCm": 308,
+      "heightCm": 293,
+      "transitionHeightCm": 130,
+      "status": "Active",
+      "innerLengthCm": 234,
+      "innerWidthCm": 298,
+      "topLengthCm": 111,
+      "topWidthCm": 308,
+      "bottomLengthCm": 244,
+      "bottomWidthCm": 308,
+      "volumeAllowedM3": 18.68,
+      "lowPallet": false,
+      "palletType": 2,
+      "palletTypeName": "slope-one-side",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          308,
+          0
+        ],
+        [
+          244,
+          308,
+          0
+        ],
+        [
+          244,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          308,
+          130
+        ],
+        [
+          244,
+          308,
+          130
+        ],
+        [
+          244,
+          0,
+          130
+        ],
+        [
+          0,
+          0,
+          130
+        ],
+        [
+          0,
+          308,
+          293
+        ],
+        [
+          111,
+          308,
+          293
+        ],
+        [
+          111,
+          0,
+          293
+        ],
+        [
+          0,
+          0,
+          293
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.2255639097744362",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-429.0375939849624",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "303.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1686537578000
+    },
+    {
+      "index": 41,
+      "id": 283,
+      "airlines": "*",
+      "airplane": "B-777F",
+      "pallet": "AL(CA)",
+      "publicBoard": true,
+      "baseOuterLengthCm": 224,
+      "baseOuterWidthCm": 308,
+      "heightCm": 293,
+      "transitionHeightCm": 130,
+      "status": "Active",
+      "innerLengthCm": 214,
+      "innerWidthCm": 298,
+      "topLengthCm": 100,
+      "topWidthCm": 308,
+      "bottomLengthCm": 224,
+      "bottomWidthCm": 308,
+      "volumeAllowedM3": 17.1,
+      "lowPallet": false,
+      "palletType": 2,
+      "palletTypeName": "slope-one-side",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          308,
+          0
+        ],
+        [
+          224,
+          308,
+          0
+        ],
+        [
+          224,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          308,
+          130
+        ],
+        [
+          224,
+          308,
+          130
+        ],
+        [
+          224,
+          0,
+          130
+        ],
+        [
+          0,
+          0,
+          130
+        ],
+        [
+          0,
+          308,
+          293
+        ],
+        [
+          100,
+          308,
+          293
+        ],
+        [
+          100,
+          0,
+          293
+        ],
+        [
+          0,
+          0,
+          293
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.314516129032258",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-424.4516129032258",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "303.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1686539079000
+    },
+    {
+      "index": 42,
+      "id": 281,
+      "airlines": "*",
+      "airplane": "B-777F",
+      "pallet": "AKE",
+      "publicBoard": true,
+      "baseOuterLengthCm": 200,
+      "baseOuterWidthCm": 153,
+      "heightCm": 162,
+      "transitionHeightCm": 30,
+      "status": "Active",
+      "innerLengthCm": 146,
+      "innerWidthCm": 143,
+      "topLengthCm": 200,
+      "topWidthCm": 153,
+      "bottomLengthCm": 156,
+      "bottomWidthCm": 153,
+      "volumeAllowedM3": 4.96,
+      "lowPallet": true,
+      "palletType": 5,
+      "palletTypeName": "ake-container",
+      "maxDetectDistanceCm": 44,
+      "pointCoordinate": [
+        [
+          0,
+          153,
+          0
+        ],
+        [
+          156,
+          153,
+          0
+        ],
+        [
+          156,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          153,
+          30
+        ],
+        [
+          200,
+          153,
+          30
+        ],
+        [
+          200,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          30
+        ],
+        [
+          0,
+          153,
+          162
+        ],
+        [
+          200,
+          153,
+          162
+        ],
+        [
+          200,
+          0,
+          162
+        ],
+        [
+          0,
+          0,
+          162
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "-0.6818181818181818",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "106.36363636363636",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "151.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "148.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1685695263000
+    },
+    {
+      "index": 43,
+      "id": 280,
+      "airlines": "*",
+      "airplane": "B-777F",
+      "pallet": "PRA",
+      "publicBoard": true,
+      "baseOuterLengthCm": 244,
+      "baseOuterWidthCm": 498,
+      "heightCm": 300,
+      "transitionHeightCm": 190,
+      "status": "Active",
+      "innerLengthCm": 234,
+      "innerWidthCm": 488,
+      "topLengthCm": 122,
+      "topWidthCm": 498,
+      "bottomLengthCm": 244,
+      "bottomWidthCm": 498,
+      "volumeAllowedM3": 33.11,
+      "lowPallet": false,
+      "palletType": 2,
+      "palletTypeName": "slope-one-side",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          498,
+          0
+        ],
+        [
+          244,
+          498,
+          0
+        ],
+        [
+          244,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          498,
+          190
+        ],
+        [
+          244,
+          498,
+          190
+        ],
+        [
+          244,
+          0,
+          190
+        ],
+        [
+          0,
+          0,
+          190
+        ],
+        [
+          0,
+          498,
+          300
+        ],
+        [
+          122,
+          498,
+          300
+        ],
+        [
+          122,
+          0,
+          300
+        ],
+        [
+          0,
+          0,
+          300
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.9016393442622951",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-410.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "493.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1685670812000
+    },
+    {
+      "index": 44,
+      "id": 279,
+      "airlines": "*",
+      "airplane": "B-777F",
+      "pallet": "PGA",
+      "publicBoard": true,
+      "baseOuterLengthCm": 244,
+      "baseOuterWidthCm": 618,
+      "heightCm": 300,
+      "transitionHeightCm": 190,
+      "status": "Active",
+      "innerLengthCm": 234,
+      "innerWidthCm": 608,
+      "topLengthCm": 122,
+      "topWidthCm": 618,
+      "bottomLengthCm": 244,
+      "bottomWidthCm": 618,
+      "volumeAllowedM3": 41.09,
+      "lowPallet": false,
+      "palletType": 2,
+      "palletTypeName": "slope-one-side",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          618,
+          0
+        ],
+        [
+          244,
+          618,
+          0
+        ],
+        [
+          244,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          618,
+          190
+        ],
+        [
+          244,
+          618,
+          190
+        ],
+        [
+          244,
+          0,
+          190
+        ],
+        [
+          0,
+          0,
+          190
+        ],
+        [
+          0,
+          618,
+          300
+        ],
+        [
+          122,
+          618,
+          300
+        ],
+        [
+          122,
+          0,
+          300
+        ],
+        [
+          0,
+          0,
+          300
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.9016393442622951",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-410.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "613.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1685669690000
+    },
+    {
+      "index": 45,
+      "id": 249,
+      "airlines": "*",
+      "airplane": "A300-600",
+      "pallet": "A-H",
+      "publicBoard": true,
+      "baseOuterLengthCm": 244,
+      "baseOuterWidthCm": 318,
+      "heightCm": 228,
+      "transitionHeightCm": 130,
+      "status": "Active",
+      "innerLengthCm": 234,
+      "innerWidthCm": 308,
+      "topLengthCm": 124,
+      "topWidthCm": 318,
+      "bottomLengthCm": 244,
+      "bottomWidthCm": 318,
+      "volumeAllowedM3": 15.82,
+      "lowPallet": false,
+      "palletType": 2,
+      "palletTypeName": "slope-one-side",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          318,
+          0
+        ],
+        [
+          244,
+          318,
+          0
+        ],
+        [
+          244,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          318,
+          130
+        ],
+        [
+          244,
+          318,
+          130
+        ],
+        [
+          244,
+          0,
+          130
+        ],
+        [
+          0,
+          0,
+          130
+        ],
+        [
+          0,
+          318,
+          228
+        ],
+        [
+          124,
+          318,
+          228
+        ],
+        [
+          124,
+          0,
+          228
+        ],
+        [
+          0,
+          0,
+          228
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.8166666666666667",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-329.26666666666665",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1681454373000
+    },
+    {
+      "index": 46,
+      "id": 254,
+      "airlines": "*",
+      "airplane": "A330",
+      "pallet": "H3",
+      "publicBoard": true,
+      "baseOuterLengthCm": 406,
+      "baseOuterWidthCm": 244,
+      "heightCm": 160,
+      "transitionHeightCm": 51,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 406,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 15.85,
+      "lowPallet": true,
+      "palletType": 4,
+      "palletTypeName": "low-pallet-flare",
+      "maxDetectDistanceCm": 44,
+      "pointCoordinate": [
+        [
+          44,
+          244,
+          0
+        ],
+        [
+          362,
+          244,
+          0
+        ],
+        [
+          362,
+          0,
+          0
+        ],
+        [
+          44,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          51
+        ],
+        [
+          406,
+          244,
+          51
+        ],
+        [
+          406,
+          0,
+          51
+        ],
+        [
+          0,
+          0,
+          51
+        ],
+        [
+          0,
+          244,
+          160
+        ],
+        [
+          406,
+          244,
+          160
+        ],
+        [
+          406,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          160
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.1590909090909092",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-51.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.1590909090909092",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "419.5909090909091",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-49.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "357.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1681457816000
+    },
+    {
+      "index": 47,
+      "id": 276,
+      "airlines": "*",
+      "airplane": "B-777F",
+      "pallet": "W3(PAG)",
+      "publicBoard": true,
+      "baseOuterLengthCm": 396,
+      "baseOuterWidthCm": 224,
+      "heightCm": 160,
+      "transitionHeightCm": 50,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 214,
+      "topLengthCm": 396,
+      "topWidthCm": 224,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 224,
+      "volumeAllowedM3": 14.19,
+      "lowPallet": true,
+      "palletType": 4,
+      "palletTypeName": "low-pallet-flare",
+      "maxDetectDistanceCm": 39,
+      "pointCoordinate": [
+        [
+          39,
+          224,
+          0
+        ],
+        [
+          357,
+          224,
+          0
+        ],
+        [
+          357,
+          0,
+          0
+        ],
+        [
+          39,
+          0,
+          0
+        ],
+        [
+          0,
+          224,
+          50
+        ],
+        [
+          396,
+          224,
+          50
+        ],
+        [
+          396,
+          0,
+          50
+        ],
+        [
+          0,
+          0,
+          50
+        ],
+        [
+          0,
+          224,
+          160
+        ],
+        [
+          396,
+          224,
+          160
+        ],
+        [
+          396,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          160
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.2820512820512822",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-50.00000000000001",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.2820512820512822",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "457.69230769230774",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-44.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "352.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1682580554000
+    },
+    {
+      "index": 48,
+      "id": 244,
+      "airlines": "*",
+      "airplane": "B-747F",
+      "pallet": "QW",
+      "publicBoard": true,
+      "baseOuterLengthCm": 460,
+      "baseOuterWidthCm": 244,
+      "heightCm": 160,
+      "transitionHeightCm": 90,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 460,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 17.96,
+      "lowPallet": true,
+      "palletType": 4,
+      "palletTypeName": "low-pallet-flare",
+      "maxDetectDistanceCm": 71,
+      "pointCoordinate": [
+        [
+          71,
+          244,
+          0
+        ],
+        [
+          389,
+          244,
+          0
+        ],
+        [
+          389,
+          0,
+          0
+        ],
+        [
+          71,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          90
+        ],
+        [
+          460,
+          244,
+          90
+        ],
+        [
+          460,
+          0,
+          90
+        ],
+        [
+          0,
+          0,
+          90
+        ],
+        [
+          0,
+          244,
+          160
+        ],
+        [
+          460,
+          244,
+          160
+        ],
+        [
+          460,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          160
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.267605633802817",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-90.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.267605633802817",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "493.0985915492958",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-76.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "384.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1681125743000
+    },
+    {
+      "index": 49,
+      "id": 225,
+      "airlines": "*",
+      "airplane": "B-777F",
+      "pallet": "W3",
+      "publicBoard": true,
+      "baseOuterLengthCm": 396,
+      "baseOuterWidthCm": 244,
+      "heightCm": 160,
+      "transitionHeightCm": 50,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 396,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 15.46,
+      "lowPallet": true,
+      "palletType": 4,
+      "palletTypeName": "low-pallet-flare",
+      "maxDetectDistanceCm": 39,
+      "pointCoordinate": [
+        [
+          39,
+          244,
+          0
+        ],
+        [
+          357,
+          244,
+          0
+        ],
+        [
+          357,
+          0,
+          0
+        ],
+        [
+          39,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          50
+        ],
+        [
+          396,
+          244,
+          50
+        ],
+        [
+          396,
+          0,
+          50
+        ],
+        [
+          0,
+          0,
+          50
+        ],
+        [
+          0,
+          244,
+          160
+        ],
+        [
+          396,
+          244,
+          160
+        ],
+        [
+          396,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          160
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.2820512820512822",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-50.00000000000001",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.2820512820512822",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "457.69230769230774",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-44.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "352.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1680170320000
+    },
+    {
+      "index": 50,
+      "id": 239,
+      "airlines": "*",
+      "airplane": "B-747F",
+      "pallet": "Q6",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 244,
+      "heightCm": 242,
+      "transitionHeightCm": 242,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 318,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 18.78,
+      "lowPallet": false,
+      "palletType": 1,
+      "palletTypeName": "box",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          244,
+          0
+        ],
+        [
+          318,
+          244,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          242
+        ],
+        [
+          318,
+          244,
+          242
+        ],
+        [
+          318,
+          0,
+          242
+        ],
+        [
+          0,
+          0,
+          242
+        ],
+        [
+          0,
+          244,
+          242
+        ],
+        [
+          318,
+          244,
+          242
+        ],
+        [
+          318,
+          0,
+          242
+        ],
+        [
+          0,
+          0,
+          242
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1681115607000
+    },
+    {
+      "index": 51,
+      "id": 240,
+      "airlines": "*",
+      "airplane": "B-747F",
+      "pallet": "S1",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 244,
+      "heightCm": 242,
+      "transitionHeightCm": 153,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 74,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 16.13,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          244,
+          0
+        ],
+        [
+          318,
+          244,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          153
+        ],
+        [
+          318,
+          244,
+          153
+        ],
+        [
+          318,
+          0,
+          153
+        ],
+        [
+          0,
+          0,
+          153
+        ],
+        [
+          122,
+          244,
+          242
+        ],
+        [
+          196,
+          244,
+          242
+        ],
+        [
+          196,
+          0,
+          242
+        ],
+        [
+          122,
+          0,
+          242
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.7295081967213115",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-384.9836065573771",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.7295081967213115",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-153.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1681120418000
+    },
+    {
+      "index": 52,
+      "id": 241,
+      "airlines": "*",
+      "airplane": "B-747F",
+      "pallet": "S2",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 244,
+      "heightCm": 242,
+      "transitionHeightCm": 168,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 238,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 18.06,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          244,
+          0
+        ],
+        [
+          318,
+          244,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          168
+        ],
+        [
+          318,
+          244,
+          168
+        ],
+        [
+          318,
+          0,
+          168
+        ],
+        [
+          0,
+          0,
+          168
+        ],
+        [
+          40,
+          244,
+          242
+        ],
+        [
+          278,
+          244,
+          242
+        ],
+        [
+          278,
+          0,
+          242
+        ],
+        [
+          40,
+          0,
+          242
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.85",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-756.3000000000001",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-1.85",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-168.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1681124009000
+    },
+    {
+      "index": 53,
+      "id": 243,
+      "airlines": "*",
+      "airplane": "B-747F",
+      "pallet": "QM",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 244,
+      "heightCm": 160,
+      "transitionHeightCm": 160,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 318,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 12.41,
+      "lowPallet": false,
+      "palletType": 1,
+      "palletTypeName": "box",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          244,
+          0
+        ],
+        [
+          318,
+          244,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          160
+        ],
+        [
+          318,
+          244,
+          160
+        ],
+        [
+          318,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          160
+        ],
+        [
+          0,
+          244,
+          160
+        ],
+        [
+          318,
+          244,
+          160
+        ],
+        [
+          318,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          160
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1681124922000
+    },
+    {
+      "index": 54,
+      "id": 250,
+      "airlines": "*",
+      "airplane": "A300-600",
+      "pallet": "J-R",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 244,
+      "heightCm": 198,
+      "transitionHeightCm": 170,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 258,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 15.16,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          244,
+          0
+        ],
+        [
+          318,
+          244,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          170
+        ],
+        [
+          318,
+          244,
+          170
+        ],
+        [
+          318,
+          0,
+          170
+        ],
+        [
+          0,
+          0,
+          170
+        ],
+        [
+          30,
+          244,
+          198
+        ],
+        [
+          288,
+          244,
+          198
+        ],
+        [
+          288,
+          0,
+          198
+        ],
+        [
+          30,
+          0,
+          198
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.9333333333333333",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-466.8",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.9333333333333333",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-170.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1681455032000
+    },
+    {
+      "index": 55,
+      "id": 251,
+      "airlines": "*",
+      "airplane": "A300-600",
+      "pallet": "PLA",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 153,
+      "heightCm": 160,
+      "transitionHeightCm": 160,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 143,
+      "topLengthCm": 318,
+      "topWidthCm": 153,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 153,
+      "volumeAllowedM3": 7.78,
+      "lowPallet": false,
+      "palletType": 1,
+      "palletTypeName": "box",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          153,
+          0
+        ],
+        [
+          318,
+          153,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          153,
+          160
+        ],
+        [
+          318,
+          153,
+          160
+        ],
+        [
+          318,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          160
+        ],
+        [
+          0,
+          153,
+          160
+        ],
+        [
+          318,
+          153,
+          160
+        ],
+        [
+          318,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          160
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "148.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1681455811000
+    },
+    {
+      "index": 56,
+      "id": 252,
+      "airlines": "*",
+      "airplane": "A300-600",
+      "pallet": "PAG",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 224,
+      "heightCm": 160,
+      "transitionHeightCm": 160,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 214,
+      "topLengthCm": 318,
+      "topWidthCm": 224,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 224,
+      "volumeAllowedM3": 11.4,
+      "lowPallet": false,
+      "palletType": 1,
+      "palletTypeName": "box",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          224,
+          0
+        ],
+        [
+          318,
+          224,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          224,
+          160
+        ],
+        [
+          318,
+          224,
+          160
+        ],
+        [
+          318,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          160
+        ],
+        [
+          0,
+          224,
+          160
+        ],
+        [
+          318,
+          224,
+          160
+        ],
+        [
+          318,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          160
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1681455973000
+    },
+    {
+      "index": 57,
+      "id": 253,
+      "airlines": "*",
+      "airplane": "A330",
+      "pallet": "A2",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 244,
+      "heightCm": 160,
+      "transitionHeightCm": 160,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 318,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 12.41,
+      "lowPallet": false,
+      "palletType": 1,
+      "palletTypeName": "box",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          244,
+          0
+        ],
+        [
+          318,
+          244,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          160
+        ],
+        [
+          318,
+          244,
+          160
+        ],
+        [
+          318,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          160
+        ],
+        [
+          0,
+          244,
+          160
+        ],
+        [
+          318,
+          244,
+          160
+        ],
+        [
+          318,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          160
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1681456118000
+    },
+    {
+      "index": 58,
+      "id": 255,
+      "airlines": "*",
+      "airplane": "A330",
+      "pallet": "XJ",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 244,
+      "heightCm": 242,
+      "transitionHeightCm": 213,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 216,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 18.42,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          244,
+          0
+        ],
+        [
+          318,
+          244,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          213
+        ],
+        [
+          318,
+          244,
+          213
+        ],
+        [
+          318,
+          0,
+          213
+        ],
+        [
+          0,
+          0,
+          213
+        ],
+        [
+          51,
+          244,
+          242
+        ],
+        [
+          267,
+          244,
+          242
+        ],
+        [
+          267,
+          0,
+          242
+        ],
+        [
+          51,
+          0,
+          242
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.5686274509803921",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-393.8235294117647",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.5686274509803921",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-213.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1681458155000
+    },
+    {
+      "index": 59,
+      "id": 257,
+      "airlines": "*",
+      "airplane": "A330",
+      "pallet": "ZY(RR)",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 244,
+      "heightCm": 234,
+      "transitionHeightCm": 190,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 144,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 17.22,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          244,
+          0
+        ],
+        [
+          318,
+          244,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          190
+        ],
+        [
+          318,
+          244,
+          190
+        ],
+        [
+          318,
+          0,
+          190
+        ],
+        [
+          0,
+          0,
+          190
+        ],
+        [
+          87,
+          244,
+          234
+        ],
+        [
+          231,
+          244,
+          234
+        ],
+        [
+          231,
+          0,
+          234
+        ],
+        [
+          87,
+          0,
+          234
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.5057471264367817",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-350.82758620689657",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.5057471264367817",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-190.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1681459041000
+    },
+    {
+      "index": 60,
+      "id": 258,
+      "airlines": "*",
+      "airplane": "A330",
+      "pallet": "ZY(PP)",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 244,
+      "heightCm": 239,
+      "transitionHeightCm": 203,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 144,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 17.78,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          244,
+          0
+        ],
+        [
+          318,
+          244,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          203
+        ],
+        [
+          318,
+          244,
+          203
+        ],
+        [
+          318,
+          0,
+          203
+        ],
+        [
+          0,
+          0,
+          203
+        ],
+        [
+          87,
+          244,
+          239
+        ],
+        [
+          231,
+          244,
+          239
+        ],
+        [
+          231,
+          0,
+          239
+        ],
+        [
+          87,
+          0,
+          239
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.41379310344827586",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-334.58620689655174",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.41379310344827586",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-203.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1681459193000
+    },
+    {
+      "index": 61,
+      "id": 259,
+      "airlines": "*",
+      "airplane": "A330",
+      "pallet": "ZR(SS)",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 244,
+      "heightCm": 229,
+      "transitionHeightCm": 177,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 144,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 16.66,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          244,
+          0
+        ],
+        [
+          318,
+          244,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          177
+        ],
+        [
+          318,
+          244,
+          177
+        ],
+        [
+          318,
+          0,
+          177
+        ],
+        [
+          0,
+          0,
+          177
+        ],
+        [
+          87,
+          244,
+          229
+        ],
+        [
+          231,
+          244,
+          229
+        ],
+        [
+          231,
+          0,
+          229
+        ],
+        [
+          87,
+          0,
+          229
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.5977011494252874",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-367.0689655172414",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.5977011494252874",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-177.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1681459471000
+    },
+    {
+      "index": 62,
+      "id": 261,
+      "airlines": "*",
+      "airplane": "A330",
+      "pallet": "ZL(MD)",
+      "publicBoard": true,
+      "baseOuterLengthCm": 244,
+      "baseOuterWidthCm": 318,
+      "heightCm": 244,
+      "transitionHeightCm": 94,
+      "status": "Active",
+      "innerLengthCm": 234,
+      "innerWidthCm": 308,
+      "topLengthCm": 107,
+      "topWidthCm": 318,
+      "bottomLengthCm": 244,
+      "bottomWidthCm": 318,
+      "volumeAllowedM3": 15.66,
+      "lowPallet": false,
+      "palletType": 2,
+      "palletTypeName": "slope-one-side",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          318,
+          0
+        ],
+        [
+          244,
+          318,
+          0
+        ],
+        [
+          244,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          318,
+          94
+        ],
+        [
+          244,
+          318,
+          94
+        ],
+        [
+          244,
+          0,
+          94
+        ],
+        [
+          0,
+          0,
+          94
+        ],
+        [
+          0,
+          318,
+          244
+        ],
+        [
+          107,
+          318,
+          244
+        ],
+        [
+          107,
+          0,
+          244
+        ],
+        [
+          0,
+          0,
+          244
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.094890510948905",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-361.15328467153284",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1681720395000
+    },
+    {
+      "index": 63,
+      "id": 260,
+      "airlines": "*",
+      "airplane": "A330",
+      "pallet": "ZR(TT)",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 244,
+      "heightCm": 226,
+      "transitionHeightCm": 152,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 144,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 15.96,
+      "lowPallet": false,
+      "palletType": 3,
+      "palletTypeName": "slope-both-sides",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          244,
+          0
+        ],
+        [
+          318,
+          244,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          152
+        ],
+        [
+          318,
+          244,
+          152
+        ],
+        [
+          318,
+          0,
+          152
+        ],
+        [
+          0,
+          0,
+          152
+        ],
+        [
+          87,
+          244,
+          226
+        ],
+        [
+          231,
+          244,
+          226
+        ],
+        [
+          231,
+          0,
+          226
+        ],
+        [
+          87,
+          0,
+          226
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "0.8505747126436781",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-422.48275862068965",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "-0.8505747126436781",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-152.0",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1681459854000
+    },
+    {
+      "index": 64,
+      "id": 224,
+      "airlines": "*",
+      "airplane": "B-777F",
+      "pallet": "Q2",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 244,
+      "heightCm": 160,
+      "transitionHeightCm": 160,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 318,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 12.41,
+      "lowPallet": false,
+      "palletType": 1,
+      "palletTypeName": "box",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          244,
+          0
+        ],
+        [
+          318,
+          244,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          160
+        ],
+        [
+          318,
+          244,
+          160
+        ],
+        [
+          318,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          160
+        ],
+        [
+          0,
+          244,
+          160
+        ],
+        [
+          318,
+          244,
+          160
+        ],
+        [
+          318,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          160
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1680169902000
+    },
+    {
+      "index": 65,
+      "id": 217,
+      "airlines": "*",
+      "airplane": "B-777F",
+      "pallet": "Q4",
+      "publicBoard": true,
+      "baseOuterLengthCm": 244,
+      "baseOuterWidthCm": 318,
+      "heightCm": 290,
+      "transitionHeightCm": 130,
+      "status": "Active",
+      "innerLengthCm": 234,
+      "innerWidthCm": 308,
+      "topLengthCm": 105,
+      "topWidthCm": 318,
+      "bottomLengthCm": 244,
+      "bottomWidthCm": 318,
+      "volumeAllowedM3": 18.97,
+      "lowPallet": false,
+      "palletType": 2,
+      "palletTypeName": "slope-one-side",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          318,
+          0
+        ],
+        [
+          244,
+          318,
+          0
+        ],
+        [
+          244,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          318,
+          130
+        ],
+        [
+          244,
+          318,
+          130
+        ],
+        [
+          244,
+          0,
+          130
+        ],
+        [
+          0,
+          0,
+          130
+        ],
+        [
+          0,
+          318,
+          290
+        ],
+        [
+          105,
+          318,
+          290
+        ],
+        [
+          105,
+          0,
+          290
+        ],
+        [
+          0,
+          0,
+          290
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.1510791366906474",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-410.86330935251794",
+          "hyperplaneLessThan": 1
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1680169201000
+    },
+    {
+      "index": 66,
+      "id": 278,
+      "airlines": "*",
+      "airplane": "A330",
+      "pallet": "H3(PAG)",
+      "publicBoard": true,
+      "baseOuterLengthCm": 406,
+      "baseOuterWidthCm": 224,
+      "heightCm": 160,
+      "transitionHeightCm": 51,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 214,
+      "topLengthCm": 406,
+      "topWidthCm": 224,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 224,
+      "volumeAllowedM3": 14.55,
+      "lowPallet": true,
+      "palletType": 4,
+      "palletTypeName": "low-pallet-flare",
+      "maxDetectDistanceCm": 44,
+      "pointCoordinate": [
+        [
+          44,
+          224,
+          0
+        ],
+        [
+          362,
+          224,
+          0
+        ],
+        [
+          362,
+          0,
+          0
+        ],
+        [
+          44,
+          0,
+          0
+        ],
+        [
+          0,
+          224,
+          51
+        ],
+        [
+          406,
+          224,
+          51
+        ],
+        [
+          406,
+          0,
+          51
+        ],
+        [
+          0,
+          0,
+          51
+        ],
+        [
+          0,
+          224,
+          160
+        ],
+        [
+          406,
+          224,
+          160
+        ],
+        [
+          406,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          160
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.1590909090909092",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-51.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.1590909090909092",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "419.5909090909091",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-49.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "357.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "219.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1682583492000
+    },
+    {
+      "index": 67,
+      "id": 223,
+      "airlines": "*",
+      "airplane": "B-777F",
+      "pallet": "Q6(R)",
+      "publicBoard": true,
+      "baseOuterLengthCm": 318,
+      "baseOuterWidthCm": 244,
+      "heightCm": 240,
+      "transitionHeightCm": 240,
+      "status": "Active",
+      "innerLengthCm": 308,
+      "innerWidthCm": 234,
+      "topLengthCm": 318,
+      "topWidthCm": 244,
+      "bottomLengthCm": 318,
+      "bottomWidthCm": 244,
+      "volumeAllowedM3": 18.62,
+      "lowPallet": false,
+      "palletType": 1,
+      "palletTypeName": "box",
+      "maxDetectDistanceCm": null,
+      "pointCoordinate": [
+        [
+          0,
+          244,
+          0
+        ],
+        [
+          318,
+          244,
+          0
+        ],
+        [
+          318,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          244,
+          240
+        ],
+        [
+          318,
+          244,
+          240
+        ],
+        [
+          318,
+          0,
+          240
+        ],
+        [
+          0,
+          0,
+          240
+        ],
+        [
+          0,
+          244,
+          240
+        ],
+        [
+          318,
+          244,
+          240
+        ],
+        [
+          318,
+          0,
+          240
+        ],
+        [
+          0,
+          0,
+          240
+        ]
+      ],
+      "hyperplaneList": [
+        {
+          "hyperplaneA": "1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "-1.0",
+          "hyperplaneB": "0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "313.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "-5.0",
+          "hyperplaneLessThan": 0
+        },
+        {
+          "hyperplaneA": "0",
+          "hyperplaneB": "-1.0",
+          "hyperplaneC": "1",
+          "hyperplaneD": "239.0",
+          "hyperplaneLessThan": 0
+        }
+      ],
+      "gmtCreate": 1680169856000
+    }
+  ]
+}
