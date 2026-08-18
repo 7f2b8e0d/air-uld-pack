@@ -203,7 +203,7 @@ export function buildAxisRulers(pallet, mesh) {
   return items;
 }
 
-export function buildDimensionGuides(pallet, mesh) {
+export function buildDimensionGuides(pallet, mesh, { skipMainAxes = false } = {}) {
   const groupItems = [];
   const box = mesh.geometry.boundingBox;
   if (!box) return groupItems;
@@ -215,32 +215,34 @@ export function buildDimensionGuides(pallet, mesh) {
   const height = pallet.heightCm;
   const trans = pallet.transitionHeightCm;
 
-  const lengthFrom = new Vector3(box.min.x, y0, box.max.z + pad);
-  const lengthTo = new Vector3(box.max.x, y0, box.max.z + pad);
-  groupItems.push(makeLine(lengthFrom, lengthTo));
-  groupItems.push(tick(lengthFrom, new Vector3(0, 0, 1)));
-  groupItems.push(tick(lengthTo, new Vector3(0, 0, 1)));
-  const lengthLabel = makeLabel(`长 ${length} cm`);
-  lengthLabel.position.copy(lengthFrom).lerp(lengthTo, 0.5).add(new Vector3(0, 10, 10));
-  groupItems.push(lengthLabel);
+  if (!skipMainAxes) {
+    const lengthFrom = new Vector3(box.min.x, y0, box.max.z + pad);
+    const lengthTo = new Vector3(box.max.x, y0, box.max.z + pad);
+    groupItems.push(makeLine(lengthFrom, lengthTo));
+    groupItems.push(tick(lengthFrom, new Vector3(0, 0, 1)));
+    groupItems.push(tick(lengthTo, new Vector3(0, 0, 1)));
+    const lengthLabel = makeLabel(`长 ${length} cm`);
+    lengthLabel.position.copy(lengthFrom).lerp(lengthTo, 0.5).add(new Vector3(0, 10, 10));
+    groupItems.push(lengthLabel);
 
-  const widthFrom = new Vector3(box.max.x + pad, y0, box.min.z);
-  const widthTo = new Vector3(box.max.x + pad, y0, box.max.z);
-  groupItems.push(makeLine(widthFrom, widthTo));
-  groupItems.push(tick(widthFrom, new Vector3(1, 0, 0)));
-  groupItems.push(tick(widthTo, new Vector3(1, 0, 0)));
-  const widthLabel = makeLabel(`宽 ${width} cm`);
-  widthLabel.position.copy(widthFrom).lerp(widthTo, 0.5).add(new Vector3(12, 10, 0));
-  groupItems.push(widthLabel);
+    const widthFrom = new Vector3(box.max.x + pad, y0, box.min.z);
+    const widthTo = new Vector3(box.max.x + pad, y0, box.max.z);
+    groupItems.push(makeLine(widthFrom, widthTo));
+    groupItems.push(tick(widthFrom, new Vector3(1, 0, 0)));
+    groupItems.push(tick(widthTo, new Vector3(1, 0, 0)));
+    const widthLabel = makeLabel(`宽 ${width} cm`);
+    widthLabel.position.copy(widthFrom).lerp(widthTo, 0.5).add(new Vector3(12, 10, 0));
+    groupItems.push(widthLabel);
 
-  const heightFrom = new Vector3(box.min.x - pad, y0, box.min.z);
-  const heightTo = new Vector3(box.min.x - pad, y0 + height, box.min.z);
-  groupItems.push(makeLine(heightFrom, heightTo));
-  groupItems.push(tick(heightFrom, new Vector3(-1, 0, 0)));
-  groupItems.push(tick(heightTo, new Vector3(-1, 0, 0)));
-  const heightLabel = makeLabel(`高 ${height} cm`);
-  heightLabel.position.copy(heightFrom).lerp(heightTo, 0.5).add(new Vector3(-12, 0, 0));
-  groupItems.push(heightLabel);
+    const heightFrom = new Vector3(box.min.x - pad, y0, box.min.z);
+    const heightTo = new Vector3(box.min.x - pad, y0 + height, box.min.z);
+    groupItems.push(makeLine(heightFrom, heightTo));
+    groupItems.push(tick(heightFrom, new Vector3(-1, 0, 0)));
+    groupItems.push(tick(heightTo, new Vector3(-1, 0, 0)));
+    const heightLabel = makeLabel(`高 ${height} cm`);
+    heightLabel.position.copy(heightFrom).lerp(heightTo, 0.5).add(new Vector3(-12, 0, 0));
+    groupItems.push(heightLabel);
+  }
 
   if (trans != null && trans > 0 && trans < height) {
     const tFrom = new Vector3(box.max.x + pad, y0, box.max.z);

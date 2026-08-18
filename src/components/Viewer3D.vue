@@ -13,7 +13,7 @@
       <button type="button" class="ghost" @click="resetCamera">复位视角</button>
     </div>
     <div ref="host" class="canvas-host"></div>
-    <p class="hint">拖拽旋转 · 滚轮缩放 · 右键平移 · 尺寸单位 cm</p>
+    <p class="hint">拖拽旋转 · 滚轮缩放 · 右键平移 · 坐标轴刻度为 cm</p>
   </section>
 </template>
 
@@ -36,6 +36,7 @@ import {
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { CSS2DRenderer } from "three/addons/renderers/CSS2DRenderer.js";
 import {
+  buildAxisRulers,
   buildCornerMarkers,
   buildDimensionGuides,
   buildUldMesh,
@@ -84,7 +85,8 @@ function rebuild() {
   modelGroup.add(mesh);
   modelGroup.add(edges);
   for (const item of buildCornerMarkers(mesh)) modelGroup.add(item);
-  for (const item of buildDimensionGuides(props.pallet, mesh)) {
+  for (const item of buildAxisRulers(props.pallet, mesh)) modelGroup.add(item);
+  for (const item of buildDimensionGuides(props.pallet, mesh, { skipMainAxes: true })) {
     modelGroup.add(item);
   }
 
