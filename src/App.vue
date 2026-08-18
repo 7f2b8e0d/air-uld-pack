@@ -9,9 +9,6 @@
         </div>
       </div>
       <nav class="tabs" aria-label="功能标签">
-        <button type="button" :class="{ on: tab === 'config' }" @click="tab = 'config'">
-          配置中心
-        </button>
         <button type="button" :class="{ on: tab === 'table' }" @click="tab = 'table'">
           集装箱
         </button>
@@ -38,7 +35,6 @@
     </header>
 
     <div class="workspace">
-      <ConfigPanel v-show="tab === 'config'" class="pane pane-config" />
       <PalletTable v-show="tab === 'table'" class="pane pane-table" />
       <CargoForm v-show="tab === 'calc'" class="pane pane-calc" />
       <ResultPanel v-show="tab === 'result'" class="pane pane-result" />
@@ -57,7 +53,6 @@
 
 <script setup>
 import { computed, provide, ref } from "vue";
-import ConfigPanel from "./components/ConfigPanel.vue";
 import PalletTable from "./components/PalletTable.vue";
 import CargoForm from "./components/CargoForm.vue";
 import ResultPanel from "./components/ResultPanel.vue";
@@ -65,14 +60,13 @@ import Viewer3D from "./components/Viewer3D.vue";
 import Modal from "./components/Modal.vue";
 import { closePalletPreview, config, exportProjectData, importProjectFile, previewPallet } from "./state.js";
 
-const tab = ref("config");
+const tab = ref("table");
 const importInput = ref(null);
 const dataMessage = ref("");
 const dataOk = ref(true);
 const hints = {
-  config: "启用后续计算要用的集装箱型号",
-  table: "查看尺寸数据，点 3D 预览轮廓",
-  calc: "选择多种板型并录入货物后计算最大装货",
+  table: "启用箱型，查看尺寸，点 3D 看轮廓",
+  calc: "勾选已启用的板型并录入货物后计算",
   result: "方案表格里改参数，点 3D 看装载图",
 };
 const tabHint = computed(() => hints[tab.value]);

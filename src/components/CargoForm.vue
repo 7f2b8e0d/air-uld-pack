@@ -15,7 +15,7 @@
           <button type="button" class="ghost sm" @click="setAllCalcPallets(false)">清空</button>
         </div>
       </div>
-      <p v-if="!enabledPallets.length" class="warn">请先在配置中心启用集装箱型号</p>
+      <p v-if="!enabledPallets.length" class="warn">请先在「集装箱」页启用型号</p>
       <div v-else class="pallet-pick">
         <label v-for="item in enabledPallets" :key="item.id" class="pick-item" :class="{ on: isCalcPallet(item.id) }">
           <input

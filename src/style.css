@@ -434,6 +434,24 @@ tbody tr.current {
   background: rgba(77, 184, 168, 0.08);
 }
 
+tr.plane-row,
+tr.plane-row:hover {
+  cursor: default;
+  background: rgba(12, 17, 24, 0.45);
+}
+
+tr.plane-row td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: var(--muted);
+}
+
+tr.plane-row strong {
+  display: inline;
+  margin-right: 8px;
+  color: var(--text);
+}
+
 td strong {
   display: block;
 }
@@ -546,6 +564,10 @@ td small {
   gap: 10px;
 }
 
+.calc-body > :not(.cargo-table-wrap) {
+  flex-shrink: 0;
+}
+
 .result-body {
   flex: 1;
   min-height: 0;
@@ -628,8 +650,8 @@ td small {
 }
 
 .pane-calc .cargo-table-wrap {
-  flex: 1 1 auto;
-  min-height: calc(100dvh - 140px);
+  flex: 0 0 auto;
+  min-height: calc(100dvh - 180px);
 }
 
 .cargo-table input {
@@ -656,7 +678,9 @@ td small {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 8px;
-  max-height: 280px;
+  flex: 0 0 auto;
+  max-height: min(46dvh, 480px);
+  min-height: 180px;
   overflow: auto;
 }
 
