@@ -3,7 +3,7 @@
     <div class="config-head">
       <div>
         <h2>配置中心</h2>
-        <p>选择后续装箱计算要使用的箱型，设置保存在本机浏览器。</p>
+        <p>选择后续装箱计算要使用的箱型。也可导入/导出当前全部数据，方便换电脑或备份方案。</p>
       </div>
       <div class="stat">
         <strong>{{ enabledCount }}</strong>

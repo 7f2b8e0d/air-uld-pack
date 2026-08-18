@@ -23,6 +23,18 @@
           <em v-if="resultCount">{{ resultCount }}</em>
         </button>
       </nav>
+      <div class="data-actions">
+        <button type="button" class="ghost sm" @click="onExport">导出数据</button>
+        <button type="button" class="ghost sm" @click="pickImport">导入数据</button>
+        <input
+          ref="importInput"
+          type="file"
+          accept="application/json,.json"
+          hidden
+          @change="onImport"
+        />
+        <small v-if="dataMessage" :class="['data-msg', dataOk ? 'ok' : 'warn']">{{ dataMessage }}</small>
+      </div>
     </header>
 
     <div class="workspace">
@@ -51,9 +63,12 @@ import CargoForm from "./components/CargoForm.vue";
 import ResultPanel from "./components/ResultPanel.vue";
 import Viewer3D from "./components/Viewer3D.vue";
 import Modal from "./components/Modal.vue";
-import { closePalletPreview, config, previewPallet } from "./state.js";
+import { closePalletPreview, config, exportProjectData, importProjectFile, previewPallet } from "./state.js";
 
 const tab = ref("config");
+const importInput = ref(null);
+const dataMessage = ref("");
+const dataOk = ref(true);
 const hints = {
   config: "启用后续计算要用的集装箱型号",
   table: "查看尺寸数据，点 3D 预览轮廓",
@@ -66,4 +81,30 @@ const resultCount = computed(() => config.results.length);
 provide("setTab", (name) => {
   tab.value = name;
 });
+
+function onExport() {
+  const res = exportProjectData();
+  dataOk.value = true;
+  dataMessage.value = res.message;
+}
+
+function pickImport() {
+  importInput.value?.click();
+}
+
+async function onImport(event) {
+  const file = event.target.files?.[0];
+  event.target.value = "";
+  if (!file) return;
+  if (!window.confirm("导入会覆盖当前浏览器里的全部配置、货物和方案，确定继续？")) return;
+  try {
+    const res = await importProjectFile(file);
+    dataOk.value = true;
+    dataMessage.value = res.message;
+    if (config.results.length) tab.value = "result";
+  } catch (error) {
+    dataOk.value = false;
+    dataMessage.value = error.message || "导入失败";
+  }
+}
 </script>

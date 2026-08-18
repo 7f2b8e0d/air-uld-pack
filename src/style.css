@@ -67,6 +67,7 @@ p {
 
 .topbar {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
@@ -74,6 +75,21 @@ p {
   border-bottom: 1px solid var(--line);
   background: rgba(12, 17, 24, 0.88);
   backdrop-filter: blur(12px);
+}
+
+.data-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.data-msg {
+  font-size: 12px;
+}
+
+.data-msg.ok {
+  color: var(--teal);
 }
 
 .tabs {

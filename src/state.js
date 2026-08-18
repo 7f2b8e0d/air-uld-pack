@@ -20,6 +20,8 @@ export const TYPE_COLORS = {
 
 const STORAGE_KEY = "airpack.config.v2";
 const LEGACY_KEY = "airpack.config.v1";
+const EXPORT_KIND = "airpack-project";
+const EXPORT_VERSION = 2;
 
 export const pallets = (catalog.items || []).map((item) => ({
   ...item,
@@ -66,8 +68,8 @@ function normalizeResult(result) {
   return { ...result, boards: [], palletIds: result.palletIds || [], flushEdge };
 }
 
-function loadStored() {
-  const fallback = {
+function emptyConfig() {
+  return {
     disabledIds: [],
     selectedId: pallets[0]?.id ?? null,
     cargos: [emptyCargo()],
@@ -82,40 +84,79 @@ function loadStored() {
     selectedGroupIds: [],
     previewPalletId: null,
   };
+}
+
+function persistPayload(value) {
+  return {
+    disabledIds: value.disabledIds,
+    selectedId: value.selectedId,
+    cargos: value.cargos,
+    calcPalletIds: value.calcPalletIds,
+    calcPalletQty: value.calcPalletQty,
+    allowFlip: value.allowFlip,
+    flushEdge: value.flushEdge,
+    results: value.results,
+    activeResultId: value.activeResultId,
+    activeBoardIndex: value.activeBoardIndex,
+    groupSelectMode: value.groupSelectMode,
+    selectedGroupIds: value.selectedGroupIds,
+  };
+}
+
+function normalizeSnapshot(parsed) {
+  const fallback = emptyConfig();
+  if (!parsed || typeof parsed !== "object") return fallback;
+  const selectedStillExists = pallets.some((p) => p.id === parsed.selectedId);
+  const palletIdList = Array.isArray(parsed.calcPalletIds)
+    ? parsed.calcPalletIds
+    : parsed.calcPalletId != null
+      ? [parsed.calcPalletId]
+      : fallback.calcPalletIds;
+  const calcPalletIds = palletIdList.filter((id) => pallets.some((p) => p.id == id));
+  const qtySource = parsed.calcPalletQty && typeof parsed.calcPalletQty === "object" ? parsed.calcPalletQty : {};
+  const calcPalletQty = {};
+  for (const id of calcPalletIds) {
+    const rawQty = qtySource[id] ?? qtySource[String(id)] ?? 1;
+    calcPalletQty[id] = Math.min(50, Math.max(1, Math.floor(Number(rawQty) || 1)));
+  }
+  return {
+    ...fallback,
+    disabledIds: Array.isArray(parsed.disabledIds) ? parsed.disabledIds : [],
+    selectedId: selectedStillExists ? parsed.selectedId : fallback.selectedId,
+    cargos: Array.isArray(parsed.cargos) && parsed.cargos.length ? parsed.cargos : fallback.cargos,
+    calcPalletIds: calcPalletIds.length ? calcPalletIds : fallback.calcPalletIds,
+    calcPalletQty: Object.keys(calcPalletQty).length ? calcPalletQty : fallback.calcPalletQty,
+    allowFlip: Boolean(parsed.allowFlip),
+    flushEdge: parsed.flushEdge == null ? false : Boolean(parsed.flushEdge),
+    results: Array.isArray(parsed.results) ? parsed.results.map(normalizeResult) : [],
+    activeResultId: parsed.activeResultId ?? null,
+    activeBoardIndex: Number(parsed.activeBoardIndex) || 0,
+    groupSelectMode: parsed.groupSelectMode === "single" ? "single" : "multi",
+    selectedGroupIds: Array.isArray(parsed.selectedGroupIds) ? parsed.selectedGroupIds : [],
+    previewPalletId: null,
+  };
+}
+
+function unwrapImport(parsed) {
+  if (!parsed || typeof parsed !== "object") {
+    throw new Error("文件内容不是有效的 JSON 对象");
+  }
+  if (parsed.kind === EXPORT_KIND && parsed.data && typeof parsed.data === "object") {
+    return parsed.data;
+  }
+  if (parsed.disabledIds || parsed.cargos || parsed.results || parsed.calcPalletIds) {
+    return parsed;
+  }
+  throw new Error("不是本项目导出的数据文件");
+}
+
+function loadStored() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY) || localStorage.getItem(LEGACY_KEY);
-    if (!raw) return fallback;
-    const parsed = JSON.parse(raw);
-    const selectedStillExists = pallets.some((p) => p.id === parsed.selectedId);
-    const palletIdList = Array.isArray(parsed.calcPalletIds)
-      ? parsed.calcPalletIds
-      : parsed.calcPalletId != null
-        ? [parsed.calcPalletId]
-        : fallback.calcPalletIds;
-    const calcPalletIds = palletIdList.filter((id) => pallets.some((p) => p.id == id));
-    const qtySource = parsed.calcPalletQty && typeof parsed.calcPalletQty === "object" ? parsed.calcPalletQty : {};
-    const calcPalletQty = {};
-    for (const id of calcPalletIds) {
-      const raw = qtySource[id] ?? qtySource[String(id)] ?? 1;
-      calcPalletQty[id] = Math.min(50, Math.max(1, Math.floor(Number(raw) || 1)));
-    }
-    return {
-      ...fallback,
-      disabledIds: Array.isArray(parsed.disabledIds) ? parsed.disabledIds : [],
-      selectedId: selectedStillExists ? parsed.selectedId : fallback.selectedId,
-      cargos: Array.isArray(parsed.cargos) && parsed.cargos.length ? parsed.cargos : fallback.cargos,
-      calcPalletIds: calcPalletIds.length ? calcPalletIds : fallback.calcPalletIds,
-      calcPalletQty: Object.keys(calcPalletQty).length ? calcPalletQty : fallback.calcPalletQty,
-      allowFlip: Boolean(parsed.allowFlip),
-      flushEdge: parsed.flushEdge == null ? false : Boolean(parsed.flushEdge),
-      results: Array.isArray(parsed.results) ? parsed.results.map(normalizeResult) : [],
-      activeResultId: parsed.activeResultId ?? null,
-      activeBoardIndex: Number(parsed.activeBoardIndex) || 0,
-      groupSelectMode: parsed.groupSelectMode === "single" ? "single" : "multi",
-      selectedGroupIds: Array.isArray(parsed.selectedGroupIds) ? parsed.selectedGroupIds : [],
-    };
+    if (!raw) return emptyConfig();
+    return normalizeSnapshot(JSON.parse(raw));
   } catch {
-    return fallback;
+    return emptyConfig();
   }
 }
 
@@ -124,26 +165,56 @@ export const config = reactive(loadStored());
 watch(
   config,
   (value) => {
-    localStorage.setItem(
-      STORAGE_KEY,
-      JSON.stringify({
-        disabledIds: value.disabledIds,
-        selectedId: value.selectedId,
-        cargos: value.cargos,
-        calcPalletIds: value.calcPalletIds,
-        calcPalletQty: value.calcPalletQty,
-        allowFlip: value.allowFlip,
-        flushEdge: value.flushEdge,
-        results: value.results,
-        activeResultId: value.activeResultId,
-        activeBoardIndex: value.activeBoardIndex,
-        groupSelectMode: value.groupSelectMode,
-        selectedGroupIds: value.selectedGroupIds,
-      })
-    );
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(persistPayload(value)));
   },
   { deep: true }
 );
+
+function fileStamp() {
+  const d = new Date();
+  const p = (n) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}${p(d.getMonth() + 1)}${p(d.getDate())}-${p(d.getHours())}${p(d.getMinutes())}`;
+}
+
+export function exportProjectData() {
+  const payload = {
+    kind: EXPORT_KIND,
+    version: EXPORT_VERSION,
+    exportedAt: Date.now(),
+    data: persistPayload(config),
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `空运装箱-数据-${fileStamp()}.json`;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+  return { ok: true, message: "已导出当前全部数据" };
+}
+
+export function importProjectData(parsed) {
+  const next = normalizeSnapshot(unwrapImport(parsed));
+  Object.assign(config, next);
+  return {
+    ok: true,
+    message: `已导入 ${next.results.length} 个方案、${next.cargos.length} 种货物`,
+  };
+}
+
+export async function importProjectFile(file) {
+  if (!file) throw new Error("请选择要导入的文件");
+  const text = await file.text();
+  let parsed;
+  try {
+    parsed = JSON.parse(text);
+  } catch {
+    throw new Error("文件不是有效的 JSON");
+  }
+  return importProjectData(parsed);
+}
 
 export const disabledSet = computed(() => new Set(config.disabledIds));
 
