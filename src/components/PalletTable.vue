@@ -3,7 +3,7 @@
     <div class="table-head">
       <div>
         <h2>集装箱型号</h2>
-        <p>启用后才会出现在「计算摆法」里。点「3D」看轮廓和尺寸刻度。</p>
+        <p>启用的型号会自动出现在「计算摆法」里。点「3D」看轮廓和尺寸刻度。</p>
       </div>
       <div class="stat">
         <strong>{{ enabledCount }}</strong>

@@ -226,11 +226,7 @@ export const selectedPallet = computed(
   () => pallets.find((p) => p.id === config.selectedId) || pallets[0] || null
 );
 
-export const calcPallets = computed(() =>
-  config.calcPalletIds
-    .map((id) => enabledPallets.value.find((p) => p.id == id) || pallets.find((p) => p.id == id))
-    .filter(Boolean)
-);
+export const calcPallets = computed(() => enabledPallets.value);
 
 export const calcPallet = computed(() => calcPallets.value[0] || enabledPallets.value[0] || null);
 
@@ -285,6 +281,10 @@ export function setEnabled(id, on) {
   if (on) next.delete(id);
   else next.add(id);
   config.disabledIds = [...next];
+  if (on) {
+    const raw = config.calcPalletQty?.[id] ?? config.calcPalletQty?.[String(id)];
+    if (!Number(raw)) setPalletQty(id, 1);
+  }
 }
 
 export function setGroupEnabled(ids, on) {
@@ -294,6 +294,13 @@ export function setGroupEnabled(ids, on) {
     else next.add(id);
   }
   config.disabledIds = [...next];
+  if (on) {
+    const qty = { ...config.calcPalletQty };
+    for (const id of ids) {
+      if (!Number(qty[id] ?? qty[String(id)])) qty[id] = 1;
+    }
+    config.calcPalletQty = qty;
+  }
 }
 
 export function setAllEnabled(on) {
@@ -487,8 +494,8 @@ function snapshotCargos() {
 
 function snapshotPalletQty() {
   const qty = {};
-  for (const id of config.calcPalletIds) {
-    qty[id] = palletQty(id);
+  for (const item of enabledPallets.value) {
+    qty[item.id] = palletQty(item.id);
   }
   return qty;
 }
@@ -553,7 +560,7 @@ function applyPackToResult(result, boards, leftover, inputs) {
 
 function currentPackInputs() {
   return {
-    palletIds: config.calcPalletIds.slice(),
+    palletIds: enabledPallets.value.map((item) => item.id),
     palletQtys: snapshotPalletQty(),
     cargos: snapshotCargos(),
     flushEdge: Boolean(config.flushEdge),

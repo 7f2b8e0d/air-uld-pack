@@ -3,29 +3,16 @@
     <div class="table-head">
       <div>
         <h2>计算摆法</h2>
-        <p>这里只列出当前计算要用的集装箱。先在「集装箱」页启用型号，再在本页添加并填写数量。</p>
+        <p>「集装箱」页启用的型号会自动出现在这里，只需填写每种数量后计算。</p>
       </div>
     </div>
 
     <div class="calc-body">
       <div class="picker-head">
         <span>集装箱型号 · {{ calcPallets.length }}</span>
-        <div class="toolbar-actions">
-          <button type="button" class="ghost sm" @click="setAllCalcPallets(true)">加入全部已启用</button>
-          <button type="button" class="ghost sm" @click="setAllCalcPallets(false)">清空</button>
-        </div>
       </div>
-      <p v-if="!enabledPallets.length" class="warn">请先在「集装箱」页启用型号</p>
-      <label v-else-if="addablePallets.length" class="add-pallet">
-        <span>添加</span>
-        <select :value="addPalletId" @change="onAddPallet">
-          <option value="">从已启用型号中添加…</option>
-          <option v-for="item in addablePallets" :key="item.id" :value="item.id">
-            {{ item.airplane }} / {{ item.pallet }} · {{ item.baseOuterLengthCm }}×{{ item.baseOuterWidthCm }}×{{ item.heightCm }}
-          </option>
-        </select>
-      </label>
-      <div v-if="calcPallets.length" class="pallet-pick">
+      <p v-if="!calcPallets.length" class="warn">请先在「集装箱」页启用型号</p>
+      <div v-else class="pallet-pick">
         <div v-for="item in calcPallets" :key="item.id" class="pick-item on">
           <span class="pick-copy">
             <strong>{{ item.airplane }} / {{ item.pallet }}</strong>
@@ -42,10 +29,8 @@
               @change="setPalletQty(item.id, $event.target.value)"
             />
           </span>
-          <button type="button" class="ghost sm" @click="toggleCalcPallet(item.id, false)">移除</button>
         </div>
       </div>
-      <p v-else-if="enabledPallets.length" class="hint">还没有集装箱，请从上方下拉框添加，或点「加入全部已启用」。</p>
 
       <label class="switch">
         <input v-model="config.flushEdge" type="checkbox" />
@@ -125,7 +110,7 @@
 </template>
 
 <script setup>
-import { computed, inject, ref } from "vue";
+import { inject, ref } from "vue";
 import {
   activeResult,
   addCargoRow,
@@ -133,14 +118,11 @@ import {
   clearAllCargos,
   calcPallets,
   config,
-  enabledPallets,
   palletQty,
   removeCargoRow,
   runCalculate,
-  setAllCalcPallets,
   setAllCargoFlip,
   setPalletQty,
-  toggleCalcPallet,
 } from "../state.js";
 
 const setTab = inject("setTab", () => {});
@@ -149,20 +131,6 @@ const ok = ref(false);
 const batchText = ref("");
 const batchMessage = ref("");
 const batchOk = ref(false);
-const addPalletId = ref("");
-
-const addablePallets = computed(() => {
-  const selected = new Set(calcPallets.value.map((item) => item.id));
-  return enabledPallets.value.filter((item) => !selected.has(item.id));
-});
-
-function onAddPallet(event) {
-  const id = event.target.value;
-  event.target.value = "";
-  addPalletId.value = "";
-  if (!id) return;
-  toggleCalcPallet(id, true);
-}
 
 function onBatchAdd() {
   const res = addCargosFromPaste(batchText.value);
