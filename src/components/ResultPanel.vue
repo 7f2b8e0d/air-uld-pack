@@ -5,9 +5,12 @@
         <h2>装货方案</h2>
         <p>点一行查看并修改参数。改货物、数量、贴边或翻转后会自动重算，点「3D」看装载图。</p>
       </div>
-      <div v-if="activeResult" class="toolbar-actions">
-        <button type="button" class="primary sm" @click="openPlan(activeResult.id)">打开 3D</button>
-        <button type="button" class="ghost sm danger" @click="deleteResult(activeResult.id)">删除当前</button>
+      <div class="toolbar-actions">
+        <button v-if="activeResult" type="button" class="primary sm" @click="openPlan(activeResult.id)">打开 3D</button>
+        <button v-if="activeResult" type="button" class="ghost sm danger" @click="deleteResult(activeResult.id)">删除当前</button>
+        <button type="button" class="ghost sm danger" :disabled="!config.results.length" @click="onClearAll">
+          清空全部方案
+        </button>
       </div>
     </div>
 
@@ -333,6 +336,7 @@ import {
   activeResult,
   addResultCargo,
   addResultCargosFromPaste,
+  clearAllResults,
   config,
   deleteResult,
   formatTime,
@@ -500,6 +504,14 @@ function openPlan(id) {
   editMessage.value = "";
   applyRecalc();
   previewOpen.value = true;
+}
+
+function onClearAll() {
+  if (!config.results.length) return;
+  if (!window.confirm(`清空全部 ${config.results.length} 个装货方案？`)) return;
+  previewOpen.value = false;
+  clearAllResults();
+  editMessage.value = "";
 }
 
 onUnmounted(() => clearTimeout(timer));

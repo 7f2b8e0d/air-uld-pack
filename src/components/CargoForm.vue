@@ -55,6 +55,7 @@
           <button type="button" class="ghost sm" @click="setAllCargoFlip(true)">全部可翻转</button>
           <button type="button" class="ghost sm" @click="setAllCargoFlip(false)">全部不翻转</button>
           <button type="button" class="ghost sm" @click="addCargoRow">添加货物</button>
+          <button type="button" class="ghost sm danger" @click="onClearCargos">清空货物</button>
         </div>
       </div>
       <div class="batch-paste">
@@ -123,6 +124,7 @@ import {
   activeResult,
   addCargoRow,
   addCargosFromPaste,
+  clearAllCargos,
   calcPallets,
   config,
   enabledPallets,
@@ -148,6 +150,14 @@ function onBatchAdd() {
   batchOk.value = res.ok;
   batchMessage.value = res.message;
   if (res.ok) batchText.value = "";
+}
+
+function onClearCargos() {
+  if (!window.confirm("清空计算页里的全部货物？")) return;
+  clearAllCargos();
+  batchText.value = "";
+  batchMessage.value = "已清空货物";
+  batchOk.value = true;
 }
 
 function onCreate() {
