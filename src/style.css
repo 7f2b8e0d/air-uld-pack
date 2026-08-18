@@ -248,7 +248,8 @@ p {
 .search input,
 .search select,
 .cargo-table input,
-.plan-name {
+.plan-name,
+.add-pallet select {
   width: 100%;
   border: 1px solid var(--line);
   background: #0e1620;
@@ -261,7 +262,8 @@ p {
 .search input:focus,
 .search select:focus,
 .cargo-table input:focus,
-.plan-name:focus {
+.plan-name:focus,
+.add-pallet select:focus {
   border-color: #4d6a86;
 }
 
@@ -680,7 +682,6 @@ td small {
   gap: 8px;
   flex: 0 0 auto;
   max-height: min(46dvh, 480px);
-  min-height: 180px;
   overflow: auto;
 }
 
@@ -692,7 +693,16 @@ td small {
   border: 1px solid var(--line);
   border-radius: 10px;
   background: rgba(12, 17, 24, 0.35);
-  cursor: pointer;
+}
+
+.add-pallet {
+  display: grid;
+  gap: 6px;
+}
+
+.add-pallet span {
+  font-size: 11px;
+  color: var(--muted);
 }
 
 .pick-item.on {
