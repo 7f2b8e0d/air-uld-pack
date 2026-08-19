@@ -37,25 +37,83 @@ function emptyCargo() {
   return { id: uid("box"), name: "", l: "", w: "", h: "", qty: "", allowFlip: true };
 }
 
+function readFlushFlag(map, id, fallback = false) {
+  if (map && typeof map === "object") {
+    const raw = map[id] ?? map[String(id)];
+    if (Array.isArray(raw)) return Boolean(raw[0]);
+    if (raw != null) return Boolean(raw);
+  }
+  return Boolean(fallback);
+}
+
+function normalizeFlushMap(source, ids, fallback = false) {
+  const map = {};
+  for (const id of ids || []) {
+    if (id == null) continue;
+    map[id] = readFlushFlag(source, id, fallback);
+  }
+  return map;
+}
+
+function flushMapFromResult(result) {
+  const ids = [
+    ...new Set(
+      (result.palletIds || result.boards?.map((board) => board.palletId) || []).filter((id) => id != null)
+    ),
+  ];
+  if (result.flushMap && typeof result.flushMap === "object") {
+    return normalizeFlushMap(result.flushMap, ids, result.flushEdge);
+  }
+  const fromBoards = {};
+  for (const board of result.boards || []) {
+    if (board.palletId == null || board.flushEdge == null) continue;
+    if (fromBoards[board.palletId] == null) fromBoards[board.palletId] = Boolean(board.flushEdge);
+  }
+  return normalizeFlushMap(fromBoards, ids, result.flushEdge);
+}
+
+export function flushState(map, fallback = null) {
+  const flags = Object.values(map || {}).map(Boolean);
+  if (!flags.length) {
+    const on = Boolean(fallback);
+    return { allOn: on, allOff: !on, mixed: false, label: on ? "贴边" : "不贴边" };
+  }
+  const n = flags.filter(Boolean).length;
+  if (n === flags.length) return { allOn: true, allOff: false, mixed: false, label: "贴边" };
+  if (!n) return { allOn: false, allOff: true, mixed: false, label: "不贴边" };
+  return { allOn: false, allOff: false, mixed: true, label: "部分贴边" };
+}
+
 function normalizeResult(result) {
   if (!result || typeof result !== "object") return result;
-  const flushEdge = Boolean(result.flushEdge);
+  const palletIds = [
+    ...new Set(
+      (result.palletIds || result.boards?.map((board) => board.palletId) || (result.palletId != null ? [result.palletId] : [])).filter(
+        (id) => id != null
+      )
+    ),
+  ];
+  const flushMap = flushMapFromResult({ ...result, palletIds });
+  const flushEdge = flushState(flushMap).allOn;
   if (Array.isArray(result.boards) && result.boards.length) {
     return {
       ...result,
+      palletIds,
+      flushMap,
       flushEdge,
-      palletIds: result.palletIds || result.boards.map((b) => b.palletId),
     };
   }
   if (result.groups) {
     return {
       ...result,
-      flushEdge,
       palletIds: result.palletIds || (result.palletId != null ? [result.palletId] : []),
+      flushMap,
+      flushEdge,
       boards: [
         {
           palletId: result.palletId,
           palletName: result.palletName,
+          flushEdge,
           groups: result.groups,
           packedCount: result.packedCount,
           packedVolume: result.packedVolume,
@@ -65,7 +123,7 @@ function normalizeResult(result) {
       ],
     };
   }
-  return { ...result, boards: [], palletIds: result.palletIds || [], flushEdge };
+  return { ...result, boards: [], palletIds: result.palletIds || [], flushMap, flushEdge };
 }
 
 function emptyConfig() {
@@ -77,6 +135,7 @@ function emptyConfig() {
     calcPalletQty: pallets[0] ? { [pallets[0].id]: 1 } : {},
     allowFlip: false,
     flushEdge: false,
+    flushMap: {},
     results: [],
     activeResultId: null,
     activeBoardIndex: 0,
@@ -95,6 +154,7 @@ function persistPayload(value) {
     calcPalletQty: value.calcPalletQty,
     allowFlip: value.allowFlip,
     flushEdge: value.flushEdge,
+    flushMap: value.flushMap,
     results: value.results,
     activeResultId: value.activeResultId,
     activeBoardIndex: value.activeBoardIndex,
@@ -128,6 +188,11 @@ function normalizeSnapshot(parsed) {
     calcPalletQty: Object.keys(calcPalletQty).length ? calcPalletQty : fallback.calcPalletQty,
     allowFlip: Boolean(parsed.allowFlip),
     flushEdge: parsed.flushEdge == null ? false : Boolean(parsed.flushEdge),
+    flushMap: normalizeFlushMap(
+      parsed.flushMap,
+      calcPalletIds.length ? calcPalletIds : fallback.calcPalletIds,
+      parsed.flushEdge == null ? false : parsed.flushEdge
+    ),
     results: Array.isArray(parsed.results) ? parsed.results.map(normalizeResult) : [],
     activeResultId: parsed.activeResultId ?? null,
     activeBoardIndex: Number(parsed.activeBoardIndex) || 0,
@@ -342,6 +407,29 @@ export function setPalletQty(id, value) {
   config.calcPalletQty = { ...config.calcPalletQty, [id]: qty };
 }
 
+export function palletFlush(id, map = config.flushMap, fallback = config.flushEdge) {
+  return readFlushFlag(map, id, fallback);
+}
+
+export function setPalletFlush(id, on) {
+  config.flushMap = { ...config.flushMap, [id]: Boolean(on) };
+}
+
+export function setAllFlush(on) {
+  const next = { ...config.flushMap };
+  for (const item of enabledPallets.value) next[item.id] = Boolean(on);
+  config.flushMap = next;
+  config.flushEdge = Boolean(on);
+}
+
+export function calcFlushMap() {
+  const map = {};
+  for (const item of enabledPallets.value) {
+    map[item.id] = palletFlush(item.id);
+  }
+  return map;
+}
+
 export function setAllCalcPallets(on) {
   config.calcPalletIds = on ? enabledPallets.value.map((p) => p.id) : [];
   if (!on) {
@@ -540,7 +628,8 @@ function applyPackToResult(result, boards, leftover, inputs) {
   });
   result.palletIds = [...(inputs.palletIds || [])];
   result.palletQtys = { ...(inputs.palletQtys || {}) };
-  result.flushEdge = Boolean(inputs.flushEdge);
+  result.flushMap = normalizeFlushMap(inputs.flushMap, result.palletIds, inputs.flushEdge);
+  result.flushEdge = flushState(result.flushMap).allOn;
   result.palletName = [...new Set(result.boards.map((b) => b.palletName))].join("、");
   result.cargos = (inputs.cargos || []).map((row) => ({ ...row }));
   result.allowFlip = result.cargos.some((row) => row.allowFlip);
@@ -563,16 +652,20 @@ function currentPackInputs() {
     palletIds: enabledPallets.value.map((item) => item.id),
     palletQtys: snapshotPalletQty(),
     cargos: snapshotCargos(),
+    flushMap: calcFlushMap(),
     flushEdge: Boolean(config.flushEdge),
   };
 }
 
 function resultPackInputs(result) {
+  const palletIds = result.palletIds?.length ? result.palletIds.slice() : config.calcPalletIds.slice();
+  const flushMap = flushMapFromResult(result);
   return {
-    palletIds: result.palletIds?.length ? result.palletIds.slice() : config.calcPalletIds.slice(),
+    palletIds,
     palletQtys: { ...(result.palletQtys || snapshotPalletQty()) },
     cargos: Array.isArray(result.cargos) && result.cargos.length ? result.cargos.map((row) => ({ ...row })) : snapshotCargos(),
-    flushEdge: Boolean(result.flushEdge),
+    flushMap,
+    flushEdge: flushState(flushMap).allOn,
   };
 }
 
@@ -593,6 +686,7 @@ function runPack(inputs, { requireEnabled = true } = {}) {
   }
   const packed = packScheme(selected, valid, {
     qtyMap: inputs.palletQtys,
+    flushMap: inputs.flushMap,
     flushEdge: Boolean(inputs.flushEdge),
   });
   if (!packed.boards.length) {
@@ -634,9 +728,11 @@ export function recalculateResult(result) {
     cargos: result.cargos,
     palletIds: result.palletIds,
     palletQtys: result.palletQtys,
+    flushMap: result.flushMap,
     flushEdge: result.flushEdge,
   });
   if (result.id === config.activeResultId) {
+    config.flushMap = { ...(result.flushMap || {}) };
     config.flushEdge = Boolean(result.flushEdge);
     config.calcPalletIds = result.palletIds?.slice() || config.calcPalletIds;
     config.calcPalletQty = { ...(result.palletQtys || {}) };
@@ -673,6 +769,24 @@ export function setResultPalletQty(result, id, value) {
   result.palletQtys = { ...(result.palletQtys || {}), [id]: qty };
 }
 
+export function setResultPalletFlush(result, id, on) {
+  if (!result) return;
+  const ids = result.palletIds?.length ? result.palletIds : Object.keys(result.flushMap || {});
+  const next = { ...(result.flushMap || {}) };
+  next[id] = Boolean(on);
+  result.flushMap = normalizeFlushMap(next, ids, result.flushEdge);
+  result.flushEdge = flushState(result.flushMap).allOn;
+}
+
+export function setResultAllFlush(result, on) {
+  if (!result) return;
+  const ids = result.palletIds?.length ? result.palletIds : Object.keys(result.flushMap || {});
+  const next = {};
+  for (const id of ids) next[id] = Boolean(on);
+  result.flushMap = next;
+  result.flushEdge = Boolean(on);
+}
+
 export function selectResult(id) {
   config.activeResultId = id;
   const result = activeResult.value;
@@ -686,6 +800,7 @@ export function selectResult(id) {
     }
   }
   config.calcPalletQty = qty;
+  config.flushMap = { ...(result.flushMap || flushMapFromResult(result)) };
   config.flushEdge = Boolean(result.flushEdge);
   config.cargos = result.cargos?.length
     ? result.cargos.map((row) => ({

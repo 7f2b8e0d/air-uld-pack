@@ -68,10 +68,11 @@
                   <label class="check">
                     <input
                       type="checkbox"
-                      :checked="Boolean(item.flushEdge)"
+                      :checked="flushState(item.flushMap, item.flushEdge).allOn"
+                      :indeterminate.prop="flushState(item.flushMap, item.flushEdge).mixed"
                       @change="onFlushEdge(item, $event.target.checked)"
                     />
-                    <span>{{ item.flushEdge ? "贴边" : "不贴边" }}</span>
+                    <span>{{ flushState(item.flushMap, item.flushEdge).label }}</span>
                   </label>
                 </td>
                 <td>{{ flipSummary(item) }}</td>
@@ -108,10 +109,10 @@
             <div class="detail-block">
               <div class="picker-head">
                 <span>集装箱</span>
-                <label class="check">
-                  <input v-model="activeResult.flushEdge" type="checkbox" @change="recalcNow" />
-                  贴边
-                </label>
+                <div class="toolbar-actions">
+                  <button type="button" class="ghost sm" @click="flushAll(true)">全部贴边</button>
+                  <button type="button" class="ghost sm" @click="flushAll(false)">全部不贴边</button>
+                </div>
               </div>
               <div class="cargo-table-wrap">
                 <table class="cargo-table">
@@ -120,6 +121,7 @@
                       <th>机型 / 板型</th>
                       <th>外径 cm</th>
                       <th class="num">数量</th>
+                      <th>贴边</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -135,6 +137,16 @@
                           max="50"
                           @change="onPalletQty(row.id, $event.target.value)"
                         />
+                      </td>
+                      <td class="col-check">
+                        <label class="check">
+                          <input
+                            type="checkbox"
+                            :checked="row.flushEdge"
+                            @change="onPalletFlush(row.id, $event.target.checked)"
+                          />
+                          <span>{{ row.flushEdge ? "贴边" : "不贴边" }}</span>
+                        </label>
                       </td>
                     </tr>
                   </tbody>
@@ -385,12 +397,15 @@ import {
   pallets,
   recalculateResult,
   removeResultCargo,
+  flushState,
   renameResult,
   selectAllGroups,
   selectBoard,
   selectResult,
   setGroupSelectMode,
   setResultAllFlip,
+  setResultAllFlush,
+  setResultPalletFlush,
   setResultPalletQty,
   toggleGroup,
   visibleGroups,
@@ -410,7 +425,7 @@ const previewSubtitle = computed(() => {
   const n = activeResult.value.cargos?.filter((row) => row.allowFlip).length || 0;
   const total = activeResult.value.cargos?.length || 0;
   const flip = total && n === total ? "均可翻转" : n ? `${n} 种可翻转` : "均不可翻转";
-  const edge = activeResult.value.flushEdge ? "贴边" : "不贴边";
+  const edge = flushState(activeResult.value.flushMap, activeResult.value.flushEdge).label;
   return `${activeResult.value.palletName || ""} · ${edge} · ${flip}`;
 });
 
@@ -424,6 +439,7 @@ const activePallets = computed(() => {
       label: item ? `${item.airplane} / ${item.pallet}` : `板 ${id}`,
       size: item ? `${item.baseOuterLengthCm}×${item.baseOuterWidthCm}×${item.heightCm}` : "—",
       qty: result.palletQtys?.[id] ?? result.palletQtys?.[String(id)] ?? 1,
+      flushEdge: Boolean(result.flushMap?.[id] ?? result.flushMap?.[String(id)] ?? result.flushEdge),
     };
   });
 });
@@ -496,16 +512,22 @@ function leftoverCount(result) {
 }
 
 function fleetRows(item) {
+  const mixed = flushState(item.flushMap, item.flushEdge).mixed;
+  const edgeText = (id, boardEdge) => {
+    if (!mixed) return "";
+    const on = Boolean(item.flushMap?.[id] ?? item.flushMap?.[String(id)] ?? boardEdge ?? item.flushEdge);
+    return on ? " · 贴边" : " · 不贴边";
+  };
   const map = new Map();
   for (const board of item.boards || []) {
-    const name = board.palletName || "集装箱";
+    const name = `${board.palletName || "集装箱"}${edgeText(board.palletId, board.flushEdge)}`;
     map.set(name, (map.get(name) || 0) + 1);
   }
   if (map.size) return [...map.entries()].map(([name, count]) => ({ name, count }));
   return (item.palletIds || []).map((id) => {
     const pallet = pallets.find((p) => p.id == id);
     return {
-      name: pallet ? `${pallet.airplane} / ${pallet.pallet}` : `板 ${id}`,
+      name: `${pallet ? `${pallet.airplane} / ${pallet.pallet}` : `板 ${id}`}${edgeText(id)}`,
       count: item.palletQtys?.[id] || 1,
     };
   });
@@ -551,8 +573,18 @@ function recalcNow() {
 }
 
 function onFlushEdge(item, on) {
-  item.flushEdge = Boolean(on);
+  setResultAllFlush(item, on);
   selectResult(item.id);
+  recalcNow();
+}
+
+function onPalletFlush(id, on) {
+  setResultPalletFlush(activeResult.value, id, on);
+  recalcNow();
+}
+
+function flushAll(on) {
+  setResultAllFlush(activeResult.value, on);
   recalcNow();
 }
 

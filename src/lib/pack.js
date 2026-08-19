@@ -453,28 +453,42 @@ function limitedRemaining(cargos) {
     .reduce((sum, item) => sum + Number(item.l) * Number(item.w) * Number(item.h) * Number(item.qty), 0);
 }
 
-export function packScheme(palletList, cargos, { qtyMap = {}, flushEdge = false } = {}) {
+function readFlushFlag(map, id, fallback = false) {
+  if (map && typeof map === "object") {
+    const raw = map[id] ?? map[String(id)];
+    if (Array.isArray(raw)) return Boolean(raw[0]);
+    if (raw != null) return Boolean(raw);
+  }
+  return Boolean(fallback);
+}
+
+export function packScheme(palletList, cargos, { qtyMap = {}, flushMap = {}, flushEdge = false } = {}) {
   const boards = [];
   if (!palletList.length) return { boards: [], leftover: [] };
-  const options = { flushEdge: Boolean(flushEdge) };
 
   const fleet = [];
   for (const pallet of palletList) {
     const raw = qtyMap[pallet.id] ?? qtyMap[String(pallet.id)] ?? 1;
     const qty = Math.min(50, Math.max(1, Math.floor(Number(raw) || 1)));
+    const edge = readFlushFlag(flushMap, pallet.id, flushEdge);
     for (let seq = 1; seq <= qty; seq += 1) {
-      fleet.push({ pallet, seq, total: qty });
+      fleet.push({ pallet, seq, total: qty, flushEdge: edge });
     }
   }
 
+  const mixedEdge = new Set(fleet.map((entry) => entry.flushEdge)).size > 1;
+
   const makeBoard = (entry, packed) => {
     const name = `${entry.pallet.airplane} / ${entry.pallet.pallet}`;
+    const edge = entry.flushEdge ? "贴边" : "不贴边";
+    const base = entry.total > 1 ? `${name} #${entry.seq}` : name;
     return {
       palletId: entry.pallet.id,
       palletName: name,
       seq: entry.seq,
       total: entry.total,
-      label: entry.total > 1 ? `${name} #${entry.seq}` : name,
+      flushEdge: Boolean(entry.flushEdge),
+      label: mixedEdge ? `${base} · ${edge}` : base,
       groups: packed.groups,
       packingList: summarizeGroups(packed.groups),
       packedCount: packed.packedCount,
@@ -484,9 +498,11 @@ export function packScheme(palletList, cargos, { qtyMap = {}, flushEdge = false 
     };
   };
 
+  const packEntry = (entry, stock) => packMaxLoad(entry.pallet, stock, { flushEdge: entry.flushEdge });
+
   if (!hasLimitedQty(cargos)) {
     for (const entry of fleet) {
-      const packed = packMaxLoad(entry.pallet, cargos, options);
+      const packed = packEntry(entry, cargos);
       if (packed.groups.length) boards.push(makeBoard(entry, packed));
     }
     return { boards, leftover: [] };
@@ -497,7 +513,7 @@ export function packScheme(palletList, cargos, { qtyMap = {}, flushEdge = false 
   while (unused.length && limitedRemaining(stock) > 0) {
     let best = null;
     for (const entry of unused) {
-      const packed = packMaxLoad(entry.pallet, stock, options);
+      const packed = packEntry(entry, stock);
       if (!packed.groups.length) continue;
       if (!best || packed.packedVolume > best.packed.packedVolume) {
         best = { entry, packed };

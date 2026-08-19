@@ -678,7 +678,7 @@ td small {
 
 .pallet-pick {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 8px;
   flex: 0 0 auto;
   max-height: min(46dvh, 480px);
@@ -741,6 +741,26 @@ td small {
   color: var(--text);
   border-radius: 8px;
   padding: 6px 8px;
+}
+
+.flush-check {
+  flex-shrink: 0;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.flush-check span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.flush-hint {
+  margin: 0;
+}
+
+.result-detail .cargo-table .col-check {
+  width: auto;
+  text-align: left;
 }
 
 .list-title {

@@ -3,13 +3,17 @@
     <div class="table-head">
       <div>
         <h2>计算摆法</h2>
-        <p>「集装箱」页启用的型号会自动出现在这里，只需填写每种数量后计算。</p>
+        <p>「集装箱」页启用的型号会自动出现在这里。每种型号单独勾选是否贴边，同一型号共用。</p>
       </div>
     </div>
 
     <div class="calc-body">
       <div class="picker-head">
         <span>集装箱型号 · {{ calcPallets.length }}</span>
+        <div v-if="calcPallets.length" class="toolbar-actions">
+          <button type="button" class="ghost sm" @click="setAllFlush(true)">全部贴边</button>
+          <button type="button" class="ghost sm" @click="setAllFlush(false)">全部不贴边</button>
+        </div>
       </div>
       <p v-if="!calcPallets.length" class="warn">请先在「集装箱」页启用型号</p>
       <div v-else class="pallet-pick">
@@ -29,16 +33,17 @@
               @change="setPalletQty(item.id, $event.target.value)"
             />
           </span>
+          <label class="check flush-check" @click.stop>
+            <input
+              type="checkbox"
+              :checked="palletFlush(item.id)"
+              @change="setPalletFlush(item.id, $event.target.checked)"
+            />
+            <span>{{ palletFlush(item.id) ? "贴边" : "不贴边" }}</span>
+          </label>
         </div>
       </div>
-
-      <label class="switch">
-        <input v-model="config.flushEdge" type="checkbox" />
-        <span>
-          <strong>贴边装箱</strong>
-          <small>勾选后货物贴集装箱外轮廓。不勾选则长宽各留约 5cm，例如 318×244×290 按 308×234×290 计算，高度不变。</small>
-        </span>
-      </label>
+      <p class="hint flush-hint">贴边按型号指定：同一型号共用，不同型号可不同。勾选后贴外轮廓；不勾选则该型号长宽各留约 5cm，高度不变。</p>
 
       <div class="picker-head">
         <span>待装货物 · {{ config.cargos.length }} 种</span>
@@ -98,7 +103,7 @@
           </tbody>
         </table>
       </div>
-      <p class="hint">填了件数就按这个数量装，装不下会在方案里显示未装入。批量格式：长*宽*高*件数。贴边：贴外轮廓；不贴边则长宽各留约 5cm。</p>
+      <p class="hint">填了件数就按这个数量装，装不下会在方案里显示未装入。批量格式：长*宽*高*件数。</p>
 
       <div class="calc-actions">
         <button type="button" class="primary" @click="onCreate">计算新方案</button>
@@ -118,10 +123,13 @@ import {
   clearAllCargos,
   calcPallets,
   config,
+  palletFlush,
   palletQty,
   removeCargoRow,
   runCalculate,
   setAllCargoFlip,
+  setAllFlush,
+  setPalletFlush,
   setPalletQty,
 } from "../state.js";
 
