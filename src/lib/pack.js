@@ -216,7 +216,28 @@ function fitGrid(rect, ori, limit) {
   return { nx, ny, n: nx * ny, x: rect.x, y: rect.y };
 }
 
-function placementInSpace(pallet, space, ori, limit, inset) {
+function betterPlace(a, b, score) {
+  if (!b) return true;
+  if (score === "count") {
+    if (a.n !== b.n) return a.n > b.n;
+    if (a.vol > b.vol + EPS) return true;
+    if (b.vol > a.vol + EPS) return false;
+    return a.z < b.z - EPS;
+  }
+  if (score === "z-vol") {
+    if (a.z < b.z - EPS) return true;
+    if (b.z < a.z - EPS) return false;
+    if (a.vol > b.vol + EPS) return true;
+    if (b.vol > a.vol + EPS) return false;
+    return a.n > b.n;
+  }
+  if (a.vol > b.vol + EPS) return true;
+  if (b.vol > a.vol + EPS) return false;
+  if (a.n !== b.n) return a.n > b.n;
+  return a.z < b.z - EPS;
+}
+
+function placementInSpace(pallet, space, ori, limit, inset, score = "vol") {
   if (ori.h > space.dz + EPS) return null;
   let best = null;
   for (const z of zCandidates(pallet, space, ori.h)) {
@@ -236,14 +257,9 @@ function placementInSpace(pallet, space, ori, limit, inset) {
     }
     const n = grid.n * nz;
     const vol = n * ori.l * ori.w * ori.h;
-    if (
-      !best ||
-      z < best.z - EPS ||
-      (Math.abs(z - best.z) <= EPS && vol > best.vol)
-    ) {
-      best = { ...grid, nz, n, vol, z };
-    }
-    if (z <= space.z + EPS && best) break;
+    const cand = { ...grid, nz, n, vol, z };
+    if (betterPlace(cand, best, score)) best = cand;
+    if (score === "z-vol" && z <= space.z + EPS && best) break;
   }
   return best;
 }
@@ -321,8 +337,50 @@ export function expandGroupBoxes(group) {
   return boxes;
 }
 
+const packMemo = new Map();
+
+function packMemoKey(pallet, cargos, options) {
+  const flush = options.flushEdge ? 1 : 0;
+  const rows = (cargos || [])
+    .map((item) => `${item.id ?? ""}:${item.l}x${item.w}x${item.h}:${item.qty ?? ""}:${item.allowFlip ? 1 : 0}`)
+    .join("|");
+  return `${pallet.id}:${flush}:${rows}`;
+}
+
 export function packMaxLoad(pallet, cargos, options = {}) {
-  return packOnce(pallet, cargos, options);
+  const key = packMemoKey(pallet, cargos, options);
+  const cached = packMemo.get(key);
+  if (cached) return clonePacked(cached);
+  const packed = packOnce(pallet, cargos, options);
+  packMemo.set(key, packed);
+  if (packMemo.size > 120) {
+    const first = packMemo.keys().next().value;
+    packMemo.delete(first);
+  }
+  return clonePacked(packed);
+}
+
+function clonePacked(packed) {
+  return {
+    ...packed,
+    groups: packed.groups.map((group) => ({
+      ...group,
+      origin: { ...group.origin },
+    })),
+  };
+}
+
+function emptyPacked(pallet) {
+  const capacity = volumeOf(pallet);
+  return { groups: [], packedCount: 0, packedVolume: 0, capacity, utilization: 0 };
+}
+
+function betterPacked(a, b) {
+  if (!b) return true;
+  if (!a) return false;
+  if (a.packedVolume > b.packedVolume + EPS) return true;
+  if (b.packedVolume > a.packedVolume + EPS) return false;
+  return a.packedCount > b.packedCount;
 }
 
 function isUprightOri(stock, ori) {
@@ -339,8 +397,7 @@ function cargoRemaining(qty) {
   return n;
 }
 
-function packOnce(pallet, cargos, options = {}) {
-  const inset = edgeInset(pallet, Boolean(options.flushEdge));
+function makeStocks(cargos, sort) {
   const stocks = cargos
     .map((item, index) => ({
       key: item.id || `cargo-${index}`,
@@ -351,11 +408,63 @@ function packOnce(pallet, cargos, options = {}) {
       allowFlip: Boolean(item.allowFlip),
       remaining: cargoRemaining(item.qty),
     }))
-    .filter((item) => item.l > 0 && item.w > 0 && item.h > 0 && item.remaining > 0)
-    .sort((a, b) => b.l * b.w * b.h - a.l * a.w * a.h);
+    .filter((item) => item.l > 0 && item.w > 0 && item.h > 0 && item.remaining > 0);
+  if (sort === "longest") {
+    stocks.sort((a, b) => Math.max(b.l, b.w, b.h) - Math.max(a.l, a.w, a.h) || b.l * b.w * b.h - a.l * a.w * a.h);
+  } else if (sort === "tallest") {
+    stocks.sort((a, b) => b.h - a.h || b.l * b.w * b.h - a.l * a.w * a.h);
+  } else {
+    stocks.sort((a, b) => b.l * b.w * b.h - a.l * a.w * a.h);
+  }
+  return stocks;
+}
 
+function applyPlacement(groups, spaces, si, stock, ori, place) {
+  const space = spaces[si];
+  const usedDx = place.nx * ori.l;
+  const usedDy = place.ny * ori.w;
+  const usedDz = place.nz * ori.h;
+  const flipped = stock.allowFlip && !isUprightOri(stock, ori);
+  groups.push({
+    id: `g-${groups.length + 1}`,
+    cargoId: stock.key,
+    name: stock.name,
+    count: place.n,
+    color: GROUP_COLORS[groups.length % GROUP_COLORS.length],
+    l: ori.l,
+    w: ori.w,
+    h: ori.h,
+    origL: stock.l,
+    origW: stock.w,
+    origH: stock.h,
+    flipped,
+    allowFlip: stock.allowFlip,
+    nx: place.nx,
+    ny: place.ny,
+    nz: place.nz,
+    origin: { x: place.x, y: place.y, z: place.z },
+  });
+  stock.remaining -= place.n;
+  spaces.splice(si, 1, ...splitAround(space, place.x, place.y, place.z, usedDx, usedDy, usedDz));
+  if (spaces.length > 220) spaces.splice(220);
+  spaces.sort((a, b) => a.z - b.z || a.y - b.y || a.x - b.x);
+}
+
+function packGreedy(pallet, cargos, options, { sort = "volume", score = "vol", first = null } = {}) {
+  const inset = edgeInset(pallet, Boolean(options.flushEdge));
+  const stocks = makeStocks(cargos, sort);
+  if (!stocks.length) return emptyPacked(pallet);
   const spaces = [packingBounds(pallet, inset)];
   const groups = [];
+
+  if (first) {
+    const stock = stocks.find((item) => item.key === first.key);
+    if (stock && stock.remaining > 0) {
+      const limit = Number.isFinite(stock.remaining) ? stock.remaining : null;
+      const place = placementInSpace(pallet, spaces[0], first.ori, limit, inset, score);
+      if (place?.n) applyPlacement(groups, spaces, 0, stock, first.ori, place);
+    }
+  }
 
   const findBest = () => {
     let best = null;
@@ -365,18 +474,10 @@ function packOnce(pallet, cargos, options = {}) {
         if (stock.remaining <= 0) continue;
         const limit = Number.isFinite(stock.remaining) ? stock.remaining : null;
         for (const ori of cargoOrientations(stock.l, stock.w, stock.h, stock.allowFlip)) {
-          const place = placementInSpace(pallet, space, ori, limit, inset);
+          const place = placementInSpace(pallet, space, ori, limit, inset, score);
           if (!place?.n) continue;
-          if (
-            !best ||
-            place.z < best.place.z - EPS ||
-            (Math.abs(place.z - best.place.z) <= EPS && place.vol > best.place.vol) ||
-            (Math.abs(place.z - best.place.z) <= EPS &&
-              Math.abs(place.vol - best.place.vol) <= EPS &&
-              place.n > best.place.n)
-          ) {
-            best = { si, stock, ori, place, space };
-          }
+          const cand = { si, stock, ori, place };
+          if (!best || betterPlace(place, best.place, score)) best = cand;
         }
       }
     }
@@ -388,34 +489,7 @@ function packOnce(pallet, cargos, options = {}) {
     guard += 1;
     const best = findBest();
     if (!best) break;
-    const { si, stock, ori, place, space } = best;
-    const usedDx = place.nx * ori.l;
-    const usedDy = place.ny * ori.w;
-    const usedDz = place.nz * ori.h;
-    const flipped = stock.allowFlip && !isUprightOri(stock, ori);
-    groups.push({
-      id: `g-${groups.length + 1}`,
-      cargoId: stock.key,
-      name: stock.name,
-      count: place.n,
-      color: GROUP_COLORS[groups.length % GROUP_COLORS.length],
-      l: ori.l,
-      w: ori.w,
-      h: ori.h,
-      origL: stock.l,
-      origW: stock.w,
-      origH: stock.h,
-      flipped,
-      allowFlip: stock.allowFlip,
-      nx: place.nx,
-      ny: place.ny,
-      nz: place.nz,
-      origin: { x: place.x, y: place.y, z: place.z },
-    });
-    stock.remaining -= place.n;
-    spaces.splice(si, 1, ...splitAround(space, place.x, place.y, place.z, usedDx, usedDy, usedDz));
-    if (spaces.length > 220) spaces.splice(220);
-    spaces.sort((a, b) => a.z - b.z || a.y - b.y || a.x - b.x);
+    applyPlacement(groups, spaces, best.si, best.stock, best.ori, best.place);
   }
 
   const packedCount = groups.reduce((sum, g) => sum + g.count, 0);
@@ -428,6 +502,35 @@ function packOnce(pallet, cargos, options = {}) {
     capacity,
     utilization: capacity > 0 ? packedVolume / capacity : 0,
   };
+}
+
+function packOnce(pallet, cargos, options = {}) {
+  const templates = makeStocks(cargos, "volume");
+  if (!templates.length) return emptyPacked(pallet);
+
+  let best = null;
+  const consider = (packed) => {
+    if (betterPacked(packed, best)) best = packed;
+  };
+
+  for (const sort of ["volume", "longest", "tallest"]) {
+    for (const score of ["vol", "count", "z-vol"]) {
+      consider(packGreedy(pallet, cargos, options, { sort, score }));
+    }
+  }
+
+  const primary = templates[0];
+  for (const ori of cargoOrientations(primary.l, primary.w, primary.h, primary.allowFlip)) {
+    consider(packGreedy(pallet, cargos, options, { sort: "volume", score: "vol", first: { key: primary.key, ori } }));
+  }
+  if (templates.length === 2) {
+    const second = templates[1];
+    for (const ori of cargoOrientations(second.l, second.w, second.h, second.allowFlip)) {
+      consider(packGreedy(pallet, cargos, options, { sort: "volume", score: "vol", first: { key: second.key, ori } }));
+    }
+  }
+
+  return best || emptyPacked(pallet);
 }
 
 function hasLimitedQty(cargos) {
@@ -463,6 +566,7 @@ function readFlushFlag(map, id, fallback = false) {
 }
 
 export function packScheme(palletList, cargos, { qtyMap = {}, flushMap = {}, flushEdge = false } = {}) {
+  packMemo.clear();
   const boards = [];
   if (!palletList.length) return { boards: [], leftover: [] };
 
@@ -512,11 +616,30 @@ export function packScheme(palletList, cargos, { qtyMap = {}, flushMap = {}, flu
   const unused = [...fleet];
   while (unused.length && limitedRemaining(stock) > 0) {
     let best = null;
+    const lookahead = unused.length <= 5;
     for (const entry of unused) {
       const packed = packEntry(entry, stock);
       if (!packed.groups.length) continue;
-      if (!best || packed.packedVolume > best.packed.packedVolume) {
-        best = { entry, packed };
+      let score = packed.packedVolume;
+      if (lookahead) {
+        const rest = subtractPacked(stock, packed.groups);
+        let follow = 0;
+        if (limitedRemaining(rest) > 0) {
+          for (const other of unused) {
+            if (other === entry) continue;
+            follow = Math.max(follow, packEntry(other, rest).packedVolume);
+          }
+        } else {
+          follow = 1e15;
+        }
+        score = packed.packedVolume + follow;
+      }
+      if (
+        !best ||
+        score > best.score + EPS ||
+        (Math.abs(score - best.score) <= EPS && betterPacked(packed, best.packed))
+      ) {
+        best = { entry, packed, score };
       }
     }
     if (!best) break;
