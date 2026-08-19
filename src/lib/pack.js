@@ -539,14 +539,15 @@ function leftoverFrom(cargos, boards) {
   const packed = new Map();
   for (const board of boards) {
     for (const group of board.groups) {
-      packed.set(group.cargoId, (packed.get(group.cargoId) || 0) + group.count);
+      const key = String(group.cargoId ?? "");
+      packed.set(key, (packed.get(key) || 0) + group.count);
     }
   }
   return cargos
     .filter((item) => Number(item.qty) > 0)
     .map((item) => {
       const requested = Math.floor(Number(item.qty));
-      const loaded = packed.get(item.id) || 0;
+      const loaded = packed.get(String(item.id)) || packed.get(String(item.cargoId)) || 0;
       return {
         cargoId: item.id,
         name: String(item.name || "").trim() || "未命名",

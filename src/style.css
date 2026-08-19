@@ -956,6 +956,19 @@ td small {
   color: var(--danger);
 }
 
+.left-tag {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.leftover-block {
+  border-color: rgba(201, 120, 106, 0.45);
+}
+
+.leftover-block .picker-head span {
+  color: var(--danger);
+}
+
 .plan-card {
   position: relative;
   display: grid;
