@@ -332,6 +332,13 @@ function isUprightOri(stock, ori) {
   );
 }
 
+function cargoRemaining(qty) {
+  if (qty === "" || qty == null) return Infinity;
+  const n = Math.floor(Number(qty));
+  if (!Number.isFinite(n) || n <= 0) return 0;
+  return n;
+}
+
 function packOnce(pallet, cargos, options = {}) {
   const inset = edgeInset(pallet, Boolean(options.flushEdge));
   const stocks = cargos
@@ -342,7 +349,7 @@ function packOnce(pallet, cargos, options = {}) {
       w: Number(item.w),
       h: Number(item.h),
       allowFlip: Boolean(item.allowFlip),
-      remaining: item.qty === "" || item.qty == null || Number(item.qty) <= 0 ? Infinity : Math.floor(Number(item.qty)),
+      remaining: cargoRemaining(item.qty),
     }))
     .filter((item) => item.l > 0 && item.w > 0 && item.h > 0 && item.remaining > 0)
     .sort((a, b) => b.l * b.w * b.h - a.l * a.w * a.h);
@@ -500,12 +507,6 @@ export function packScheme(palletList, cargos, { qtyMap = {}, flushEdge = false 
     boards.push(makeBoard(best.entry, best.packed));
     stock = subtractPacked(stock, best.packed.groups);
     unused.splice(unused.indexOf(best.entry), 1);
-  }
-
-  for (const entry of unused) {
-    const packed = packMaxLoad(entry.pallet, stock, options);
-    if (packed.groups.length) boards.push(makeBoard(entry, packed));
-    stock = subtractPacked(stock, packed.groups);
   }
 
   return { boards, leftover: leftoverFrom(cargos, boards) };

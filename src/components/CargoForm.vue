@@ -86,7 +86,7 @@
                 <input v-model="row.h" type="number" min="1" step="0.1" placeholder="高" />
               </td>
               <td>
-                <input v-model="row.qty" type="number" min="0" step="1" placeholder="不填=尽量装满" />
+                <input v-model="row.qty" type="number" min="1" step="1" placeholder="件数" />
               </td>
               <td class="col-check">
                 <input v-model="row.allowFlip" type="checkbox" title="勾选后可把 120×80×150 翻成 150×120×80 等朝向，算法会翻转部分或全部以尽量多装" />
@@ -98,7 +98,7 @@
           </tbody>
         </table>
       </div>
-      <p class="hint">新货物默认可翻转。批量格式：长*宽*高*件数，可一次粘贴多行。贴边：贴外轮廓；不贴边则长宽各留约 5cm。</p>
+      <p class="hint">填了件数就按这个数量装，装不下会在方案里显示未装入。批量格式：长*宽*高*件数。贴边：贴外轮廓；不贴边则长宽各留约 5cm。</p>
 
       <div class="calc-actions">
         <button type="button" class="primary" @click="onCreate">计算新方案</button>

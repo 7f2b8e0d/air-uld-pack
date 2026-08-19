@@ -181,7 +181,7 @@
                         <input v-model="row.h" class="cell-input num-input" type="number" min="1" step="0.1" @input="scheduleRecalc" />
                       </td>
                       <td>
-                        <input v-model="row.qty" class="cell-input num-input" type="number" min="0" step="1" placeholder="满" @input="scheduleRecalc" />
+                        <input v-model="row.qty" class="cell-input num-input" type="number" min="1" step="1" placeholder="件数" @input="scheduleRecalc" />
                       </td>
                       <td class="col-check">
                         <input v-model="row.allowFlip" type="checkbox" @change="recalcNow" />
