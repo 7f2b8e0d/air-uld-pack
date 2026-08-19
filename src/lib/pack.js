@@ -550,10 +550,11 @@ function leftoverFrom(cargos, boards) {
       const loaded = packed.get(String(item.id)) || packed.get(String(item.cargoId)) || 0;
       return {
         cargoId: item.id,
-        name: String(item.name || "").trim() || "未命名",
+        name: String(item.name || "").trim() || `${Number(item.l)}×${Number(item.w)}×${Number(item.h)}`,
         l: Number(item.l),
         w: Number(item.w),
         h: Number(item.h),
+        allowFlip: Boolean(item.allowFlip),
         requested,
         packed: loaded,
         leftover: Math.max(0, requested - loaded),

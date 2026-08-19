@@ -59,7 +59,9 @@
                       {{ row.name }} {{ row.l }}×{{ row.w }}×{{ row.h }} ×{{ row.qtyText }}{{ row.allowFlip ? " 翻" : "" }}
                     </span>
                     <span v-if="!cargoRows(item).length">—</span>
-                    <span v-if="leftoverCount(item)" class="left-tag">未装下 {{ leftoverCount(item) }} 件</span>
+                    <span v-for="row in leftoverList(item)" :key="'left-' + row.cargoId" class="left-tag">
+                      未装下 {{ row.name }} {{ row.l }}×{{ row.w }}×{{ row.h }} cm ×{{ row.leftover }} 件
+                    </span>
                   </div>
                 </td>
                 <td class="col-check" @click.stop>
@@ -94,7 +96,9 @@
               <span>
                 {{ activeResult.packedCount || 0 }} 件已装 · {{ activeResult.boards?.length || 0 }} 块板 ·
                 利用率 {{ ((activeResult.utilization || 0) * 100).toFixed(1) }}%
-                <em v-if="leftoverCount(activeResult)" class="left-tag">未装下 {{ leftoverCount(activeResult) }} 件</em>
+                <em v-if="leftoverCount(activeResult)" class="left-tag">
+                  未装下 {{ leftoverCount(activeResult) }} 件
+                </em>
               </span>
             </div>
             <p v-if="editMessage" class="msg warn">{{ editMessage }}</p>
@@ -198,6 +202,42 @@
             </div>
           </div>
 
+          <div v-if="leftoverRows.length" class="detail-block leftover-block">
+            <div class="picker-head">
+              <span>未装下货物 · {{ leftoverRows.length }} 种 · {{ leftoverCount(activeResult) }} 件</span>
+            </div>
+            <div class="cargo-table-wrap">
+              <table class="cargo-table pack-result-table">
+                <thead>
+                  <tr>
+                    <th>状态</th>
+                    <th>型号名</th>
+                    <th class="num">长 cm</th>
+                    <th class="num">宽 cm</th>
+                    <th class="num">高 cm</th>
+                    <th>可翻转</th>
+                    <th class="num">需求件数</th>
+                    <th class="num">已装件数</th>
+                    <th class="num">未装下件数</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="row in leftoverRows" :key="'miss-' + row.cargoId" class="is-left">
+                    <td>未装下</td>
+                    <td>{{ row.name }}</td>
+                    <td class="num">{{ row.l }}</td>
+                    <td class="num">{{ row.w }}</td>
+                    <td class="num">{{ row.h }}</td>
+                    <td>{{ row.allowFlip ? "可翻转" : "不翻转" }}</td>
+                    <td class="num">{{ row.requested }}</td>
+                    <td class="num">{{ row.packed }}</td>
+                    <td class="num">{{ row.leftover }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
           <div class="detail-block">
             <div class="picker-head">
               <span>装箱结果</span>
@@ -226,7 +266,7 @@
                   </tr>
                   <tr v-for="row in leftoverRows" :key="'left-' + row.cargoId" class="is-left">
                     <td>未装下</td>
-                    <td>{{ row.name }}</td>
+                    <td>{{ row.name }} {{ row.l }}×{{ row.w }}×{{ row.h }}</td>
                     <td>{{ row.l }}×{{ row.w }}×{{ row.h }}</td>
                     <td>未装下</td>
                     <td class="num">{{ row.leftover }}</td>
@@ -234,36 +274,6 @@
                 </tbody>
               </table>
               <p v-if="!packingRows.length && !leftoverRows.length" class="empty">暂无装箱结果</p>
-            </div>
-          </div>
-
-          <div v-if="leftoverRows.length" class="detail-block leftover-block">
-            <div class="picker-head">
-              <span>未装下货物 · {{ leftoverCount(activeResult) }} 件</span>
-            </div>
-            <div class="cargo-table-wrap">
-              <table class="cargo-table pack-result-table">
-                <thead>
-                  <tr>
-                    <th>状态</th>
-                    <th>货物</th>
-                    <th>尺寸 cm</th>
-                    <th class="num">需求</th>
-                    <th class="num">已装</th>
-                    <th class="num">未装下</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="row in leftoverRows" :key="'miss-' + row.cargoId" class="is-left">
-                    <td>未装下</td>
-                    <td>{{ row.name }}</td>
-                    <td>{{ row.l }}×{{ row.w }}×{{ row.h }}</td>
-                    <td class="num">{{ row.requested }}</td>
-                    <td class="num">{{ row.packed }}</td>
-                    <td class="num">{{ row.leftover }}</td>
-                  </tr>
-                </tbody>
-              </table>
             </div>
           </div>
         </div>
@@ -442,31 +452,43 @@ const leftoverRows = computed(() => leftoverList(activeResult.value));
 
 function leftoverList(result) {
   if (!result) return [];
-  if (Array.isArray(result.leftover) && result.leftover.length) return result.leftover;
-  const packed = new Map();
+  const packedById = new Map();
   for (const board of result.boards || []) {
     for (const group of board.groups || []) {
       const key = String(group.cargoId ?? "");
-      packed.set(key, (packed.get(key) || 0) + group.count);
+      packedById.set(key, (packedById.get(key) || 0) + group.count);
     }
   }
-  return (result.cargos || [])
-    .filter((row) => Number(row.qty) > 0)
+  const fromCargos = (result.cargos || [])
+    .filter((row) => Number(row.l) > 0 && Number(row.w) > 0 && Number(row.h) > 0 && Number(row.qty) > 0)
     .map((row) => {
       const requested = Math.floor(Number(row.qty));
-      const loaded = packed.get(String(row.id)) || 0;
+      const loaded = packedById.get(String(row.id)) || 0;
       return {
         cargoId: row.id,
-        name: String(row.name || "").trim() || "未命名",
+        name: String(row.name || "").trim() || `${row.l}×${row.w}×${row.h}`,
         l: Number(row.l),
         w: Number(row.w),
         h: Number(row.h),
+        allowFlip: Boolean(row.allowFlip),
         requested,
         packed: loaded,
         leftover: Math.max(0, requested - loaded),
       };
     })
     .filter((row) => row.leftover > 0);
+  if (fromCargos.length) return fromCargos;
+  return (result.leftover || []).map((row) => ({
+    cargoId: row.cargoId,
+    name: String(row.name || "").trim() || `${row.l}×${row.w}×${row.h}`,
+    l: Number(row.l) || 0,
+    w: Number(row.w) || 0,
+    h: Number(row.h) || 0,
+    allowFlip: Boolean(row.allowFlip),
+    requested: Number(row.requested) || 0,
+    packed: Number(row.packed) || 0,
+    leftover: Number(row.leftover) || 0,
+  }));
 }
 
 function leftoverCount(result) {
