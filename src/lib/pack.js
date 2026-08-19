@@ -455,7 +455,7 @@ function limitedRemaining(cargos) {
 
 function readFlushFlag(map, id, fallback = false) {
   if (map && typeof map === "object") {
-    const raw = map[id] ?? map[String(id)];
+    const raw = map[String(id)] ?? map[id] ?? (id !== "" && Number.isFinite(Number(id)) ? map[Number(id)] : undefined);
     if (Array.isArray(raw)) return Boolean(raw[0]);
     if (raw != null) return Boolean(raw);
   }

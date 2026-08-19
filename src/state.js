@@ -39,35 +39,48 @@ function emptyCargo() {
 
 function readFlushFlag(map, id, fallback = false) {
   if (map && typeof map === "object") {
-    const raw = map[id] ?? map[String(id)];
+    const raw = map[String(id)] ?? map[id] ?? (id !== "" && Number.isFinite(Number(id)) ? map[Number(id)] : undefined);
     if (Array.isArray(raw)) return Boolean(raw[0]);
     if (raw != null) return Boolean(raw);
   }
   return Boolean(fallback);
 }
 
+function uniquePalletIds(ids) {
+  const out = [];
+  for (const id of ids || []) {
+    if (id == null || id === "") continue;
+    if (out.some((item) => item == id)) continue;
+    out.push(id);
+  }
+  return out;
+}
+
 function normalizeFlushMap(source, ids, fallback = false) {
   const map = {};
-  for (const id of ids || []) {
-    if (id == null) continue;
-    map[id] = readFlushFlag(source, id, fallback);
+  for (const id of uniquePalletIds(ids)) {
+    map[String(id)] = readFlushFlag(source, id, fallback);
   }
   return map;
 }
 
+function resultPalletIds(result) {
+  return uniquePalletIds([
+    ...(result?.palletIds || []),
+    ...(result?.boards || []).map((board) => board.palletId),
+    ...Object.keys(result?.flushMap || {}),
+  ]);
+}
+
 function flushMapFromResult(result) {
-  const ids = [
-    ...new Set(
-      (result.palletIds || result.boards?.map((board) => board.palletId) || []).filter((id) => id != null)
-    ),
-  ];
+  const ids = resultPalletIds(result);
   if (result.flushMap && typeof result.flushMap === "object") {
     return normalizeFlushMap(result.flushMap, ids, result.flushEdge);
   }
   const fromBoards = {};
   for (const board of result.boards || []) {
     if (board.palletId == null || board.flushEdge == null) continue;
-    if (fromBoards[board.palletId] == null) fromBoards[board.palletId] = Boolean(board.flushEdge);
+    if (fromBoards[String(board.palletId)] == null) fromBoards[String(board.palletId)] = Boolean(board.flushEdge);
   }
   return normalizeFlushMap(fromBoards, ids, result.flushEdge);
 }
@@ -86,15 +99,9 @@ export function flushState(map, fallback = null) {
 
 function normalizeResult(result) {
   if (!result || typeof result !== "object") return result;
-  const palletIds = [
-    ...new Set(
-      (result.palletIds || result.boards?.map((board) => board.palletId) || (result.palletId != null ? [result.palletId] : [])).filter(
-        (id) => id != null
-      )
-    ),
-  ];
+  const palletIds = resultPalletIds(result);
   const flushMap = flushMapFromResult({ ...result, palletIds });
-  const flushEdge = flushState(flushMap).allOn;
+  const flushEdge = Boolean(result.flushEdge);
   if (Array.isArray(result.boards) && result.boards.length) {
     return {
       ...result,
@@ -412,12 +419,12 @@ export function palletFlush(id, map = config.flushMap, fallback = config.flushEd
 }
 
 export function setPalletFlush(id, on) {
-  config.flushMap = { ...config.flushMap, [id]: Boolean(on) };
+  config.flushMap = { ...config.flushMap, [String(id)]: Boolean(on) };
 }
 
 export function setAllFlush(on) {
   const next = { ...config.flushMap };
-  for (const item of enabledPallets.value) next[item.id] = Boolean(on);
+  for (const item of enabledPallets.value) next[String(item.id)] = Boolean(on);
   config.flushMap = next;
   config.flushEdge = Boolean(on);
 }
@@ -425,7 +432,7 @@ export function setAllFlush(on) {
 export function calcFlushMap() {
   const map = {};
   for (const item of enabledPallets.value) {
-    map[item.id] = palletFlush(item.id);
+    map[String(item.id)] = palletFlush(item.id);
   }
   return map;
 }
@@ -626,10 +633,10 @@ function applyPackToResult(result, boards, leftover, inputs) {
       packingList: cargoListFromGroups(groups),
     };
   });
-  result.palletIds = [...(inputs.palletIds || [])];
+  result.palletIds = uniquePalletIds(inputs.palletIds || resultPalletIds({ ...result, palletIds: inputs.palletIds }));
   result.palletQtys = { ...(inputs.palletQtys || {}) };
   result.flushMap = normalizeFlushMap(inputs.flushMap, result.palletIds, inputs.flushEdge);
-  result.flushEdge = flushState(result.flushMap).allOn;
+  result.flushEdge = Boolean(inputs.flushEdge);
   result.palletName = [...new Set(result.boards.map((b) => b.palletName))].join("、");
   result.cargos = (inputs.cargos || []).map((row) => ({ ...row }));
   result.allowFlip = result.cargos.some((row) => row.allowFlip);
@@ -658,14 +665,14 @@ function currentPackInputs() {
 }
 
 function resultPackInputs(result) {
-  const palletIds = result.palletIds?.length ? result.palletIds.slice() : config.calcPalletIds.slice();
-  const flushMap = flushMapFromResult(result);
+  const palletIds = result.palletIds?.length ? uniquePalletIds(result.palletIds) : uniquePalletIds(config.calcPalletIds);
+  const flushMap = flushMapFromResult({ ...result, palletIds });
   return {
     palletIds,
     palletQtys: { ...(result.palletQtys || snapshotPalletQty()) },
     cargos: Array.isArray(result.cargos) && result.cargos.length ? result.cargos.map((row) => ({ ...row })) : snapshotCargos(),
     flushMap,
-    flushEdge: flushState(flushMap).allOn,
+    flushEdge: Boolean(result.flushEdge),
   };
 }
 
@@ -770,19 +777,19 @@ export function setResultPalletQty(result, id, value) {
 }
 
 export function setResultPalletFlush(result, id, on) {
-  if (!result) return;
-  const ids = result.palletIds?.length ? result.palletIds : Object.keys(result.flushMap || {});
-  const next = { ...(result.flushMap || {}) };
-  next[id] = Boolean(on);
+  if (!result || id == null || id === "") return;
+  const ids = uniquePalletIds([...(result.palletIds || []), id]);
+  const next = { ...(result.flushMap || {}), [String(id)]: Boolean(on) };
+  result.palletIds = ids;
   result.flushMap = normalizeFlushMap(next, ids, result.flushEdge);
-  result.flushEdge = flushState(result.flushMap).allOn;
 }
 
 export function setResultAllFlush(result, on) {
   if (!result) return;
-  const ids = result.palletIds?.length ? result.palletIds : Object.keys(result.flushMap || {});
+  const ids = uniquePalletIds(result.palletIds?.length ? result.palletIds : resultPalletIds(result));
   const next = {};
-  for (const id of ids) next[id] = Boolean(on);
+  for (const id of ids) next[String(id)] = Boolean(on);
+  result.palletIds = ids;
   result.flushMap = next;
   result.flushEdge = Boolean(on);
 }

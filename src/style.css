@@ -905,6 +905,21 @@ td small {
   font-size: 12px;
 }
 
+.flush-stack {
+  min-width: 88px;
+}
+
+.pallet-edit {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  overflow: auto;
+}
+
+.pallet-edit .pick-item {
+  background: rgba(12, 17, 24, 0.45);
+}
+
 .result-detail {
   min-height: 0;
   overflow: auto;
@@ -933,7 +948,7 @@ td small {
 
 .detail-grid {
   display: grid;
-  grid-template-columns: minmax(220px, 320px) minmax(0, 1fr);
+  grid-template-columns: minmax(300px, 0.95fr) minmax(0, 1.05fr);
   gap: 10px;
 }
 

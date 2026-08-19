@@ -3,7 +3,7 @@
     <div class="table-head">
       <div>
         <h2>装货方案</h2>
-        <p>点一行查看并修改参数。改货物、数量、贴边或翻转后会自动重算，点「3D」看装载图。</p>
+        <p>点一行查看并修改。每个集装箱型号可单独勾选贴边，改完会自动重算。</p>
       </div>
       <div class="toolbar-actions">
         <button v-if="activeResult" type="button" class="primary sm" @click="openPlan(activeResult.id)">打开 3D</button>
@@ -49,7 +49,7 @@
                 </td>
                 <td>
                   <div class="stack-cell">
-                    <span v-for="row in fleetRows(item)" :key="row.name">{{ row.name }} ×{{ row.count }}</span>
+                    <span v-for="row in fleetRows(item)" :key="row.id">{{ row.name }} ×{{ row.count }}</span>
                     <span v-if="!fleetRows(item).length">—</span>
                   </div>
                 </td>
@@ -65,15 +65,17 @@
                   </div>
                 </td>
                 <td class="col-check" @click.stop>
-                  <label class="check">
-                    <input
-                      type="checkbox"
-                      :checked="flushState(item.flushMap, item.flushEdge).allOn"
-                      :indeterminate.prop="flushState(item.flushMap, item.flushEdge).mixed"
-                      @change="onFlushEdge(item, $event.target.checked)"
-                    />
-                    <span>{{ flushState(item.flushMap, item.flushEdge).label }}</span>
-                  </label>
+                  <div class="stack-cell flush-stack">
+                    <label v-for="row in fleetRows(item)" :key="'flush-' + row.id" class="check">
+                      <input
+                        type="checkbox"
+                        :checked="row.flushEdge"
+                        @change="onPlanPalletFlush(item, row.id, $event.target.checked)"
+                      />
+                      <span>{{ row.flushEdge ? "贴边" : "不贴边" }}</span>
+                    </label>
+                    <span v-if="!fleetRows(item).length">—</span>
+                  </div>
                 </td>
                 <td>{{ flipSummary(item) }}</td>
                 <td class="num">{{ item.boards?.length || 0 }}</td>
@@ -114,43 +116,33 @@
                   <button type="button" class="ghost sm" @click="flushAll(false)">全部不贴边</button>
                 </div>
               </div>
-              <div class="cargo-table-wrap">
-                <table class="cargo-table">
-                  <thead>
-                    <tr>
-                      <th>机型 / 板型</th>
-                      <th>外径 cm</th>
-                      <th class="num">数量</th>
-                      <th>贴边</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr v-for="row in activePallets" :key="row.id">
-                      <td>{{ row.label }}</td>
-                      <td>{{ row.size }}</td>
-                      <td>
-                        <input
-                          class="cell-input num-input"
-                          :value="row.qty"
-                          type="number"
-                          min="1"
-                          max="50"
-                          @change="onPalletQty(row.id, $event.target.value)"
-                        />
-                      </td>
-                      <td class="col-check">
-                        <label class="check">
-                          <input
-                            type="checkbox"
-                            :checked="row.flushEdge"
-                            @change="onPalletFlush(row.id, $event.target.checked)"
-                          />
-                          <span>{{ row.flushEdge ? "贴边" : "不贴边" }}</span>
-                        </label>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="cargo-table-wrap pallet-edit">
+                <div v-for="row in activePallets" :key="row.id" class="pick-item on">
+                  <span class="pick-copy">
+                    <strong>{{ row.label }}</strong>
+                    <small>{{ row.size }} cm</small>
+                  </span>
+                  <span class="qty-field">
+                    <em>数量</em>
+                    <input
+                      class="cell-input num-input"
+                      :value="row.qty"
+                      type="number"
+                      min="1"
+                      max="50"
+                      @change="onPalletQty(row.id, $event.target.value)"
+                    />
+                  </span>
+                  <label class="check flush-check">
+                    <input
+                      type="checkbox"
+                      :checked="row.flushEdge"
+                      @change="onPalletFlush(row.id, $event.target.checked)"
+                    />
+                    <span>{{ row.flushEdge ? "贴边" : "不贴边" }}</span>
+                  </label>
+                </div>
+                <p v-if="!activePallets.length" class="empty">没有集装箱型号</p>
               </div>
             </div>
 
@@ -394,6 +386,7 @@ import {
   config,
   deleteResult,
   formatTime,
+  palletFlush,
   pallets,
   recalculateResult,
   removeResultCargo,
@@ -439,7 +432,7 @@ const activePallets = computed(() => {
       label: item ? `${item.airplane} / ${item.pallet}` : `板 ${id}`,
       size: item ? `${item.baseOuterLengthCm}×${item.baseOuterWidthCm}×${item.heightCm}` : "—",
       qty: result.palletQtys?.[id] ?? result.palletQtys?.[String(id)] ?? 1,
-      flushEdge: Boolean(result.flushMap?.[id] ?? result.flushMap?.[String(id)] ?? result.flushEdge),
+      flushEdge: palletFlush(id, result.flushMap, result.flushEdge),
     };
   });
 });
@@ -512,23 +505,26 @@ function leftoverCount(result) {
 }
 
 function fleetRows(item) {
-  const mixed = flushState(item.flushMap, item.flushEdge).mixed;
-  const edgeText = (id, boardEdge) => {
-    if (!mixed) return "";
-    const on = Boolean(item.flushMap?.[id] ?? item.flushMap?.[String(id)] ?? boardEdge ?? item.flushEdge);
-    return on ? " · 贴边" : " · 不贴边";
-  };
-  const map = new Map();
-  for (const board of item.boards || []) {
-    const name = `${board.palletName || "集装箱"}${edgeText(board.palletId, board.flushEdge)}`;
-    map.set(name, (map.get(name) || 0) + 1);
+  const ids = [];
+  for (const id of item.palletIds || []) {
+    if (id == null || id === "" || ids.some((value) => value == id)) continue;
+    ids.push(id);
   }
-  if (map.size) return [...map.entries()].map(([name, count]) => ({ name, count }));
-  return (item.palletIds || []).map((id) => {
+  if (!ids.length) {
+    for (const board of item.boards || []) {
+      if (board.palletId == null || ids.some((value) => value == board.palletId)) continue;
+      ids.push(board.palletId);
+    }
+  }
+  return ids.map((id) => {
     const pallet = pallets.find((p) => p.id == id);
+    const boards = (item.boards || []).filter((board) => board.palletId == id);
+    const qty = Number(item.palletQtys?.[id] ?? item.palletQtys?.[String(id)] ?? boards.length);
     return {
-      name: `${pallet ? `${pallet.airplane} / ${pallet.pallet}` : `板 ${id}`}${edgeText(id)}`,
-      count: item.palletQtys?.[id] || 1,
+      id,
+      name: pallet ? `${pallet.airplane} / ${pallet.pallet}` : boards[0]?.palletName || `板 ${id}`,
+      count: Number.isFinite(qty) && qty > 0 ? qty : 1,
+      flushEdge: palletFlush(id, item.flushMap, item.flushEdge),
     };
   });
 }
@@ -572,20 +568,29 @@ function recalcNow() {
   applyRecalc();
 }
 
-function onFlushEdge(item, on) {
-  setResultAllFlush(item, on);
+function onPlanPalletFlush(item, id, on) {
+  setResultPalletFlush(item, id, on);
   selectResult(item.id);
-  recalcNow();
+  recalcResult(item);
 }
 
 function onPalletFlush(id, on) {
-  setResultPalletFlush(activeResult.value, id, on);
-  recalcNow();
+  const result = activeResult.value;
+  setResultPalletFlush(result, id, on);
+  recalcResult(result);
 }
 
 function flushAll(on) {
-  setResultAllFlush(activeResult.value, on);
-  recalcNow();
+  const result = activeResult.value;
+  setResultAllFlush(result, on);
+  recalcResult(result);
+}
+
+function recalcResult(result) {
+  if (!result) return;
+  clearTimeout(timer);
+  const res = recalculateResult(result);
+  editMessage.value = res.ok ? "" : res.message;
 }
 
 function onPalletQty(id, value) {
