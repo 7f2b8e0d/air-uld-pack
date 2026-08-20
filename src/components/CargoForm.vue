@@ -103,7 +103,7 @@
           </tbody>
         </table>
       </div>
-      <p class="hint">填了件数就按这个数量装，装不下会在方案里显示未装入。批量格式：长*宽*高*件数；逗号会换成换行，/ 会换成 *。</p>
+      <p class="hint">填了件数就按这个数量装，装不下会在方案里显示未装入。粘贴时只保留数字、*、/、逗号和换行，再把逗号换成换行、/ 换成 *。</p>
 
       <div class="calc-actions">
         <button type="button" class="primary" @click="onCreate">计算新方案</button>

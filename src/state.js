@@ -472,6 +472,9 @@ const CARGO_PASTE_RE =
 
 function normalizeCargoPaste(text) {
   return String(text || "")
+    .replace(/\r\n?/g, "\n")
+    .replace(/[ \t]+/g, "\n")
+    .replace(/[^\d*/,\n，、]/g, "")
     .replace(/[,，、]/g, "\n")
     .replace(/\//g, "*");
 }
