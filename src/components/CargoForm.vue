@@ -58,7 +58,7 @@
         <textarea
           v-model="batchText"
           rows="3"
-          placeholder="粘贴批量添加，每行一种：长*宽*高*件数&#10;120*80*100*2&#10;90*60*50*3"
+          placeholder="粘贴批量添加：长*宽*高*件数。逗号会换成换行，/ 会换成 *&#10;120*80*100*2,90*60*50/3"
         ></textarea>
         <button type="button" class="ghost sm" @click="onBatchAdd">粘贴添加</button>
       </div>
@@ -103,7 +103,7 @@
           </tbody>
         </table>
       </div>
-      <p class="hint">填了件数就按这个数量装，装不下会在方案里显示未装入。批量格式：长*宽*高*件数。</p>
+      <p class="hint">填了件数就按这个数量装，装不下会在方案里显示未装入。批量格式：长*宽*高*件数；逗号会换成换行，/ 会换成 *。</p>
 
       <div class="calc-actions">
         <button type="button" class="primary" @click="onCreate">计算新方案</button>

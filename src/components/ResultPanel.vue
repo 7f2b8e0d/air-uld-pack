@@ -159,7 +159,7 @@
                 <textarea
                   v-model="batchText"
                   rows="2"
-                  placeholder="粘贴批量添加：120*80*100*2"
+                  placeholder="粘贴批量添加：120*80*100*2，逗号换行，/ 换成 *"
                 ></textarea>
                 <button type="button" class="ghost sm" @click="onBatchAdd">粘贴添加</button>
               </div>

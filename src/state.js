@@ -470,8 +470,14 @@ function isBlankCargo(row) {
 const CARGO_PASTE_RE =
   /(\d+(?:\.\d+)?)\s*[*\u00d7xX\uff0a]\s*(\d+(?:\.\d+)?)\s*[*\u00d7xX\uff0a]\s*(\d+(?:\.\d+)?)(?:\s*[*\u00d7xX\uff0a]\s*(\d+))?/g;
 
+function normalizeCargoPaste(text) {
+  return String(text || "")
+    .replace(/[,，、]/g, "\n")
+    .replace(/\//g, "*");
+}
+
 export function parseCargoPaste(text) {
-  const src = String(text || "").trim();
+  const src = normalizeCargoPaste(text).trim();
   if (!src) {
     return { ok: false, message: "请粘贴货物尺寸，例如 120*80*100*2", items: [] };
   }
