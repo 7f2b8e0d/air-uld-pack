@@ -1,6 +1,6 @@
 import { reactive, computed, watch } from "vue";
 import catalog from "../data/uld-pallets.json";
-import { packScheme, GROUP_COLORS } from "./lib/pack.js";
+import { packScheme, GROUP_COLORS, PACK_BUDGET_MS } from "./lib/pack.js";
 
 export const TYPE_LABELS = {
   box: "矩形箱",
@@ -233,6 +233,113 @@ function loadStored() {
 }
 
 export const config = reactive(loadStored());
+
+export const packProgress = reactive({
+  running: false,
+  startedAt: 0,
+  budgetMs: PACK_BUDGET_MS,
+  elapsedMs: 0,
+});
+
+export const packStatusText = computed(() => {
+  const used = Math.max(0, Math.floor(packProgress.elapsedMs / 1000));
+  const max = Math.round((packProgress.budgetMs || PACK_BUDGET_MS) / 1000);
+  return `计算中，已用 ${used} 秒，最长 ${max} 秒`;
+});
+
+let packJob = 0;
+let packWorker = null;
+let packElapsedTimer = 0;
+let rejectActivePack = null;
+
+function slimPallet(pallet) {
+  return {
+    id: pallet.id,
+    airplane: pallet.airplane,
+    pallet: pallet.pallet,
+    heightCm: pallet.heightCm,
+    volumeAllowedM3: pallet.volumeAllowedM3,
+    baseOuterLengthCm: pallet.baseOuterLengthCm,
+    baseOuterWidthCm: pallet.baseOuterWidthCm,
+    bottomLengthCm: pallet.bottomLengthCm,
+    bottomWidthCm: pallet.bottomWidthCm,
+    innerLengthCm: pallet.innerLengthCm,
+    innerWidthCm: pallet.innerWidthCm,
+    pointCoordinate: pallet.pointCoordinate,
+  };
+}
+
+function stopPackWorker() {
+  if (rejectActivePack) {
+    const reject = rejectActivePack;
+    rejectActivePack = null;
+    reject(Object.assign(new Error("cancelled"), { cancelled: true }));
+  }
+  if (packWorker) {
+    packWorker.terminate();
+    packWorker = null;
+  }
+}
+
+function startPackProgress(budgetMs = PACK_BUDGET_MS) {
+  packProgress.running = true;
+  packProgress.startedAt = Date.now();
+  packProgress.budgetMs = budgetMs;
+  packProgress.elapsedMs = 0;
+  window.clearInterval(packElapsedTimer);
+  packElapsedTimer = window.setInterval(() => {
+    if (!packProgress.running) return;
+    packProgress.elapsedMs = Date.now() - packProgress.startedAt;
+  }, 200);
+}
+
+function stopPackProgress() {
+  packProgress.running = false;
+  if (packProgress.startedAt) {
+    packProgress.elapsedMs = Date.now() - packProgress.startedAt;
+  }
+  window.clearInterval(packElapsedTimer);
+  packElapsedTimer = 0;
+}
+
+function runPackInWorker(payload) {
+  if (typeof Worker === "undefined") {
+    return Promise.resolve(
+      packScheme(payload.palletList, payload.cargos, {
+        qtyMap: payload.qtyMap,
+        flushMap: payload.flushMap,
+        flushEdge: payload.flushEdge,
+        budgetMs: payload.budgetMs,
+      })
+    );
+  }
+  stopPackWorker();
+  const id = payload.id;
+  packWorker = new Worker(new URL("./lib/packWorker.js", import.meta.url), { type: "module" });
+  const current = packWorker;
+  return new Promise((resolve, reject) => {
+    rejectActivePack = reject;
+    current.onmessage = (event) => {
+      if (event.data?.id !== id) return;
+      if (rejectActivePack === reject) rejectActivePack = null;
+      if (packWorker === current) {
+        current.terminate();
+        packWorker = null;
+      }
+      if (event.data.ok) resolve(event.data.packed);
+      else reject(new Error(event.data.message || "计算失败"));
+    };
+    current.onerror = (event) => {
+      if (rejectActivePack === reject) rejectActivePack = null;
+      if (packWorker === current) {
+        current.terminate();
+        packWorker = null;
+      }
+      reject(event.error || new Error(event.message || "计算线程失败"));
+    };
+    current.postMessage(payload);
+  });
+}
 
 watch(
   config,
@@ -660,6 +767,8 @@ function applyPackToResult(result, boards, leftover, inputs) {
   result.packedVolume = result.boards.reduce((sum, b) => sum + b.packedVolume, 0);
   result.capacity = result.boards.reduce((sum, b) => sum + b.capacity, 0);
   result.utilization = result.capacity > 0 ? result.packedVolume / result.capacity : 0;
+  result.timedOut = Boolean(inputs.timedOut);
+  result.packElapsedMs = Number(inputs.packElapsedMs) || 0;
   result.updatedAt = Date.now();
 }
 
@@ -685,7 +794,7 @@ function resultPackInputs(result) {
   };
 }
 
-function runPack(inputs, { requireEnabled = true } = {}) {
+async function runPack(inputs, { requireEnabled = true } = {}) {
   const selected = inputs.palletIds
     .map((id) => enabledPallets.value.find((p) => p.id == id) || pallets.find((p) => p.id == id))
     .filter((item) => item && (!requireEnabled || isEnabled(item.id)));
@@ -700,31 +809,66 @@ function runPack(inputs, { requireEnabled = true } = {}) {
   if (!valid.length) {
     return { ok: false, message: "请至少填写一组货物的长宽高" };
   }
-  const packed = packScheme(selected, valid, {
-    qtyMap: inputs.palletQtys,
-    flushMap: inputs.flushMap,
-    flushEdge: Boolean(inputs.flushEdge),
-  });
-  if (!packed.boards.length) {
-    return { ok: false, message: "当前货物无法装入所选板型，请检查尺寸、数量、贴边或翻转" };
+
+  const gen = ++packJob;
+  startPackProgress(PACK_BUDGET_MS);
+  try {
+    const packed = await runPackInWorker({
+      id: gen,
+      palletList: selected.map(slimPallet),
+      cargos: valid,
+      qtyMap: inputs.palletQtys,
+      flushMap: inputs.flushMap,
+      flushEdge: Boolean(inputs.flushEdge),
+      budgetMs: PACK_BUDGET_MS,
+    });
+    if (gen !== packJob) return { ok: false, cancelled: true, message: "已取消" };
+    if (!packed.boards.length) {
+      return { ok: false, message: "当前货物无法装入所选板型，请检查尺寸、数量、贴边或翻转" };
+    }
+    return {
+      ok: true,
+      packed,
+      inputs: { ...inputs, cargos: valid.length ? inputs.cargos : valid },
+    };
+  } catch (error) {
+    if (error?.cancelled || gen !== packJob) return { ok: false, cancelled: true, message: "已取消" };
+    return { ok: false, message: error?.message || "计算失败" };
+  } finally {
+    if (gen === packJob) stopPackProgress();
   }
-  return { ok: true, packed, inputs: { ...inputs, cargos: valid.length ? inputs.cargos : valid } };
 }
 
-export function runCalculate({ overwrite = false } = {}) {
-  const packedRun = runPack(currentPackInputs());
+function packResultNote(packed) {
+  if (!packed?.timedOut) return "";
+  const sec = Math.max(1, Math.round((Number(packed.elapsedMs) || PACK_BUDGET_MS) / 1000));
+  return `搜索已达 1 分钟上限（用时 ${sec} 秒），这是目前装得最多的摆法。`;
+}
+
+export async function runCalculate({ overwrite = false } = {}) {
+  const packedRun = await runPack(currentPackInputs());
   if (!packedRun.ok) return packedRun;
 
   const now = Date.now();
+  const packMeta = {
+    timedOut: packedRun.packed.timedOut,
+    packElapsedMs: packedRun.packed.elapsedMs,
+  };
   if (overwrite && activeResult.value) {
-    applyPackToResult(activeResult.value, packedRun.packed.boards, packedRun.packed.leftover, packedRun.inputs);
+    applyPackToResult(activeResult.value, packedRun.packed.boards, packedRun.packed.leftover, {
+      ...packedRun.inputs,
+      ...packMeta,
+    });
   } else {
     const result = {
       id: uid("plan"),
       name: `方案 ${config.results.length + 1}`,
       createdAt: now,
     };
-    applyPackToResult(result, packedRun.packed.boards, packedRun.packed.leftover, packedRun.inputs);
+    applyPackToResult(result, packedRun.packed.boards, packedRun.packed.leftover, {
+      ...packedRun.inputs,
+      ...packMeta,
+    });
     config.results.unshift(result);
     config.activeResultId = result.id;
   }
@@ -732,12 +876,12 @@ export function runCalculate({ overwrite = false } = {}) {
   const current = activeResult.value;
   config.groupSelectMode = "multi";
   config.selectedGroupIds = current.boards[0]?.groups.map((g) => g.id) || [];
-  return { ok: true, result: current };
+  return { ok: true, result: current, timedOut: Boolean(packedRun.packed.timedOut), note: packResultNote(packedRun.packed) };
 }
 
-export function recalculateResult(result) {
+export async function recalculateResult(result) {
   if (!result) return { ok: false, message: "没有可更新的方案" };
-  const packedRun = runPack(resultPackInputs(result), { requireEnabled: false });
+  const packedRun = await runPack(resultPackInputs(result), { requireEnabled: false });
   if (!packedRun.ok) return packedRun;
   applyPackToResult(result, packedRun.packed.boards, packedRun.packed.leftover, {
     ...packedRun.inputs,
@@ -746,6 +890,8 @@ export function recalculateResult(result) {
     palletQtys: result.palletQtys,
     flushMap: result.flushMap,
     flushEdge: result.flushEdge,
+    timedOut: packedRun.packed.timedOut,
+    packElapsedMs: packedRun.packed.elapsedMs,
   });
   if (result.id === config.activeResultId) {
     config.flushMap = { ...(result.flushMap || {}) };
@@ -756,7 +902,7 @@ export function recalculateResult(result) {
     config.activeBoardIndex = Math.min(config.activeBoardIndex, Math.max(0, result.boards.length - 1));
     selectAllGroups();
   }
-  return { ok: true, result };
+  return { ok: true, result, timedOut: Boolean(packedRun.packed.timedOut), note: packResultNote(packedRun.packed) };
 }
 
 export function addResultCargo(result) {

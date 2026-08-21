@@ -3,7 +3,7 @@
     <div class="table-head">
       <div>
         <h2>装货方案</h2>
-        <p>点一行查看并修改。每个集装箱型号可单独勾选贴边，改完会自动重算。</p>
+        <p>点一行查看并修改。每个集装箱型号可单独勾选贴边，改完会自动重算，最长约 1 分钟。</p>
       </div>
       <div class="toolbar-actions">
         <button v-if="activeResult" type="button" class="primary sm" @click="openPlan(activeResult.id)">打开 3D</button>
@@ -102,9 +102,11 @@
                 <em v-if="leftoverCount(activeResult)" class="left-tag">
                   未装下 {{ leftoverCount(activeResult) }} 件
                 </em>
+                <em v-if="activeResult.timedOut" class="left-tag">已按 1 分钟上限停止搜索</em>
               </span>
             </div>
-            <p v-if="editMessage" class="msg warn">{{ editMessage }}</p>
+            <p v-if="packProgress.running" class="msg">{{ packStatusText }}</p>
+            <p v-else-if="editMessage" :class="['msg', editOk ? 'ok' : 'warn']">{{ editMessage }}</p>
           </div>
 
           <div class="detail-grid">
@@ -388,6 +390,8 @@ import {
   formatTime,
   palletFlush,
   pallets,
+  packProgress,
+  packStatusText,
   recalculateResult,
   removeResultCargo,
   flushState,
@@ -406,6 +410,7 @@ import {
 
 const previewOpen = ref(false);
 const editMessage = ref("");
+const editOk = ref(false);
 const batchText = ref("");
 let timer = 0;
 
@@ -551,11 +556,13 @@ function flipSummary(item) {
   return `${n}/${rows.length} 可翻转`;
 }
 
-function applyRecalc() {
+async function applyRecalc() {
   const result = activeResult.value;
   if (!result) return;
-  const res = recalculateResult(result);
-  editMessage.value = res.ok ? "" : res.message;
+  const res = await recalculateResult(result);
+  if (res.cancelled) return;
+  editOk.value = res.ok;
+  editMessage.value = res.ok ? res.note || "" : res.message;
 }
 
 function scheduleRecalc() {
@@ -586,11 +593,13 @@ function flushAll(on) {
   recalcResult(result);
 }
 
-function recalcResult(result) {
+async function recalcResult(result) {
   if (!result) return;
   clearTimeout(timer);
-  const res = recalculateResult(result);
-  editMessage.value = res.ok ? "" : res.message;
+  const res = await recalculateResult(result);
+  if (res.cancelled) return;
+  editOk.value = res.ok;
+  editMessage.value = res.ok ? res.note || "" : res.message;
 }
 
 function onPalletQty(id, value) {
@@ -628,8 +637,8 @@ function focusPlan(id) {
 function openPlan(id) {
   selectResult(id);
   editMessage.value = "";
-  applyRecalc();
   previewOpen.value = true;
+  applyRecalc();
 }
 
 function onClearAll() {

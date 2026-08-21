@@ -103,13 +103,18 @@
           </tbody>
         </table>
       </div>
-      <p class="hint">填了件数就按这个数量装，装不下会在方案里显示未装入。粘贴时只保留数字、*、/、逗号和换行，再把逗号换成换行、/ 换成 *。</p>
+      <p class="hint">填了件数就按这个数量装，装不下会在方案里显示未装入。粘贴时只保留数字、*、/、逗号和换行，再把逗号换成换行、/ 换成 *。计算会先出可用摆法，再用最多 1 分钟搜索装得更多的方案。</p>
 
       <div class="calc-actions">
-        <button type="button" class="primary" @click="onCreate">计算新方案</button>
-        <button type="button" class="ghost" :disabled="!activeResult" @click="onUpdate">更新当前方案</button>
+        <button type="button" class="primary" :disabled="packProgress.running" @click="onCreate">
+          {{ packProgress.running ? "计算中…" : "计算新方案" }}
+        </button>
+        <button type="button" class="ghost" :disabled="!activeResult || packProgress.running" @click="onUpdate">
+          更新当前方案
+        </button>
       </div>
-      <p v-if="message" :class="['msg', ok ? 'ok' : 'warn']">{{ message }}</p>
+      <p v-if="packProgress.running" class="msg">{{ packStatusText }}</p>
+      <p v-else-if="message" :class="['msg', ok ? 'ok' : 'warn']">{{ message }}</p>
     </div>
   </section>
 </template>
@@ -123,6 +128,8 @@ import {
   clearAllCargos,
   calcPallets,
   config,
+  packProgress,
+  packStatusText,
   palletFlush,
   palletQty,
   removeCargoRow,
@@ -155,20 +162,22 @@ function onClearCargos() {
   batchOk.value = true;
 }
 
-function onCreate() {
-  const res = runCalculate({ overwrite: false });
+async function onCreate() {
+  const res = await runCalculate({ overwrite: false });
+  if (res.cancelled) return;
   ok.value = res.ok;
   message.value = res.ok
-    ? `已生成「${res.result.name}」，${res.result.boards.length} 块板，共 ${res.result.packedCount} 件，利用率 ${(res.result.utilization * 100).toFixed(1)}%`
+    ? `已生成「${res.result.name}」，${res.result.boards.length} 块板，共 ${res.result.packedCount} 件，利用率 ${(res.result.utilization * 100).toFixed(1)}%${res.note ? ` ${res.note}` : ""}`
     : res.message;
   if (res.ok) setTab("result");
 }
 
-function onUpdate() {
-  const res = runCalculate({ overwrite: true });
+async function onUpdate() {
+  const res = await runCalculate({ overwrite: true });
+  if (res.cancelled) return;
   ok.value = res.ok;
   message.value = res.ok
-    ? `已更新「${res.result.name}」，${res.result.boards.length} 块板，共 ${res.result.packedCount} 件，利用率 ${(res.result.utilization * 100).toFixed(1)}%`
+    ? `已更新「${res.result.name}」，${res.result.boards.length} 块板，共 ${res.result.packedCount} 件，利用率 ${(res.result.utilization * 100).toFixed(1)}%${res.note ? ` ${res.note}` : ""}`
     : res.message;
   if (res.ok) setTab("result");
 }

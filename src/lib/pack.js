@@ -1,5 +1,37 @@
 const EPS = 1e-4;
 
+export const PACK_BUDGET_MS = 60_000;
+
+function createClock(budgetMs = PACK_BUDGET_MS) {
+  const start = Date.now();
+  const budget = Number.isFinite(Number(budgetMs)) ? Math.max(1, Number(budgetMs)) : PACK_BUDGET_MS;
+  const deadline = start + budget;
+  const hardDeadline = deadline + 4000;
+  const clock = {
+    start,
+    deadline,
+    timedOut: false,
+    remaining() {
+      return deadline - Date.now();
+    },
+    expired() {
+      if (Date.now() >= deadline) {
+        clock.timedOut = true;
+        return true;
+      }
+      return false;
+    },
+    hardExpired() {
+      if (Date.now() >= hardDeadline) {
+        clock.timedOut = true;
+        return true;
+      }
+      return false;
+    },
+  };
+  return clock;
+}
+
 export function cargoOrientations(l, w, h, allowFlip) {
   const raw = allowFlip
     ? [
@@ -181,20 +213,22 @@ export function boxInsidePallet(pallet, x, y, z, l, w, h, flushEdge = true) {
   );
 }
 
-function zCandidates(pallet, space, h) {
+function zCandidates(pallet, space, h, lite = false) {
   const zEnd = space.z + space.dz - h;
   if (zEnd < space.z - EPS) return [];
   const set = new Set([Number(space.z.toFixed(4))]);
   for (const layer of contourLayers(pallet)) {
     if (layer.z >= space.z - EPS && layer.z <= zEnd + EPS) set.add(Number(layer.z.toFixed(4)));
   }
-  const layers = contourLayers(pallet);
-  for (let i = 0; i < layers.length - 1; i += 1) {
-    const lo = Math.max(space.z, layers[i].z);
-    const hi = Math.min(zEnd, layers[i + 1].z);
-    if (hi - lo < 2) continue;
-    for (let k = 1; k < 4; k += 1) {
-      set.add(Number((lo + ((hi - lo) * k) / 4).toFixed(4)));
+  if (!lite) {
+    const layers = contourLayers(pallet);
+    for (let i = 0; i < layers.length - 1; i += 1) {
+      const lo = Math.max(space.z, layers[i].z);
+      const hi = Math.min(zEnd, layers[i + 1].z);
+      if (hi - lo < 2) continue;
+      for (let k = 1; k < 4; k += 1) {
+        set.add(Number((lo + ((hi - lo) * k) / 4).toFixed(4)));
+      }
     }
   }
   return [...set].filter((z) => z <= zEnd + EPS).sort((a, b) => a - b);
@@ -237,10 +271,11 @@ function betterPlace(a, b, score) {
   return a.z < b.z - EPS;
 }
 
-function placementInSpace(pallet, space, ori, limit, inset, score = "vol") {
+function placementInSpace(pallet, space, ori, limit, inset, score = "vol", clock = null, lite = false) {
   if (ori.h > space.dz + EPS) return null;
   let best = null;
-  for (const z of zCandidates(pallet, space, ori.h)) {
+  for (const z of zCandidates(pallet, space, ori.h, lite)) {
+    if (clock?.hardExpired() || (!lite && clock?.expired())) break;
     const rect = intersectSpace(space, usableRect(pallet, z, z + ori.h, inset));
     const grid = fitGrid(rect, ori, limit);
     if (!grid.n) continue;
@@ -352,10 +387,13 @@ export function packMaxLoad(pallet, cargos, options = {}) {
   const cached = packMemo.get(key);
   if (cached) return clonePacked(cached);
   const packed = packOnce(pallet, cargos, options);
-  packMemo.set(key, packed);
-  if (packMemo.size > 120) {
-    const first = packMemo.keys().next().value;
-    packMemo.delete(first);
+  const clock = options.clock;
+  if (!(clock?.timedOut && packed.packedCount === 0)) {
+    packMemo.set(key, packed);
+    if (packMemo.size > 120) {
+      const first = packMemo.keys().next().value;
+      packMemo.delete(first);
+    }
   }
   return clonePacked(packed);
 }
@@ -450,7 +488,9 @@ function applyPlacement(groups, spaces, si, stock, ori, place) {
   spaces.sort((a, b) => a.z - b.z || a.y - b.y || a.x - b.x);
 }
 
-function packGreedy(pallet, cargos, options, { sort = "volume", score = "vol", first = null } = {}) {
+function packGreedy(pallet, cargos, options, { sort = "volume", score = "vol", first = null, lite = false } = {}) {
+  const clock = options.clock || null;
+  const abortable = !lite;
   const inset = edgeInset(pallet, Boolean(options.flushEdge));
   const stocks = makeStocks(cargos, sort);
   if (!stocks.length) return emptyPacked(pallet);
@@ -461,7 +501,7 @@ function packGreedy(pallet, cargos, options, { sort = "volume", score = "vol", f
     const stock = stocks.find((item) => item.key === first.key);
     if (stock && stock.remaining > 0) {
       const limit = Number.isFinite(stock.remaining) ? stock.remaining : null;
-      const place = placementInSpace(pallet, spaces[0], first.ori, limit, inset, score);
+      const place = placementInSpace(pallet, spaces[0], first.ori, limit, inset, score, clock, lite);
       if (place?.n) applyPlacement(groups, spaces, 0, stock, first.ori, place);
     }
   }
@@ -469,14 +509,17 @@ function packGreedy(pallet, cargos, options, { sort = "volume", score = "vol", f
   const findBest = () => {
     let best = null;
     for (let si = 0; si < spaces.length; si += 1) {
+      if (clock?.hardExpired() || (abortable && clock?.expired())) return best;
       const space = spaces[si];
       for (const stock of stocks) {
+        if (clock?.hardExpired() || (abortable && clock?.expired())) return best;
         if (stock.remaining <= 0) continue;
         const limit = Number.isFinite(stock.remaining) ? stock.remaining : null;
         for (const ori of cargoOrientations(stock.l, stock.w, stock.h, stock.allowFlip)) {
-          const place = placementInSpace(pallet, space, ori, limit, inset, score);
+          const place = placementInSpace(pallet, space, ori, limit, inset, score, clock, lite);
           if (!place?.n) continue;
           const cand = { si, stock, ori, place };
+          if (lite) return cand;
           if (!best || betterPlace(place, best.place, score)) best = cand;
         }
       }
@@ -485,8 +528,11 @@ function packGreedy(pallet, cargos, options, { sort = "volume", score = "vol", f
   };
 
   let guard = 0;
-  while (guard < 1500) {
+  const guardMax = lite ? 80 : 1500;
+  while (guard < guardMax) {
     guard += 1;
+    if (abortable && clock?.expired()) break;
+    if (clock?.hardExpired()) break;
     const best = findBest();
     if (!best) break;
     applyPlacement(groups, spaces, best.si, best.stock, best.ori, best.place);
@@ -507,25 +553,36 @@ function packGreedy(pallet, cargos, options, { sort = "volume", score = "vol", f
 function packOnce(pallet, cargos, options = {}) {
   const templates = makeStocks(cargos, "volume");
   if (!templates.length) return emptyPacked(pallet);
+  const clock = options.clock || null;
+  const lite = Boolean(options.lite || clock?.expired());
 
   let best = null;
   const consider = (packed) => {
     if (betterPacked(packed, best)) best = packed;
   };
 
+  consider(packGreedy(pallet, cargos, options, { sort: "volume", score: "vol", lite }));
+  if (lite || clock?.expired()) return best || emptyPacked(pallet);
+
   for (const sort of ["volume", "longest", "tallest"]) {
     for (const score of ["vol", "count", "z-vol"]) {
+      if (sort === "volume" && score === "vol") continue;
+      if (clock?.expired()) return best || emptyPacked(pallet);
       consider(packGreedy(pallet, cargos, options, { sort, score }));
     }
   }
 
+  if (clock && clock.remaining() < 1500) return best || emptyPacked(pallet);
+
   const primary = templates[0];
   for (const ori of cargoOrientations(primary.l, primary.w, primary.h, primary.allowFlip)) {
+    if (clock?.expired()) break;
     consider(packGreedy(pallet, cargos, options, { sort: "volume", score: "vol", first: { key: primary.key, ori } }));
   }
-  if (templates.length === 2) {
+  if (templates.length === 2 && !clock?.expired()) {
     const second = templates[1];
     for (const ori of cargoOrientations(second.l, second.w, second.h, second.allowFlip)) {
+      if (clock?.expired()) break;
       consider(packGreedy(pallet, cargos, options, { sort: "volume", score: "vol", first: { key: second.key, ori } }));
     }
   }
@@ -565,10 +622,11 @@ function readFlushFlag(map, id, fallback = false) {
   return Boolean(fallback);
 }
 
-export function packScheme(palletList, cargos, { qtyMap = {}, flushMap = {}, flushEdge = false } = {}) {
+export function packScheme(palletList, cargos, { qtyMap = {}, flushMap = {}, flushEdge = false, budgetMs = PACK_BUDGET_MS } = {}) {
   packMemo.clear();
+  const clock = createClock(budgetMs);
   const boards = [];
-  if (!palletList.length) return { boards: [], leftover: [] };
+  if (!palletList.length) return { boards: [], leftover: [], timedOut: false, elapsedMs: Date.now() - clock.start };
 
   const fleet = [];
   for (const pallet of palletList) {
@@ -602,31 +660,44 @@ export function packScheme(palletList, cargos, { qtyMap = {}, flushMap = {}, flu
     };
   };
 
-  const packEntry = (entry, stock) => packMaxLoad(entry.pallet, stock, { flushEdge: entry.flushEdge });
+  const packEntry = (entry, stock) =>
+    packMaxLoad(entry.pallet, stock, { flushEdge: entry.flushEdge, clock, lite: clock.expired() });
+
+  const finish = (leftover) => ({
+    boards,
+    leftover,
+    timedOut: Boolean(clock.timedOut || clock.expired()),
+    elapsedMs: Date.now() - clock.start,
+  });
 
   if (!hasLimitedQty(cargos)) {
     for (const entry of fleet) {
+      if (clock.hardExpired()) break;
       const packed = packEntry(entry, cargos);
       if (packed.groups.length) boards.push(makeBoard(entry, packed));
     }
-    return { boards, leftover: [] };
+    return finish([]);
   }
 
   let stock = cargos.map((item) => ({ ...item }));
   const unused = [...fleet];
   while (unused.length && limitedRemaining(stock) > 0) {
+    if (clock.hardExpired()) break;
     let best = null;
-    const lookahead = unused.length <= 5;
+    const lookahead = unused.length <= 5 && clock.remaining() > 5000;
     for (const entry of unused) {
+      if (clock.hardExpired()) break;
+      if (clock.expired() && best) break;
       const packed = packEntry(entry, stock);
       if (!packed.groups.length) continue;
       let score = packed.packedVolume;
-      if (lookahead) {
+      if (lookahead && !clock.expired()) {
         const rest = subtractPacked(stock, packed.groups);
         let follow = 0;
         if (limitedRemaining(rest) > 0) {
           for (const other of unused) {
             if (other === entry) continue;
+            if (clock.expired()) break;
             follow = Math.max(follow, packEntry(other, rest).packedVolume);
           }
         } else {
@@ -648,7 +719,7 @@ export function packScheme(palletList, cargos, { qtyMap = {}, flushMap = {}, flu
     unused.splice(unused.indexOf(best.entry), 1);
   }
 
-  return { boards, leftover: leftoverFrom(cargos, boards) };
+  return finish(leftoverFrom(cargos, boards));
 }
 
 function summarizeGroups(groups) {

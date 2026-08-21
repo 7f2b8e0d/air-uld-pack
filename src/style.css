@@ -309,6 +309,11 @@ p {
   cursor: pointer;
 }
 
+.primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
 .primary.sm {
   padding: 4px 10px;
   font-size: 12px;
