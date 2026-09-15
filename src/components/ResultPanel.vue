@@ -161,7 +161,7 @@
                 <textarea
                   v-model="batchText"
                   rows="2"
-                  placeholder="粘贴批量添加：120*80*100*2，逗号换行，/ 换成 *"
+                  placeholder="粘贴批量添加：120.5*80*100*2，逗号换行，/ 换成 *"
                 ></textarea>
                 <button type="button" class="ghost sm" @click="onBatchAdd">粘贴添加</button>
               </div>
@@ -184,13 +184,13 @@
                         <input v-model.trim="row.name" class="cell-input" type="text" placeholder="如 A 箱" @input="scheduleRecalc" />
                       </td>
                       <td>
-                        <input v-model="row.l" class="cell-input num-input" type="number" min="1" step="0.1" @input="scheduleRecalc" />
+                        <input v-model="row.l" class="cell-input num-input" type="number" min="0.01" step="any" @input="scheduleRecalc" />
                       </td>
                       <td>
-                        <input v-model="row.w" class="cell-input num-input" type="number" min="1" step="0.1" @input="scheduleRecalc" />
+                        <input v-model="row.w" class="cell-input num-input" type="number" min="0.01" step="any" @input="scheduleRecalc" />
                       </td>
                       <td>
-                        <input v-model="row.h" class="cell-input num-input" type="number" min="1" step="0.1" @input="scheduleRecalc" />
+                        <input v-model="row.h" class="cell-input num-input" type="number" min="0.01" step="any" @input="scheduleRecalc" />
                       </td>
                       <td>
                         <input v-model="row.qty" class="cell-input num-input" type="number" min="1" step="1" placeholder="件数" @input="scheduleRecalc" />

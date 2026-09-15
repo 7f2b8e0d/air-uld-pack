@@ -581,7 +581,8 @@ function normalizeCargoPaste(text) {
   return String(text || "")
     .replace(/\r\n?/g, "\n")
     .replace(/[ \t]+/g, "\n")
-    .replace(/[^\d*/,\n，、]/g, "")
+    .replace(/．/g, ".")
+    .replace(/[^\d.*/,\n，、]/g, "")
     .replace(/[,，、]/g, "\n")
     .replace(/\//g, "*");
 }
@@ -589,7 +590,7 @@ function normalizeCargoPaste(text) {
 export function parseCargoPaste(text) {
   const src = normalizeCargoPaste(text).trim();
   if (!src) {
-    return { ok: false, message: "请粘贴货物尺寸，例如 120*80*100*2", items: [] };
+    return { ok: false, message: "请粘贴货物尺寸，例如 120.5*80*100*2", items: [] };
   }
   const items = [];
   const re = new RegExp(CARGO_PASTE_RE.source, "g");
@@ -614,7 +615,7 @@ export function parseCargoPaste(text) {
   if (!items.length) {
     return {
       ok: false,
-      message: "没有识别到有效尺寸。格式：长*宽*高*件数，例如 120*80*100*2，可一次粘贴多行",
+      message: "没有识别到有效尺寸。格式：长*宽*高*件数，例如 120.5*80*100*2，可一次粘贴多行",
       items: [],
     };
   }

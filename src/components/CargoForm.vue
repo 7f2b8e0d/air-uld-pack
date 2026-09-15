@@ -58,7 +58,7 @@
         <textarea
           v-model="batchText"
           rows="3"
-          placeholder="粘贴批量添加：长*宽*高*件数。逗号会换成换行，/ 会换成 *&#10;120*80*100*2,90*60*50/3"
+          placeholder="粘贴批量添加：长*宽*高*件数，尺寸可带小数。逗号会换成换行，/ 会换成 *&#10;120.5*80*100*2,90*60.5*50/3"
         ></textarea>
         <button type="button" class="ghost sm" @click="onBatchAdd">粘贴添加</button>
       </div>
@@ -82,13 +82,13 @@
                 <input v-model.trim="row.name" type="text" placeholder="如 A 箱" />
               </td>
               <td>
-                <input v-model="row.l" type="number" min="1" step="0.1" placeholder="长" />
+                <input v-model="row.l" type="number" min="0.01" step="any" placeholder="长" />
               </td>
               <td>
-                <input v-model="row.w" type="number" min="1" step="0.1" placeholder="宽" />
+                <input v-model="row.w" type="number" min="0.01" step="any" placeholder="宽" />
               </td>
               <td>
-                <input v-model="row.h" type="number" min="1" step="0.1" placeholder="高" />
+                <input v-model="row.h" type="number" min="0.01" step="any" placeholder="高" />
               </td>
               <td>
                 <input v-model="row.qty" type="number" min="1" step="1" placeholder="件数" />
@@ -103,7 +103,7 @@
           </tbody>
         </table>
       </div>
-      <p class="hint">填了件数就按这个数量装，装不下会在方案里显示未装入。粘贴时只保留数字、*、/、逗号和换行，再把逗号换成换行、/ 换成 *。计算会先出可用摆法，再用最多 1 分钟搜索装得更多的方案。</p>
+      <p class="hint">填了件数就按这个数量装，装不下会在方案里显示未装入。粘贴时只保留数字、小数点、*、/、逗号和换行，再把逗号换成换行、/ 换成 *。计算会先出可用摆法，再用最多 1 分钟搜索装得更多的方案。</p>
 
       <div class="calc-actions">
         <button type="button" class="primary" :disabled="packProgress.running" @click="onCreate">
