@@ -601,14 +601,14 @@ export function parseCargoPaste(text) {
     const h = Number(match[3]);
     if (!(l > 0 && w > 0 && h > 0)) continue;
     const qtyRaw = match[4];
-    const qty = qtyRaw == null || qtyRaw === "" ? "" : Math.max(0, Math.floor(Number(qtyRaw)));
+    const qty = qtyRaw == null || qtyRaw === "" ? 1 : Math.max(1, Math.floor(Number(qtyRaw)) || 1);
     items.push({
       id: uid("box"),
       name: `${l}×${w}×${h}`,
       l,
       w,
       h,
-      qty: qty === "" || qty <= 0 ? "" : qty,
+      qty,
       allowFlip: true,
     });
   }

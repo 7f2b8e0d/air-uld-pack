@@ -103,7 +103,7 @@
           </tbody>
         </table>
       </div>
-      <p class="hint">填了件数就按这个数量装，装不下会在方案里显示未装入。粘贴时只保留数字、小数点、*、/、逗号和换行，再把逗号换成换行、/ 换成 *。计算会先出可用摆法，再用最多 1 分钟搜索装得更多的方案。</p>
+      <p class="hint">填了件数就按这个数量装，装不下会在方案里显示未装入。粘贴时只保留数字、小数点、*、/、逗号和换行，再把逗号换成换行、/ 换成 *；没写件数按 1 件。计算会先出可用摆法，再用最多 1 分钟搜索装得更多的方案。</p>
 
       <div class="calc-actions">
         <button type="button" class="primary" :disabled="packProgress.running" @click="onCreate">
