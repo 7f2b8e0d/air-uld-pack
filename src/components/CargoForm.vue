@@ -57,7 +57,7 @@
       <div class="batch-paste">
         <textarea
           v-model="batchText"
-          rows="3"
+          rows="8"
           placeholder="粘贴批量添加：长*宽*高*件数，尺寸可带小数。逗号会换成换行，/ 会换成 *&#10;120.5*80*100*2,90*60.5*50/3"
         ></textarea>
         <button type="button" class="ghost sm" @click="onBatchAdd">粘贴添加</button>
@@ -67,7 +67,6 @@
         <table class="cargo-table">
           <thead>
             <tr>
-              <th>型号名</th>
               <th class="num">长 cm</th>
               <th class="num">宽 cm</th>
               <th class="num">高 cm</th>
@@ -78,9 +77,6 @@
           </thead>
           <tbody>
             <tr v-for="row in config.cargos" :key="row.id">
-              <td>
-                <input v-model.trim="row.name" type="text" placeholder="如 A 箱" />
-              </td>
               <td>
                 <input v-model="row.l" type="number" min="0.01" step="any" placeholder="长" />
               </td>

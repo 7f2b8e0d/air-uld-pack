@@ -622,7 +622,7 @@ td small {
 .batch-paste textarea {
   flex: 1;
   min-width: 0;
-  min-height: 68px;
+  min-height: 180px;
   resize: vertical;
   padding: 8px 10px;
   border: 1px solid var(--line);
@@ -630,6 +630,7 @@ td small {
   background: rgba(12, 17, 24, 0.5);
   color: var(--text);
   font: inherit;
+  font-size: 12px;
   line-height: 1.45;
 }
 
