@@ -55,12 +55,15 @@
         </div>
       </div>
       <div class="batch-paste">
-        <textarea
-          ref="batchTextarea"
-          v-model="batchText"
-          rows="8"
-          placeholder="粘贴批量添加：长*宽*高*件数，尺寸可带小数。逗号会换成换行，/ 会换成 *&#10;120.5*80*100*2,90*60.5*50/3"
-        ></textarea>
+        <div class="paste-box">
+          <textarea
+            ref="batchTextarea"
+            v-model="batchText"
+            rows="8"
+            placeholder="粘贴批量添加：长*宽*高*件数，尺寸可带小数。逗号会换成换行，/ 会换成 *&#10;120.5*80*100*2,90*60.5*50/3"
+          ></textarea>
+          <div class="resize-handle" title="上下拖动调整高度" @pointerdown="startResize"></div>
+        </div>
         <button type="button" class="ghost sm" @click="onBatchAdd">粘贴添加</button>
       </div>
       <p v-if="batchMessage" :class="['msg', batchOk ? 'ok' : 'warn']">{{ batchMessage }}</p>
@@ -140,7 +143,7 @@ import { usePersistedHeight } from "../lib/persistedHeight.js";
 
 const setTab = inject("setTab", () => {});
 const batchTextarea = ref(null);
-usePersistedHeight(batchTextarea, "cargo-batch-paste");
+const { startResize } = usePersistedHeight(batchTextarea, "cargo-paste-box");
 const message = ref("");
 const ok = ref(false);
 const batchText = ref("");

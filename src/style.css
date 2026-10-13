@@ -622,8 +622,7 @@ td small {
 .batch-paste textarea {
   flex: 1;
   min-width: 0;
-  height: 280px;
-  min-height: 80px;
+  min-height: 52px;
   resize: vertical;
   padding: 8px 10px;
   border: 1px solid var(--line);
@@ -648,9 +647,41 @@ td small {
   padding: 8px 10px 0;
 }
 
-.batch-paste.compact textarea {
-  height: auto;
-  min-height: 52px;
+.paste-box {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.paste-box textarea {
+  flex: none;
+  height: 360px;
+  resize: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.resize-handle {
+  height: 12px;
+  border: 1px solid var(--line);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  background:
+    linear-gradient(var(--muted), var(--muted)) center 4px / 36px 1px no-repeat,
+    linear-gradient(var(--muted), var(--muted)) center 7px / 36px 1px no-repeat,
+    rgba(12, 17, 24, 0.7);
+  cursor: ns-resize;
+  touch-action: none;
+}
+
+.resize-handle:hover {
+  background-color: rgba(77, 184, 168, 0.25);
+}
+
+.is-resizing-y {
+  cursor: ns-resize;
+  user-select: none;
 }
 
 .cargo-table-wrap {
