@@ -56,6 +56,7 @@
       </div>
       <div class="batch-paste">
         <textarea
+          ref="batchTextarea"
           v-model="batchText"
           rows="8"
           placeholder="粘贴批量添加：长*宽*高*件数，尺寸可带小数。逗号会换成换行，/ 会换成 *&#10;120.5*80*100*2,90*60.5*50/3"
@@ -135,8 +136,11 @@ import {
   setPalletFlush,
   setPalletQty,
 } from "../state.js";
+import { usePersistedHeight } from "../lib/persistedHeight.js";
 
 const setTab = inject("setTab", () => {});
+const batchTextarea = ref(null);
+usePersistedHeight(batchTextarea, "cargo-batch-paste");
 const message = ref("");
 const ok = ref(false);
 const batchText = ref("");
